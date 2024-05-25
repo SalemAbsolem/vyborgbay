@@ -1,1 +1,6 @@
-/* здесь подключите шрифты */
+$primary-font: "Involve", "Arial", sans-serif;
+$secondary-font: "Pines", "Arial", sans-serif;
+
+@include font-face("Involve", 500, normal, url("../../fonts/involve/involve-medium.woff2") format("woff2"), url("../../fonts/involve/involve-medium.woff") format("woff"));
+@include font-face("Involve", 600, normal, url("../../fonts/involve/involve-semibold.woff2") format("woff2"), url("../../fonts/involve/involve-semibold.woff") format("woff"));
+@include font-face("Pines", 700, normal, url("../../fonts/pines/pines-bold.woff2") format("woff2"), url("../../fonts/pines/pines-bold.woff") format("woff"));
