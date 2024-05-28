@@ -52,8 +52,758 @@
     <!-- <link rel="prefetch" href="/quiz"> -->
 
   </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
+  <body class="page__body body">
+    <header class="body__header header">
+      <div class="header__wrap">
+        <!-- если находимся на главной то убираем href и добавляем aria-current -->
+        <a class="header__logo logo logo--header" href="/" aria-current="true">
+          <span class="logo__wrap logo__wrap--image">
+            <!-- Тут будет иконка выборга -->
+          </span>
+          <span class="logo__wrap logo__wrap--text">
+            <!-- тут будет текст выборга -->
+          </span>
+          <span class="visually-hidden logo__hidden-link-text">
+            Перейти на главную страницу
+          </span>
+        </a>
+        <!-- кнопка бронирования. ведет на отдельную страницу -->
+        <a class="header__booking-button button button--booking" href="booking.html">
+          <span class="button__text">
+            Забронировать
+          </span>
+        </a>
+        <!-- нужен модификатор на открытое меню -->
+        <button class="header__menu-button button button--menu" type="button">
+          <span class="button__text">
+            Меню
+          </span>
+        </button>
+        <!-- список с пунктами меню -->
+        <nav class="header__site-navigetion site-navigation site-navigation--header">
+          <ul class="site-navigation__pages pages">
+            <!-- класс для текущей страницы pages__item\-\-current -->
+            <li class="pages__item pages__item--current">
+              <!-- для текущей страницы убираем href и добавляем aria-current -->
+              <a class="pages__link" href="/">
+                Главная
+              </a>
+            </li>
+            <li class="pages__item">
+              <a class="pages__link" href="booking.html">
+                Бронирование
+              </a>
+            </li>
+            <li class="pages__item">
+              <a class="pages__link" href="services.html">
+                Услуги
+              </a>
+            </li>
+            <li class="pages__item">
+              <a class="pages__link" href="location.html">
+                Локация 1
+              </a>
+            </li>
+            <li class="pages__item">
+              <a class="pages__link" href="blog.html">
+                Блог
+              </a>
+            </li>
+          </ul>
+          <div class="site-navigation__footer">
+            <p class="site-navigation__contact-container">
+              <span class="site-navigation__title-link">
+                тел.
+              </span>
+              <a class="site-navigation__link" href="tel:+78126005007" rel="nofollow noreferrer noopener" target="_blank">
+                7 (812) 600-50-07
+              </a>
+            </p>
+            <p class="site-navigation__contact-container">
+              <span class="site-navigation__title-link">
+                Mail
+              </span>
+              <a class="site-navigation__link" href="mailto:info@nuova.group" rel="nofollow noreferrer noopener" target="_blank">
+                info@nuova.group
+              </a>
+            </p>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="body__main main">
+      <!-- Скрытый заголовок. Участвует в SEO. Сделать изменение через админку -->
+      <h1 class="visually-hidden">
+        VyborgBay главная страница
+      </h1>
+      <section class="main__section hero-slider">
+        <!-- Скрытый заголовок. Участвует в SEO Сделать изменение через админку -->
+        <h2 class="main__section-title visually-hidden">
+          Акции и предложения VyborgBay
+        </h2>
+        <div class="hero-slider__container">
+          <ul class="hero-slider__wrap slides">
+            <li class="hero-slider__slide slides__item slides__item--image">
+              <h3 class="slides__title">
+                Насладитесь Выборгом комфортно с Vyborg Bay
+              </h3>
+              <!-- Если есть комментарий, то выводить на экран. Настроить через админку -->
+              <p class="slides__description">
+                Акция действует ограниченное время.
+              </p>
+              <div class="slides__background">
+                <picture>
+                  <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                  <img class="slides__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+                </picture>
+              </div>
+            </li>
+            <li class="hero-slider__slide slides__item slides__item--video">
+              <h3 class="slides__title">
+                Насладитесь Выборгом комфортно с Vyborg Bay
+              </h3>
+              <div class="slides__background">
+                <!-- к видео добавить атрибут playsinline -->
+                <video class="slides__background-video" poster="#" width="10" height="10" preload="auto" autoplay loop muted>
+                  <!-- <source media="(min-width: 768px)" type="video/mp4" src="#"> -->
+                  <source type="video/mp4" src="#">
+                </video>
+              </div>
+            </li>
+            <li class="hero-slider__slide slides__item slides__item--card">
+              <h3 class="slides__title">
+                Выберите локацию по душе
+              </h3>
+              <ul class="slides__card cards">
+                <li class="cards__item">
+                  <a class="cards__link" href="location.html">
+                    <h4 class="cards__title">
+                      Локация 1
+                    </h4>
+                    <address class="cards__address">
+                      Выборг, ул. Симоняка, 21
+                    </address>
+                    <p class="cards__link-text">
+                      Перейти на локацию
+                    </p>
+                    <p class="cards__icon-wrap">
+                      <!-- Добавить сюда иконку -->
+                    </p>
+                    <div class="cards__background">
+                      <picture>
+                        <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                        <img class="cards__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+                <li class="cards__item">
+                  <a class="cards__link" href="location.html">
+                    <h4 class="cards__title">
+                      Локация 1
+                    </h4>
+                    <address class="cards__address">
+                      Выборг, ул. Симоняка, 21
+                    </address>
+                    <p class="cards__link-text">
+                      Перейти на локацию
+                    </p>
+                    <p class="cards__icon-wrap">
+                      <!-- Добавить сюда иконку -->
+                    </p>
+                    <div class="cards__background">
+                      <picture>
+                        <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                        <img class="cards__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="slides__background">
+                <picture>
+                  <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                  <img class="slides__background-image" src="#" width="10" height="10" alt="#">
+                </picture>
+              </div>
+            </li>
+            <li class="hero-slider__slide slides__item slides__item--card slides__item--video">
+              <h3 class="slides__title">
+                Выберите локацию по душе
+              </h3>
+              <ul class="slides__card cards">
+                <li class="cards__item">
+                  <a class="cards__link" href="location.html">
+                    <h4 class="cards__title">
+                      Локация 1
+                    </h4>
+                    <address class="cards__address">
+                      Выборг, ул. Симоняка, 21
+                    </address>
+                    <p class="cards__link-text">
+                      Перейти на локацию
+                    </p>
+                    <p class="cards__icon-wrap">
+                      <!-- Добавить сюда иконку -->
+                    </p>
+                    <div class="cards__background">
+                      <picture>
+                        <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                        <img class="cards__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+                <li class="cards__item">
+                  <a class="cards__link" href="location.html">
+                    <h4 class="cards__title">
+                      Локация 1
+                    </h4>
+                    <address class="cards__address">
+                      Выборг, ул. Симоняка, 21
+                    </address>
+                    <p class="cards__link-text">
+                      Перейти на локацию
+                    </p>
+                    <p class="cards__icon-wrap">
+                      <!-- Добавить сюда иконку -->
+                    </p>
+                    <div class="cards__background">
+                      <picture>
+                        <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                        <img class="cards__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="slides__background">
+                <!-- к видео добавить атрибут playsinline -->
+                <video class="slides__background-video" poster="#" width="10" height="10" preload="auto" autoplay loop muted>
+                  <!-- <source media="(min-width: 768px)" type="video/mp4" src="#"> -->
+                  <source type="video/mp4" src="#">
+                </video>
+              </div>
+            </li>
+          </ul>
+          <div class="hero-slider__pagination"></div>
+        </div>
+      </section>
+      <section class="main__section booking-section">
+        <h2 class="main__section-title">
+          Успей забронировать
+        </h2>
+        <div class="booking-section__icon-wrap">
+          <!-- тут картинка свг или пнг с управлением через админку -->
+        </div>
+        <!-- тут код модуля бронирования -->
+      </section>
+      <section class="main__section about">
+        <h2 class="main__section-title">
+          Общее описание
+        </h2>
+        <div class="about__wrap">
+          <p class="about__lead">
+            Загородный отдых на заливе в черте города
+          </p>
+          <p class="about__image-container">
+            <picture>
+              <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+              <img class="about__image" src="#" width="10" height="10" alt="#" loading="lazy">
+            </picture>
+          </p>
+          <p class="about__image-container">
+            <picture>
+              <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+              <img class="about__image" src="#" width="10" height="10" alt="#" loading="lazy">
+            </picture>
+          </p>
+          <p class="about__lead">
+            Уютные лоджи и современные купольные глэмпы
+          </p>
+          <div class="about__text">
+            <p class="about__paragraf">
+              Наш глэмпинг находится в самом красивом городе Ленинградской области - в Выборге,на берегу Финского залива.
+            </p>
+            <p class="about__paragraf">
+              С нами Вы сможете кататься на сапах по заливу, встретить закат на необитаемом острове, узнать тайны старинного Выборгаи его окрестностей.
+            </p>
+            <button class="about__more-button button button--more" type="button">
+              <span class="button__text">
+                Подробнее
+              </span>
+            </button>
+            <p class="about__paragraf">
+              Мы нацелены на поддержание спокойной, умиротворяющей атмосферы семейного отдыха, поэтому категорически против, чтобы в общих зонах глэмпинга громко слушали музыку и распивали спиртные напитки, а курение возможно только в специально отведённых местах, чтобы наши маленькие гости не дышали табачным дымом.
+            </p>
+          </div>
+          <div class="about__interier-slider interier-slider">
+            <ul class="interier-slider__wrap">
+              <li class="interier-slider__item" data-text-slider="Лодж: гостинная">
+                <div class="interier-slider__image-container">
+                  <picture>
+                    <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                    <img class="interier-slider__image" src="#" width="10" height="10" alt="#" loading="lazy">
+                  </picture>
+                </div>
+              </li>
+              <li class="interier-slider__item" data-text-slider="Глэмп: терраса">
+                <div class="interier-slider__image-container">
+                  <picture>
+                    <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                    <img class="interier-slider__image" src="#" width="10" height="10" alt="#" loading="lazy">
+                  </picture>
+                </div>
+              </li>
+            </ul>
+            <div class="interier-slider__button-prev button button--slider-interier"></div>
+            <div class="interier-slider__button-next button button--slider-interier button--next"></div>
+            <div class="interier-slider__text-container">
+              <span class="interier-slider__text">
+                Лодж: гостинная
+              </span>
+            </div>
+          </div>
+          <p class="about__image-container">
+            <picture>
+              <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+              <img class="about__image" src="#" width="10" height="10" alt="#" loading="lazy">
+            </picture>
+          </p>
+          <p class="about__image-container">
+            <picture>
+              <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+              <img class="about__image" src="#" width="10" height="10" alt="#" loading="lazy">
+            </picture>
+          </p>
+          <p class="about__image-container">
+            <picture>
+              <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+              <img class="about__image" src="#" width="10" height="10" alt="#" loading="lazy">
+            </picture>
+          </p>
+          <p class="about__lead">
+            А ещё можно кататься на лодке или сапе, Ждем в гости!
+          </p>
+          <a class="about__booking-button button button--booking" href="booking.html">
+            <span class="button__text">
+              Забронировать домик
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="main__section location">
+        <h2 class="main__section-title">
+          У нас есть 2 локации
+        </h2>
+        <ul class="location__card cards cards--location">
+          <li class="cards__item">
+            <h3 class="cards__title">
+              Локация 1
+            </h3>
+            <address class="cards__address">
+              Выборг, ул. Симоняка, 21
+            </address>
+            <a class="cards__button button button--green" href="location.html">
+              Перейти к локации
+            </a>
+            <p class="cards__icon-wrap">
+              <!-- Добавить сюда иконку -->
+            </p>
+            <div class="cards__background">
+              <picture>
+                <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                <img class="cards__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+              </picture>
+            </div>
+          </li>
+          <li class="cards__item">
+            <h3 class="cards__title">
+              Локация 1
+            </h3>
+            <address class="cards__address">
+              Выборг, ул. Симоняка, 21
+            </address>
+            <a class="cards__button button button--green" href="location.html">
+              Перейти к локации
+            </a>
+            <p class="cards__icon-wrap">
+              <!-- Добавить сюда иконку -->
+            </p>
+            <div class="cards__background">
+              <picture>
+                <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                <img class="cards__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="main__section houses">
+        <h2 class="main__section-title">
+          Наши домики
+        </h2>
+        <div class="houses__slider">
+          <ul class="houses__wrap">
+            <li class="houses__card card-houses">
+              <div class="card-houses__title-wrap">
+                <h3 class="card-houses__title">
+                  Лодж
+                </h3>
+                <div class="card-houses__icon-wrap">
+                  <!-- Добавить сюда иконку -->
+                </div>
+                <div class="card-houses__background">
+                  <picture>
+                    <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                    <img class="card-houses__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+              <h4 class="card-houses__subtitle">
+                Описание
+              </h4>
+              <p class="card-houses__description">
+                В рамках спецификации современных стандартов, явные признаки победы
+              </p>
+              <a class="card-houses__link" href="#">
+                Подробнее о размещении
+              </a>
+              <ul class="card-houses__utp-block utp-block">
+                <li class="utp-block__item">
+                  <div class="utp-block__icon-wrap">
+                    <!-- Добавить сюда иконку -->
+                  </div>
+                  <p class="utp-block__text">
+                    Своя кухня
+                  </p>
+                </li>
+                <li class="utp-block__item">
+                  <div class="utp-block__icon-wrap">
+                    <!-- Добавить сюда иконку -->
+                  </div>
+                  <p class="utp-block__text">
+                    Терраса
+                  </p>
+                </li>
+                <li class="utp-block__item">
+                  <div class="utp-block__icon-wrap">
+                    <!-- Добавить сюда иконку -->
+                  </div>
+                  <p class="utp-block__text">
+                    Вид на залив
+                  </p>
+                </li>
+                <li class="utp-block__item">
+                  <div class="utp-block__icon-wrap">
+                    <!-- Добавить сюда иконку -->
+                  </div>
+                  <p class="utp-block__text">
+                    4 гостя
+                  </p>
+                </li>
+              </ul>
+              <footer class="card-houses__footer">
+                <p class="card-houses__price">
+                  <span class="card-houses__money">
+                    от 9 000 руб.
+                  </span>
+                  <span class="card-houses__period">
+                    в сутки
+                  </span>
+                </p>
+                <a class="card-houses__button button button--booking button--blue" href="booking.html">
+                  Забронировать
+                </a>
+              </footer>
+            </li>
+          </ul>
+          <div class="houses__button-prev button button--houses"></div>
+          <div class="houses__button-next button button--houses button--next"></div>
+          <div class="houses__scroll-bar"></div>
+          <span class="houses__notification">
+            Листайте что бы увидеть все домики
+          </span>
+        </div>
+      </section>
+      <section class="main__section activity">
+        <h2 class="main__section-title">
+          Чем у нас заняться
+        </h2>
+        <div class="activity__button-wrap">
+          <button class="activity__button button button--activity button--service button--brown" type="button" data-btn-color="brown">
+            <span class="button__text">
+              Услуги
+            </span>
+          </button>
+          <button class="activity__button button button--activity button--excursions" type="button" data-btn-color="green">
+            <span class="button__text">
+              Экскурсии
+            </span>
+          </button>
+          <span class="activity__notification">
+            Выберите интересующую категорию
+          </span>
+        </div>
+        <ul class="activity__list activity__list--service">
+          <li class="activity__item">
+            <h3 class="activity__title">
+              SPA, Финская баня
+            </h3>
+            <div class="activity__icon-wrap">
+              <!-- Добавить сюда иконку -->
+            </div>
+            <div class="activity__button-wrap">
+              <a class="activity__button button button--activity" href="#">
+                <span class="button__text">
+                  Подробнее
+                </span>
+              </a>
+              <a class="activity__button button button--activity button--green" href="#">
+                <span class="button__text">
+                  Забронировать
+                </span>
+              </a>
+            </div>
+            <div class="activity__background">
+              <picture>
+                <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                <img class="activity__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+              </picture>
+            </div>
+          </li>
+        </ul>
+        <ul class="activity__list activity__list--excursions">
+          <li class="activity__item">
+            <h3 class="activity__title">
+              SPA, Финская баня
+            </h3>
+            <div class="activity__icon-wrap">
+              <!-- Добавить сюда иконку -->
+            </div>
+            <div class="activity__button-wrap">
+              <a class="activity__button button button--activity" href="#">
+                <span class="button__text">
+                  Подробнее
+                </span>
+              </a>
+              <a class="activity__button button button--activity button--green" href="#">
+                <span class="button__text">
+                  Забронировать
+                </span>
+              </a>
+            </div>
+            <div class="activity__background">
+              <picture>
+                <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10">
+                <img class="activity__background-image" src="#" width="10" height="10" alt="#" loading="lazy">
+              </picture>
+            </div>
+          </li>
+        </ul>
+        <button class="activity__button button button--activity button--more" type="button">
+          <span class="button__text">
+            Открыть еще
+          </span>
+        </button>
+      </section>
+      <section class="main__section feedback">
+        <h2 class="main__section-title">
+          Отзывы
+        </h2>
+        <!-- Виджет с отзывами -->
+      </section>
+      <section class="main__section map">
+        <h2 class="main__section-title">
+          Мы находимся здесь
+        </h2>
+        <button class="map__button button button--map button--green" type="button">
+          <span class="button__text">
+            Как до нас добраться
+          </span>
+        </button>
+        <!-- Виджет с картой -->
+      </section>
+    </main>
+    <footer class="body__footer footer">
+      <div class="footer__column">
+        <!-- если находимся на главной то убираем href и добавляем aria-current -->
+        <a class="footer__logo logo logo--footer" href="/" aria-current="true">
+          <span class="logo__wrap logo__wrap--image">
+            <!-- Тут будет иконка выборга -->
+          </span>
+          <span class="logo__wrap logo__wrap--text">
+            <!-- тут будет текст выборга -->
+          </span>
+          <span class="visually-hidden logo__hidden-link-text">
+            Перейти на главную страницу
+          </span>
+        </a>
+        <!-- кнопка бронирования. ведет на отдельную страницу -->
+        <a class="footer__booking-button button button--booking" href="booking.html">
+          <span class="button__text">
+            Забронировать
+          </span>
+        </a>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-title">
+          Контакты
+        </p>
+        <p class="footer__column-group">
+          <span class="footer__group-subtitle">
+            тел.
+          </span>
+          <a class="footer__group-link" href="tel:+78126005007" rel="nofollow noreferrer noopener" target="_blank">
+            7 (812) 600-50-07
+          </a>
+        </p>
+        <p class="footer__column-group">
+          <span class="footer__group-subtitle">
+            Mail
+          </span>
+          <a class="footer__group-link" href="mailto:info@nuova.group" rel="nofollow noreferrer noopener" target="_blank">
+            info@nuova.group
+          </a>
+        </p>
+        <p class="footer__column-group">
+          <span class="footer__group-subtitle">
+            Часы работы
+          </span>
+          <span class="footer__group-link">
+            Круглосуточно
+          </span>
+        </p>
+        <p class="footer__column-group">
+          <span class="footer__group-subtitle">
+            Адрес локация 2
+          </span>
+          <a class="footer__group-link" href="#" rel="nofollow noreferrer noopener" target="_blank">
+            Выборг, ул. Монрепо, 14
+          </a>
+        </p>
+        <p class="footer__column-group">
+          <span class="footer__group-subtitle">
+            Адрес локация 1
+          </span>
+          <a class="footer__group-link" href="#" rel="nofollow noreferrer noopener" target="_blank">
+            Выборг, ул. Симоняка, 21
+          </a>
+        </p>
+      </div>
+      <div class="footer__column"></div>
+      <p class="footer__column-title">
+        Навигация
+      </p>
+      <p class="footer__column-group">
+        <a class="footer__group-link" href="/">
+          Главная
+        </a>
+      </p>
+      <p class="footer__column-group">
+        <a class="footer__group-link" href="booking.html">
+          Бронирование
+        </a>
+      </p>
+      <p class="footer__column-group">
+        <a class="footer__group-link" href="services.html">
+          Услуги
+        </a>
+      </p>
+      <p class="footer__column-group">
+        <a class="footer__group-link" href="location.html">
+          Локация 1
+        </a>
+      </p>
+      <p class="footer__column-group">
+        <a class="footer__group-link" href="blog.html">
+          Блог
+        </a>
+      </p>
+      <div class="footer__column">
+        <p class="footer__column-title">
+          Важное
+        </p>
+        <p class="footer__column-group">
+          <a class="footer__group-link" href="#">
+            Условия размещения
+          </a>
+        </p>
+        <p class="footer__column-group">
+          <a class="footer__group-link" href="#">
+            Инвестицмонное предложение
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="#" rel="nofollow noreferrer noopener" target="_blank">
+              <span class="visually-hidden">
+                Вконтакте
+              </span>
+              <div class="social__icon-wrap">
+                <!-- Добавить сюда иконку -->
+              </div>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" rel="nofollow noreferrer noopener" target="_blank">
+              <span class="visually-hidden">
+                Вотсап
+              </span>
+              <div class="social__icon-wrap">
+                <!-- Добавить сюда иконку -->
+              </div>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" rel="nofollow noreferrer noopener" target="_blank">
+              <span class="visually-hidden">
+                Instagram
+              </span>
+              <div class="social__icon-wrap">
+                <!-- Добавить сюда иконку -->
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-group">
+          <span class="footer__group-subtitle">
+            Разработка сайта
+          </span>
+          <a class="footer__group-link footer__group-link--developer" href="#" rel="nofollow noreferrer noopener" target="_blank">
+            <span class="visually-hidden">
+              Cycle Media
+            </span>
+            <span class="footer__icon-wrap">
+              <!-- Добавить сюда иконку -->
+            </span>
+          </a>
+        </p>
+      </div>
+      <div class="footer__column legal-info">
+        <ul class="legal-info__list">
+          <li class="legal-info__item">
+            <a class="legal-info__link" href="#">
+              Политика конфиденциальности и обработки персональных данных
+            </a>
+          </li>
+          <li class="legal-info__item">
+            <a class="legal-info__link" href="#">
+              Договор публичной оферты
+            </a>
+          </li>
+          <li class="legal-info__item">
+            <a class="legal-info__link" href="#">
+              Информация об оплате картой
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="scripts/index.js" defer></script>
   </body>
 </html>
