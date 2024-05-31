@@ -1,10 +1,16 @@
-// .social {
+.social {
+  @include normalize-list;
 
-// }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 50%;
+}
 
-// .social__item {
-
-// }
+.social__item {
+  width: 36px;
+  height: 36px;
+}
 
 // .social__link {
 

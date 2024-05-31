@@ -1,39 +1,104 @@
-// .about {
+.about {
+  max-width: 320px;
+  padding: 10px;
+}
 
-// }
+.about__wrap {
+  display: grid;
+  grid-template-areas:
+    "lead-one image-one"
+    "image-two image-two"
+    "lead-two lead-two"
+    "text text"
+    "slider slider"
+    "image-three image-three"
+    "image-four image-five"
+    "lead-three lead-three"
+    "button button";
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
-// .about__wrap {
+.about__lead {
+  align-self: self-end;
+  margin: 5px 0;
 
-// }
+  font-weight: 600;
+  font-size: 16px;
 
-// .about__lead {
+  &.about__lead--one {
+    grid-area: lead-one;
+  }
 
-// }
+  &.about__lead--two {
+    grid-area: lead-two;
+    margin: 10px 0 0;
+  }
 
-// .about__image-container {
+  &.about__lead--three {
+    grid-area: lead-three;
+    margin-top: 10px;
+  }
+}
 
-// }
+.about__image-container {
+  height: 145px;
+  margin: 0;
 
-// .about__image {
+  border-radius: 20px;
 
-// }
+  overflow: hidden;
 
-// .about__text {
+  &.about__image-container--one {
+    grid-area: image-one;
+  }
 
-// }
+  &.about__image-container--two {
+    grid-area: image-two;
+  }
 
-// .about__paragraf {
+  &.about__image-container--three {
+    grid-area: image-three;
+    height: 200px;
+  }
 
-// }
+  &.about__image-container--four {
+    grid-area: image-four;
+  }
 
-// .about__more-button {
+  &.about__image-container--five {
+    grid-area: image-five;
+  }
+}
 
-// }
+.about__image {
+  height: 100%;
+  object-fit: cover;
+}
 
-// .about__interier-slider {
+.about__text-wrap {
+  grid-area: text;
+  margin: 0;
+}
 
-// }
+.about__text {
+  height: 122px;
+  overflow: hidden;
+}
 
-// .about__booking-button {
+.about__paragraf {
+  margin: 0 0 10px;
+}
 
-// }
+.about__more-button {
+  margin-bottom: 10px;
+}
+
+.about__interier-slider {
+  grid-area: slider;
+}
+
+.about__booking-button {
+  grid-area: button;
+  margin-top: 10px;
+}

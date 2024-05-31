@@ -32,8 +32,10 @@ body {
   font-variant-numeric: lining-nums;
 }
 
+picture,
 img,
-svg {
+svg,
+video {
   max-width: 100%;
   height: auto;
   object-fit: contain;

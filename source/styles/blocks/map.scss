@@ -1,7 +1,16 @@
-// .map {
+.map {
+  max-width: 300px;
+}
 
-// }
+.map__button {
+  margin-bottom: 20px;
+}
 
-// .map__button {
+.map__map-wrap {
+  width: 300px;
+  height: 500px;
 
-// }
+  border-radius: 20px;
+
+  overflow: hidden;
+}

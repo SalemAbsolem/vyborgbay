@@ -1,18 +1,23 @@
-// .header {
+.header {
+  position: relative;
+}
 
-// }
-
-// .header__wrap {
-
-// }
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $breakpoint-mobile;
+  margin: 0 auto;
+  padding: 10px;
+}
 
 // .header__logo {
 
 // }
 
-// .header__booking-button {
-
-// }
+.header__booking-button {
+  display: none;
+}
 
 // .header__menu-button {
 

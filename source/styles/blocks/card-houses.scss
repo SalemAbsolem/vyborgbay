@@ -1,58 +1,112 @@
-// .card-houses {
+.card-houses {
+  width: 260px;
 
-// }
+  border: 1px solid rgba($color-black, 0.5);
+  border-radius: 20px;
+}
 
-// .card-houses__title-wrap {
+.card-houses__title-wrap {
+  position: relative;
 
-// }
+  height: 145px;
+  padding: 10px;
 
-// .card-houses__title {
+  border-radius: 20px 20px 0 0;
 
-// }
+  overflow: hidden;
+}
 
-// .card-houses__icon-wrap {
+.card-houses__title {
+  margin: 8px 0 0;
 
-// }
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+}
 
-// .card-houses__background {
+.card-houses__icon-wrap {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 
-// }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
 
-// .card-houses__background-image {
+  background-color: $color-white;
+  border-radius: 12px;
+}
 
-// }
+.card-houses__background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 
-// .card-houses__subtitle {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-// }
+    background-color: rgba($color-black, 0.1);
+  }
+}
 
-// .card-houses__description {
+.card-houses__background-image {
+  height: 100%;
+  object-fit: cover;
+}
 
-// }
+.card-houses__subtitle {
+  margin: 10px;
 
-// .card-houses__link {
+  font-weight: 600;
+  font-size: 16px;
+}
 
-// }
+.card-houses__description {
+  margin: 0 10px 10px;
+}
 
-// .card-houses__utp-block {
+.card-houses__link {
+  display: inline-block;
+  margin: 0 10px 10px;
 
-// }
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 
-// .card-houses__footer {
+  opacity: 0.8;
+}
 
-// }
+.card-houses__utp-block {
+  margin: 0 10px 20px;
+}
 
-// .card-houses__price {
+.card-houses__footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0 10px 10px;
+}
 
-// }
+.card-houses__price {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
-// .card-houses__money {
+.card-houses__money {
+  font-weight: 600;
+  font-size: 16px;
+}
 
-// }
-
-// .card-houses__period {
-
-// }
+.card-houses__period {
+  opacity: 0.8;
+}
 
 // .card-houses__button {
 

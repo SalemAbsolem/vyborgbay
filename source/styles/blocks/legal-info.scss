@@ -2,14 +2,20 @@
 
 // }
 
-// .legal-info__list {
+.legal-info__list {
+  @include normalize-list;
 
-// }
+  margin: 0;
+}
 
-// .legal-info__item {
+.legal-info__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 
-// }
+.legal-info__link {
+  color: inherit;
 
-// .legal-info__link {
-
-// }
+  opacity: 0.8;
+}

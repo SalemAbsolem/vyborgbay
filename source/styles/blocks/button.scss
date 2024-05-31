@@ -1,56 +1,132 @@
-// .button {
-//   &.button--booking {
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 20px;
 
-//   }
+  font-family: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  font-size: inherit;
+  color: inherit;
 
-//   &.button--menu {
+  background: none;
 
-//   }
+  border: 0;
+  border-radius: 14px;
 
-//   &.button--more {
+  cursor: pointer;
 
-//   }
+  &.button--booking {
+    height: 46px;
 
-//   &.button--slider-interier {
+    font-size: 16px;
+  }
 
-//   }
+  &.button--booking.button--houses {
+    padding: 10px;
+    height: 36px;
 
-//   &.button--houses {
+    font-size: 12px;
+  }
 
-//   }
+  // &.button--menu {
 
-//   &.button--activity {
+  // }
 
-//   }
+  &.button--slides {
+    height: 46px;
 
-//   &.button--service {
+    font-size: 16px;
+  }
 
-//   }
+  &.button--more {
+    padding: 0;
 
-//   &.button--excursions {
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $color-black;
 
-//   }
+    border: 0;
 
-//   &.button--map {
+    opacity: 0.8;
+  }
 
-//   }
+  &.button--slider-interier {
+    width: 36px;
+    height: 36px;
+    padding: 10px;
 
-//   &.button--next {
+    border: 0;
+    border-radius: 12px;
 
-//   }
+    .button__icon {
+      width: 10px;
+      height: 10px;
+    }
+  }
 
-//   &.button--green {
+  // &.button--houses {
 
-//   }
+  // }
 
-//   &.button--blue {
+  &.button--activity {
+    height: 36px;
+  }
 
-//   }
+  // &.button--service {
 
-//   &.button--brown {
+  // }
 
-//   }
-// }
+  // &.button--excursions {
+
+  // }
+
+  // &.button--map {
+
+  // }
+
+  &.button--next {
+    transform: rotate(180deg);
+  }
+
+  &.button--with-border {
+    border: 1px solid rgba($color-black, 0.5);
+  }
+
+  &.button--white {
+    color: $color-black;
+
+    background-color: $color-white;
+  }
+
+  &.button--green {
+    color: $color-white;
+
+    background-color: $color-green;
+  }
+
+  &.button--blue {
+    color: $color-white;
+
+    background-color: $color-blue;
+  }
+
+  &.button--brown {
+    color: $color-white;
+
+    background-color: $color-brown;
+  }
+
+  &.button--mint {
+    color: $color-white;
+
+    background-color: $color-mint;
+  }
+}
 
 // .button__text {
 

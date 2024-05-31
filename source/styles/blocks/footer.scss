@@ -1,41 +1,130 @@
-// .footer {
+.footer {
+  max-width: 300px;
+  margin: 0 auto 20px;
+  padding: 10px;
 
-// }
+  border: 1px solid rgba($color-black, 0.5);
+  border-radius: 20px;
 
-// .footer__column {
+  overflow: hidden;
+}
 
-// }
+.footer__column {
+  &.footer__column--navigation {
+    height: 32px;
 
-// .footer__logo {
+    overflow: hidden;
 
-// }
+    @media #{$mobile-only} {
+      .footer__column-title {
+        cursor: pointer;
+      }
+    }
+  }
 
-// .footer__booking-button {
+  &.footer__column--active {
+    height: 100%;
 
-// }
+    .footer__column-title {
+      color: $color-brown;
+      /* stylelint-disable max-nesting-depth */
+      &::after {
+        background-color: $color-brown;
 
-// .footer__column-title {
+        transform: rotate(-90deg);
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+}
 
-// }
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
 
-// .footer__column-group {
+  .footer__column-group {
+    margin: 0;
+  }
+}
 
-// }
+.footer__logo {
+  margin-bottom: 4px;
+}
 
-// .footer__group-subtitle {
+.footer__notification {
+  display: inline-block;
+  margin: 0 0 20px;
+  opacity: 0.5;
+}
 
-// }
+.footer__booking-button {
+  margin-bottom: 20px;
+}
 
-// .footer__group-link {
-//   &.footer__group-link--developer {
+.footer__column-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
 
-//   }
-// }
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 24px;
 
-// .footer__social {
+  &::after {
+    content: "";
 
-// }
+    display: block;
+    width: 15px;
+    height: 15px;
+
+    background-color: $color-black;
+
+    mask-image: url("../../images/arrow-slider.svg");
+
+    transform: rotate(-180deg);
+  }
+}
+
+.footer__column-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.footer__group-subtitle {
+  font-weight: 500;
+  font-size: 12px;
+
+  opacity: 0.5;
+}
+
+.footer__group-link {
+  width: fit-content;
+
+  font-weight: 600;
+  font-size: 16px;
+  color: inherit;
+
+  // &.footer__group-link--developer {
+
+  // }
+}
+
+.footer__social {
+  margin: 0;
+}
 
 // .footer__icon-wrap {
 
 // }
+
+.footer__line {
+  width: 300px;
+  height: 1px;
+  margin: 20px -10px 10px;
+
+  background-color: rgba($color-black, 0.5);
+}
