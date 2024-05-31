@@ -31,9 +31,11 @@
     font-size: 12px;
   }
 
-  // &.button--menu {
-
-  // }
+  &.button--menu {
+    width: 77px;
+    height: 36px;
+    padding: 10px;
+  }
 
   &.button--slides {
     height: 46px;
@@ -48,11 +50,28 @@
     font-size: 12px;
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    text-underline-offset: 1px;
     color: $color-black;
 
     border: 0;
 
     opacity: 0.8;
+
+    transition: opacity $tr-default, text-underline-offset $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        text-underline-offset: 4px;
+
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      text-underline-offset: 1px;
+
+      opacity: 0.5;
+    }
   }
 
   &.button--slider-interier {
@@ -90,44 +109,256 @@
   // }
 
   &.button--next {
-    transform: rotate(180deg);
+    transform: scaleX(-1);
   }
 
   &.button--with-border {
-    border: 1px solid rgba($color-black, 0.5);
+    border: 1px solid $color-gray;
   }
 
-  &.button--white {
+  &.button--white-brown {
     color: $color-black;
 
-    background-color: $color-white;
+    background-color: $color-brown;
+
+    box-shadow: inset 0 46px 0 0 $color-white;
+
+    transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-white;
+
+        box-shadow: inset 0 8px 0 0 $color-white;
+      }
+    }
+
+    &:active {
+      color: $color-white;
+
+      box-shadow: inset 0 0 0 0 $color-white;
+    }
+
+    &.button--with-border-on-hover {
+      box-shadow: inset 0 0 0 1px $color-gray, inset 0 46px 0 0 $color-white;
+
+      @media #{$hover} {
+        &:hover {
+          box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-white;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-white;
+      }
+    }
   }
 
-  &.button--green {
+  &.button--brown-white {
     color: $color-white;
+
+    background-color: $color-white;
+
+    box-shadow: inset 0 46px 0 0 $color-brown;
+
+    transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-black;
+
+        box-shadow: inset 0 8px 0 0 $color-brown;
+      }
+    }
+
+    &:active {
+      color: $color-black;
+
+      box-shadow: inset 0 0 0 0 $color-brown;
+    }
+
+    &.button--with-border-on-hover {
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-brown;
+
+      @media #{$hover} {
+        &:hover {
+          box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-brown;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-brown;
+      }
+    }
+  }
+
+  &.button--green-white {
+    color: $color-white;
+
+    background-color: $color-white;
+
+    box-shadow: inset 0 46px 0 0 $color-green;
+
+    transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-black;
+
+        box-shadow: inset 0 8px 0 0 $color-green;
+      }
+    }
+
+    &:active {
+      color: $color-black;
+
+      box-shadow: inset 0 0 0 0 $color-green;
+    }
+
+    &.button--with-border-on-hover {
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-green;
+
+      @media #{$hover} {
+        &:hover {
+          box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-green;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-green;
+      }
+    }
+  }
+
+  &.button--white-green {
+    color: $color-black;
 
     background-color: $color-green;
+
+    box-shadow: inset 0 46px 0 0 $color-white;
+
+    transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-white;
+
+        box-shadow: inset 0 8px 0 0 $color-white;
+
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+
+    &:active {
+      color: $color-white;
+
+      box-shadow: inset 0 0 0 0 $color-white;
+
+      path {
+        fill: $color-white;
+      }
+    }
+
+    &.button--with-border-on-hover {
+      box-shadow: inset 0 0 0 1px $color-gray, inset 0 46px 0 0 $color-white;
+
+      @media #{$hover} {
+        &:hover {
+          box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-white;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-white;
+      }
+    }
   }
 
-  &.button--blue {
+  &.button--blue-white {
     color: $color-white;
 
-    background-color: $color-blue;
+    background-color: $color-white;
+
+    box-shadow: inset 0 46px 0 0 $color-blue;
+
+    transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-black;
+
+        box-shadow: inset 0 8px 0 0 $color-blue;
+      }
+    }
+
+    &:active {
+      color: $color-black;
+
+      box-shadow: inset 0 0 0 0 $color-blue;
+    }
+
+    &.button--with-border-on-hover {
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-blue;
+
+      @media #{$hover} {
+        &:hover {
+          box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-blue;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-blue;
+      }
+    }
   }
 
-  &.button--brown {
+  &.button--mint-white {
     color: $color-white;
 
-    background-color: $color-brown;
-  }
+    background-color: $color-white;
 
-  &.button--mint {
-    color: $color-white;
+    box-shadow: inset 0 46px 0 0 $color-mint;
 
-    background-color: $color-mint;
+    transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
+
+    @media #{$hover} {
+      &:hover {
+        color: $color-black;
+
+        box-shadow: inset 0 8px 0 0 $color-mint;
+      }
+    }
+
+    &:active {
+      color: $color-black;
+
+      box-shadow: inset 0 0 0 0 $color-mint;
+    }
+
+    &.button--with-border-on-hover {
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-mint;
+
+      @media #{$hover} {
+        &:hover {
+          box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-mint;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-mint;
+      }
+    }
   }
 }
 
 // .button__text {
 
 // }
+
+.button__icon {
+  path {
+    transition: fill $tr-default;
+  }
+}

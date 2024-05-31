@@ -1,14 +1,82 @@
-// .pages-list {
+.pages-list {
+  @include normalize-list;
+}
 
-// }
+.pages-list__item {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $color-black;
 
-// .pages-list__item {
-//   &.pages-list__item--current {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 
-//   }
+  &.pages-list__item--current {
+    color: $color-green;
 
-// }
+    .pages-list__link {
+      pointer-events: none;
+      cursor: default;
+    }
 
-// .pages-list__link {
+    .pages-list__link::after {
+      background-color: $color-green;
 
-// }
+      transform: rotate(-180deg) translateX(0);
+    }
+  }
+}
+
+.pages-list__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: inherit;
+
+  transition: color $tr-default, opacity $tr-default;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 15px;
+    height: 15px;
+
+    background-color: $color-black;
+
+    mask-image: url("../../images/arrow-slider.svg");
+
+    transform: rotate(-180deg) translateX(5px);
+
+    transition: background-color $tr-default, transform $tr-default, opacity $tr-default;
+  }
+
+  @media #{$hover} {
+    &:hover {
+      color: $color-green;
+    }
+
+    &:hover::after {
+      background-color: $color-green;
+
+      transform: rotate(-180deg) translateX(0);
+    }
+  }
+
+  &:active {
+    color: $color-green;
+
+    opacity: 0.5;
+  }
+
+  &:active::after {
+    background-color: $color-green;
+
+    opacity: 0.5;
+
+    transform: rotate(-180deg) translateX(0);
+  }
+}

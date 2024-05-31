@@ -53,6 +53,7 @@
 
   </head>
   <body class="page__body body">
+    <!-- header--nav-is-open -->
     <header class="body__header header">
       <div class="header__wrap">
         <!-- если находимся на главной то убираем href и добавляем aria-current -->
@@ -78,12 +79,13 @@
           </span>
         </a>
         <!-- нужен модификатор на открытое меню -->
-        <button class="header__menu-button button button--menu button--with-border" type="button">
+        <button class="header__menu-button button button--menu button--white-brown button--with-border-on-hover" type="button">
           <span class="button__text">
             Меню
           </span>
         </button>
         <!-- список с пунктами меню -->
+        <!-- site-navigation--is-open -->
         <nav class="header__site-navigetion site-navigation site-navigation--header">
           <ul class="site-navigation__pages-list pages-list">
             <!-- класс для текущей страницы pages-list__item\-\-current -->
@@ -114,6 +116,7 @@
               </a>
             </li>
           </ul>
+          <div class="site-navigation__line line"></div>
           <div class="site-navigation__footer">
             <p class="site-navigation__contact-container">
               <span class="site-navigation__title-link">
@@ -155,7 +158,7 @@
               <p class="slides__description">
                 Акция действует ограниченное время.
               </p>
-              <a class="slides__button button button--slides button--green" href="#">
+              <a class="slides__button button button--slides button--green-white" href="#">
                 <span class="button__text">
                   Узнать больше
                 </span>
@@ -171,7 +174,7 @@
               <h3 class="slides__title">
                 Насладитесь Выборгом комфортно с Vyborg Bay
               </h3>
-              <a class="slides__button button button--slides button--green" href="#">
+              <a class="slides__button button button--slides button--green-white" href="#">
                 <span class="button__text">
                   Узнать больше
                 </span>
@@ -238,7 +241,7 @@
                   </a>
                 </li>
               </ul>
-              <a class="slides__button button button--slides button--green" href="#">
+              <a class="slides__button button button--slides button--green-white" href="#">
                 <span class="button__text">
                   Узнать больше
                 </span>
@@ -300,7 +303,7 @@
                   </a>
                 </li>
               </ul>
-              <a class="slides__button button button--slides button--green" href="#">
+              <a class="slides__button button button--slides button--green-white" href="#">
                 <span class="button__text">
                   Узнать больше
                 </span>
@@ -388,12 +391,12 @@
                 </div>
               </li>
             </ul>
-            <div class="interier-slider__button-prev button button--slider-interier button--white">
+            <div class="interier-slider__button-prev button button--slider-interier button--white-green">
               <svg class="button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18168 0.976401C6.98641 0.78114 6.66983 0.781141 6.47457 0.976404L2.80221 4.64879C2.60695 4.84405 2.60695 5.16064 2.80221 5.3559L6.47457 9.02826C6.66983 9.22352 6.98642 9.22352 7.18168 9.02826C7.37694 8.833 7.37694 8.51642 7.18168 8.32115L3.86287 5.00234L7.18168 1.68351C7.37694 1.48825 7.37694 1.17166 7.18168 0.976401Z" fill="#1F1F1F"/>
               </svg>
             </div>
-            <div class="interier-slider__button-next button button--slider-interier button--white button--next">
+            <div class="interier-slider__button-next button button--slider-interier button--white-green button--next">
               <svg class="button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18168 0.976401C6.98641 0.78114 6.66983 0.781141 6.47457 0.976404L2.80221 4.64879C2.60695 4.84405 2.60695 5.16064 2.80221 5.3559L6.47457 9.02826C6.66983 9.22352 6.98642 9.22352 7.18168 9.02826C7.37694 8.833 7.37694 8.51642 7.18168 8.32115L3.86287 5.00234L7.18168 1.68351C7.37694 1.48825 7.37694 1.17166 7.18168 0.976401Z" fill="#1F1F1F"/>
               </svg>
@@ -425,7 +428,7 @@
           <p class="about__lead about__lead--three">
             А ещё можно кататься на лодке или сапе, Ждем в гости!
           </p>
-          <a class="about__booking-button button button--booking button--green" href="booking.html">
+          <a class="about__booking-button button button--booking button--green-white button--with-border-on-hover" href="booking.html">
             <span class="button__text">
               Забронировать домик
             </span>
@@ -444,7 +447,7 @@
             <address class="cards__address">
               Выборг, ул. Симоняка, 21
             </address>
-            <a class="cards__button button button--green" href="location.html">
+            <a class="cards__button button button--green-white" href="location.html">
               Перейти к локации
             </a>
             <p class="cards__icon-wrap">
@@ -466,7 +469,7 @@
             <address class="cards__address">
               Выборг, ул. Симоняка, 21
             </address>
-            <a class="cards__button button button--blue" href="location.html">
+            <a class="cards__button button button--blue-white" href="location.html">
               Перейти к локации
             </a>
             <p class="cards__icon-wrap">
@@ -558,7 +561,7 @@
                     в сутки
                   </span>
                 </p>
-                <a class="card-houses__button button button--booking button--houses button--blue" href="booking.html">
+                <a class="card-houses__button button button--booking button--houses button--blue-white button--with-border-on-hover" href="booking.html">
                   Забронировать
                 </a>
               </footer>
@@ -632,7 +635,7 @@
                     в сутки
                   </span>
                 </p>
-                <a class="card-houses__button button button--booking button--houses button--blue" href="booking.html">
+                <a class="card-houses__button button button--booking button--houses button--blue-white button--with-border-on-hover" href="booking.html">
                   Забронировать
                 </a>
               </footer>
@@ -706,7 +709,7 @@
                     в сутки
                   </span>
                 </p>
-                <a class="card-houses__button button button--booking button--houses button--blue" href="booking.html">
+                <a class="card-houses__button button button--booking button--houses button--blue-white button--with-border-on-hover" href="booking.html">
                   Забронировать
                 </a>
               </footer>
@@ -780,7 +783,7 @@
                     в сутки
                   </span>
                 </p>
-                <a class="card-houses__button button button--booking button--houses button--blue" href="booking.html">
+                <a class="card-houses__button button button--booking button--houses button--blue-white button--with-border-on-hover" href="booking.html">
                   Забронировать
                 </a>
               </footer>
@@ -854,7 +857,7 @@
                     в сутки
                   </span>
                 </p>
-                <a class="card-houses__button button button--booking button--houses button--blue" href="booking.html">
+                <a class="card-houses__button button button--booking button--houses button--blue-white button--with-border-on-hover" href="booking.html">
                   Забронировать
                 </a>
               </footer>
@@ -873,12 +876,12 @@
           Чем у нас заняться
         </h2>
         <div class="activity__button-wrap">
-          <button class="activity__button button button--activity button--service button--brown" type="button" data-btn-color="brown">
+          <button class="activity__button button button--activity button--service button--brown-white button--with-border-on-hover" type="button" data-btn-color="brown">
             <span class="button__text">
               Услуги
             </span>
           </button>
-          <button class="activity__button button button--activity button--excursions button--with-border" type="button" data-btn-color="green">
+          <button class="activity__button button button--activity button--excursions button--white-green button--with-border-on-hover" type="button" data-btn-color="green">
             <span class="button__text">
               Экскурсии
             </span>
@@ -899,12 +902,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -928,12 +931,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -957,12 +960,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -986,12 +989,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1015,12 +1018,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1044,12 +1047,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1073,12 +1076,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1102,12 +1105,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1131,12 +1134,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1162,12 +1165,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1191,12 +1194,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1220,12 +1223,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1249,12 +1252,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1278,12 +1281,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1307,12 +1310,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1336,12 +1339,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1365,12 +1368,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1394,12 +1397,12 @@
               </svg>
             </div>
             <div class="activity__button-wrap">
-              <a class="activity__button button button--activity button--white" href="#">
+              <a class="activity__button button button--activity button--white-brown" href="#">
                 <span class="button__text">
                   Подробнее
                 </span>
               </a>
-              <a class="activity__button button button--activity button--green" href="#">
+              <a class="activity__button button button--activity button--green-white" href="#">
                 <span class="button__text">
                   Забронировать
                 </span>
@@ -1429,7 +1432,7 @@
         <h2 class="main__section-title">
           Мы находимся здесь
         </h2>
-        <button class="map__button button button--map button--mint" type="button">
+        <button class="map__button button button--map button--mint-white button--with-border-on-hover" type="button">
           <span class="button__text">
             Как до нас добраться
           </span>
@@ -1461,7 +1464,7 @@
           Все права защищены
         </span>
         <!-- кнопка бронирования. ведет на отдельную страницу -->
-        <a class="footer__booking-button button button--booking button--green" href="booking.html">
+        <a class="footer__booking-button button button--booking button--green-white button--with-border-on-hover" href="booking.html">
           <span class="button__text">
             Забронировать
           </span>
@@ -1618,7 +1621,7 @@
           </p>
         </div>
       </div>
-      <div class="footer__line"></div>
+      <div class="footer__line line"></div>
       <div class="footer__column legal-info">
         <ul class="legal-info__list">
           <li class="legal-info__item">
