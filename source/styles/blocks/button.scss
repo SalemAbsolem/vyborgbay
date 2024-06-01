@@ -18,6 +18,10 @@
 
   cursor: pointer;
 
+  @media #{$tablet-only} {
+    border-radius: 16px;
+  }
+
   &.button--booking {
     height: 46px;
 
@@ -29,18 +33,39 @@
     height: 36px;
 
     font-size: 12px;
+
+    @media #{$tablet-only} {
+      height: 46px;
+
+      font-size: 16px;
+    }
   }
 
   &.button--menu {
     width: 77px;
     height: 36px;
     padding: 10px;
+
+    @media #{$tablet-only} {
+      width: 89px;
+      height: 46px;
+    }
   }
 
   &.button--slides {
     height: 46px;
 
     font-size: 16px;
+
+    @media #{$tablet-only} {
+      width: 200px;
+    }
+  }
+
+  &.button--cards {
+    @media #{$tablet-only} {
+      height: 46px;
+    }
   }
 
   &.button--more {
@@ -59,11 +84,20 @@
 
     transition: opacity $tr-default, text-underline-offset $tr-default;
 
+    @media #{$tablet-only} {
+      font-size: 16px;
+      text-underline-offset: 2px;
+    }
+
     @media #{$hover} {
       &:hover {
         text-underline-offset: 4px;
 
         opacity: 1;
+
+        @media #{$tablet-only} {
+          text-underline-offset: 6px;
+        }
       }
     }
 
@@ -71,6 +105,10 @@
       text-underline-offset: 1px;
 
       opacity: 0.5;
+
+      @media #{$tablet-only} {
+        text-underline-offset: 2px;
+      }
     }
   }
 
@@ -82,9 +120,23 @@
     border: 0;
     border-radius: 12px;
 
+    @media #{$tablet-only} {
+      width: 46px;
+      height: 46px;
+
+      border-radius: 16px;
+    }
+
     .button__icon {
       width: 10px;
       height: 10px;
+
+      /* stylelint-disable max-nesting-depth */
+      @media #{$tablet-only} {
+        width: 15px;
+        height: 15px;
+      }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -94,6 +146,11 @@
 
   &.button--activity {
     height: 36px;
+
+    @media #{$tablet-only} {
+      height: 46px;
+      padding: 10px;
+    }
   }
 
   // &.button--service {

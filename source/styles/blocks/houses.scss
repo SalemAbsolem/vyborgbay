@@ -1,5 +1,9 @@
 .houses {
   max-width: 300px;
+
+  @media #{$tablet-only} {
+    max-width: 748px;
+  }
 }
 
 .houses__slider {
@@ -17,6 +21,32 @@
     width: 110px;
 
     background-image: linear-gradient(to right, $color-transparent, $color-white);
+
+    pointer-events: none;
+  }
+
+  @media #{$tablet-only} {
+    width: 768px;
+    margin: 0 -10px;
+
+    &::before {
+      inset: 0 -110px 80px auto;
+
+      width: 320px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0 auto 80px -110px;
+      z-index: 10;
+
+      width: 320px;
+
+      background-image: linear-gradient(to left, $color-transparent, $color-white);
+
+      pointer-events: none;
+    }
   }
 }
 
@@ -29,6 +59,11 @@
   margin: 0;
 
   overflow: visible;
+
+  @media #{$tablet-only} {
+    gap: 20px;
+    width: 768px;
+  }
 }
 
 // .houses__card {
@@ -50,6 +85,12 @@
 
   border: 1px solid $color-gray;
   border-radius: 12px;
+
+  @media #{$tablet-only} {
+    width: 748px;
+    height: 20px;
+    margin: 20px auto 0;
+  }
 }
 
 .houses__notification {
@@ -62,4 +103,12 @@
   text-align: center;
 
   opacity: 0.5;
+
+  @media #{$tablet-only} {
+    width: 748px;
+    height: 20px;
+    margin: 20px auto 0;
+
+    font-size: 14px;
+  }
 }

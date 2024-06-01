@@ -1,7 +1,13 @@
 .location {
   max-width: 300px;
+
+  @media #{$tablet-only} {
+    max-width: 748px;
+  }
 }
 
-// .location__card {
-
-// }
+.location__card {
+  @media #{$tablet-only} {
+    margin-top: 30px;
+  }
+}

@@ -4,6 +4,10 @@
 
 .main__section {
   margin: 0 auto 10px;
+
+  @media #{$tablet-only} {
+    margin-bottom: 20px;
+  }
 }
 
 .main__section-title {
@@ -15,8 +19,16 @@
   line-height: 1.2;
   color: $color-black;
 
+  @media #{$tablet-only} {
+    font-size: 50px;
+  }
+
   &.main__section-title--with-icon {
     max-width: 200px;
+
+    @media #{$tablet-only} {
+      max-width: 640px;
+    }
   }
 
   &.main__section-title--feedback {

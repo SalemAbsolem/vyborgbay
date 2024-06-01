@@ -6,11 +6,25 @@
   @include normalize-list;
 
   margin: 0;
+
+  @media #{$tablet-only} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
 
 .legal-info__item {
   &:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @media #{$tablet-only} {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    font-size: 12px;
   }
 }
 

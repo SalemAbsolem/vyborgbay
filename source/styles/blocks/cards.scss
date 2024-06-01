@@ -8,6 +8,13 @@
   margin: 0 auto;
 
   &.cards--location {
+    @media #{$tablet-only} {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      min-height: 380px;
+    }
+
     .cards__item {
       display: flex;
       flex-direction: column;
@@ -19,12 +26,24 @@
       font-weight: 700;
       font-size: 16px;
       color: $color-white;
+
+      /* stylelint-disable max-nesting-depth */
+      @media #{$tablet-only} {
+        font-size: 28px;
+      }
+      /* stylelint-enable max-nesting-depth */
     }
 
     .cards__address {
       font-weight: 500;
       font-size: 12px;
       color: $color-white;
+
+      /* stylelint-disable max-nesting-depth */
+      @media #{$tablet-only} {
+        font-size: 16px;
+      }
+      /* stylelint-enable max-nesting-depth */
     }
 
     .cards__button {
@@ -41,6 +60,14 @@
 
       background-color: $color-white;
       border-radius: 12px;
+
+      /* stylelint-disable max-nesting-depth */
+      @media #{$tablet-only} {
+        width: 46px;
+        height: 46px;
+        padding: 5px;
+      }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }
@@ -55,6 +82,12 @@
   border-radius: 20px;
 
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    padding: 20px;
+
+    border-radius: 25px;
+  }
 }
 
 .cards__link {
@@ -71,6 +104,10 @@
 
   font-weight: 600;
   font-size: 16px;
+
+  @media #{$tablet-only} {
+    font-size: 28px;
+  }
 }
 
 .cards__address {
@@ -80,6 +117,10 @@
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
+
+  @media #{$tablet-only} {
+    font-size: 16px;
+  }
 }
 
 .cards__link-text {
@@ -106,6 +147,9 @@
 }
 
 .cards__icon {
+  width: 100%;
+  height: 100%;
+
   &.cards__icon--green path {
     fill: $color-green;
   }
@@ -130,11 +174,22 @@
 
     background: rgba($color-black, 0.2);
   }
+
+  &.cards__background--scale-on-hover {
+    .cards__background-image {
+      transform: scale(1.1);
+    }
+  }
 }
 
-// .cards__background-image {
+.cards__background-image {
+  width: 100%;
+  height: 100%;
 
-// }
+  object-fit: cover;
+
+  transition: transform $tr-default;
+}
 
 // .cards__button {
 

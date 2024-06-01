@@ -13,6 +13,10 @@
     margin-bottom: 10px;
   }
 
+  @media #{$tablet-only} {
+    font-size: 28px;
+  }
+
   &.pages-list__item--current {
     color: $color-green;
 

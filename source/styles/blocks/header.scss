@@ -1,10 +1,21 @@
 .header {
   &.header--nav-is-open {
-    .header__logo {
-      left: 10px;
-      top: 10px;
+    @media #{$mobile-only} {
+      .header__logo {
+        left: 10px;
+        top: 10px;
 
-      transition: opacity $tr-default, left $tr-default, top $tr-default 0.3s;
+        transition: opacity $tr-default, left $tr-default, top $tr-default 0.3s;
+      }
+    }
+
+    @media #{$tablet-only} {
+      .header__booking-button {
+        right: 20px;
+        top: 20px;
+
+        transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default, top $tr-default 0.3s;
+      }
     }
 
     .header__menu-button {
@@ -12,6 +23,13 @@
       top: 10px;
 
       transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default, top $tr-default 0.3s;
+
+      /* stylelint-disable max-nesting-depth */
+      @media #{$tablet-only} {
+        right: 20px;
+        top: 20px;
+      }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }
@@ -25,6 +43,11 @@
   max-width: $breakpoint-mobile;
   margin: 0 auto;
   padding: 10px;
+
+  @media #{$tablet-only} {
+    max-width: $breakpoint-tablet;
+    padding: 20px 10px;
+  }
 }
 
 .header__logo {
@@ -32,10 +55,25 @@
   left: 0;
   top: 0;
   z-index: 9999999;
+
+  @media #{$tablet-only} {
+    position: static;
+  }
 }
 
 .header__booking-button {
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 9999999;
+
   display: none;
+  margin: 0 20px 0 auto;
+  width: 206px;
+
+  @media #{$tablet-only} {
+    display: flex;
+  }
 }
 
 .header__menu-button {

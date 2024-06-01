@@ -30,68 +30,8 @@ const tabletOnlyBP = window.matchMedia('screen and (min-width: 768px) and (max-w
 const smallDesctopOnlyBP = window.matchMedia('screen and (min-width: 1200px) and (max-width: 1919.98px)');
 const feedbackBlockBP = window.matchMedia('screen and (max-width: 480.98px)');
 
-// Открытие меню
-
 const header = document.querySelector('.header');
-const menuButton = header.querySelector('.button--menu');
-const menuButtonText = menuButton.querySelector('.button__text');
-const menu = header.querySelector('.site-navigation.site-navigation--header');
-const pageList = menu.querySelectorAll('.pages-list__item').length;
-
-let menuHeight;
-
-if(mobileOnlyBP.matches) {
-  menuHeight = 150 + (39 * pageList) - 10;
-}
-
-menuButton.addEventListener('click', () => {
-  header.classList.toggle('header--nav-is-open');
-  menu.classList.toggle('site-navigation--is-open');
-
-  if(menu.classList.contains('site-navigation--is-open')) {
-    menuButtonText.textContent = 'Закрыть';
-    menuButton.classList.add('button--brown-white');
-    menuButton.classList.remove('button--white-brown');
-    menu.style.height = `${menuHeight}px`;
-  } else {
-    menuButtonText.textContent = 'Меню';
-    menuButton.classList.remove('button--brown-white');
-    menuButton.classList.add('button--white-brown');
-    menu.style.height = '';
-  }
-});
-
-// Аккордион в футере
-
 const footer = document.querySelector('.footer');
-
-if(mobileOnlyBP.matches) {
-  const footerGroups = footer.querySelectorAll('.footer__column--accordion');
-  const footerTitles = [];
-  const groupsHeight = [];
-  const titleHeight = [];
-
-  for(let i = 0; i < footerGroups.length; i++) {
-    footerTitles[i] = footerGroups[i].querySelector('.footer__column-title');
-    titleHeight[i] = footerTitles[i].clientHeight;
-    groupsHeight[i] = footerGroups[i].clientHeight;
-
-    for(let j = 0; j < footerGroups.length; j++) {
-      footerGroups[j].style.height = `${titleHeight[j]}px`;
-    }
-
-    footerGroups[0].style.height = `${groupsHeight[0]}px`;
-
-    footerTitles[i].addEventListener('click', () => {
-      for(let j = 0; j < footerGroups.length; j++) {
-        footerGroups[j].classList.remove('footer__column--active');
-        footerGroups[j].style.height = `${titleHeight[j]}px`;
-      }
-      footerGroups[i].classList.add('footer__column--active');
-      footerGroups[i].style.height = `${groupsHeight[i]}px`;
-    });
-  }
-}
 
 //  Масштабирование
 
@@ -151,6 +91,114 @@ if(notLargeDesctopBP.matches) {
       }
 
       footer.setAttribute('style', `zoom: ${scale}`);
+    }
+  });
+}
+
+// Открытие меню
+
+const menuButton = header.querySelector('.button--menu');
+const menuButtonText = menuButton.querySelector('.button__text');
+const menu = header.querySelector('.site-navigation.site-navigation--header');
+const pageList = menu.querySelectorAll('.pages-list__item').length;
+
+let menuHeight;
+
+if(mobileOnlyBP.matches) {
+  menuHeight = 150 + (39 * pageList) - 10;
+} else if(tabletOnlyBP.matches) {
+  menuHeight = 250 + (44 * pageList) - 10;
+}
+
+menuButton.addEventListener('click', () => {
+  header.classList.toggle('header--nav-is-open');
+  menu.classList.toggle('site-navigation--is-open');
+
+  if(menu.classList.contains('site-navigation--is-open')) {
+    menuButtonText.textContent = 'Закрыть';
+    menuButton.classList.add('button--brown-white');
+    menuButton.classList.remove('button--white-brown');
+    menu.style.height = `${menuHeight}px`;
+  } else {
+    menuButtonText.textContent = 'Меню';
+    menuButton.classList.remove('button--brown-white');
+    menuButton.classList.add('button--white-brown');
+    menu.style.height = '';
+  }
+});
+
+// Аккордион в футере
+
+if(mobileOnlyBP.matches) {
+  const footerGroups = footer.querySelectorAll('.footer__column--accordion');
+  const footerTitles = [];
+  const groupsHeight = [];
+  const titleHeight = [];
+
+  for(let i = 0; i < footerGroups.length; i++) {
+    footerTitles[i] = footerGroups[i].querySelector('.footer__column-title');
+    titleHeight[i] = footerTitles[i].clientHeight;
+    groupsHeight[i] = footerGroups[i].clientHeight;
+
+    for(let j = 0; j < footerGroups.length; j++) {
+      footerGroups[j].style.height = `${titleHeight[j]}px`;
+    }
+
+    footerGroups[0].style.height = `${groupsHeight[0]}px`;
+
+    footerTitles[i].addEventListener('click', () => {
+      for(let j = 0; j < footerGroups.length; j++) {
+        footerGroups[j].classList.remove('footer__column--active');
+        footerGroups[j].style.height = `${titleHeight[j]}px`;
+      }
+      footerGroups[i].classList.add('footer__column--active');
+      footerGroups[i].style.height = `${groupsHeight[i]}px`;
+    });
+  }
+}
+
+
+// увеличение фона при наведении на кнопку
+const locationBlock = document.querySelector('.main__section.location');
+const locationCards = locationBlock.querySelectorAll('.cards__item');
+let locationBackground;
+
+for(let i = 0; i < locationCards.length; i++) {
+  locationCards[i].addEventListener('mouseover', (e) => {
+    locationBackground = locationCards[i].querySelector('.cards__background');
+
+    if(e.target.classList.contains('cards__button') || e.target.classList.contains('button__text')) {
+      locationBackground.classList.add('cards__background--scale-on-hover');
+    }
+  });
+
+  locationCards[i].addEventListener('mouseout', (e) => {
+    locationBackground = locationCards[i].querySelector('.cards__background');
+
+    if(e.target.classList.contains('cards__button') || e.target.classList.contains('button__text')) {
+      locationBackground.classList.remove('cards__background--scale-on-hover');
+    }
+  });
+}
+
+const activityBlock = document.querySelector('.main__section.activity');
+const activityCards = activityBlock.querySelectorAll('.activity__item');
+let activityBackground;
+
+for(let i = 0; i < activityCards.length; i++) {
+  activityCards[i].addEventListener('mouseover', (e) => {
+    activityBackground = activityCards[i].querySelector('.activity__background');
+
+    if(e.target.classList.contains('activity__button') || e.target.classList.contains('button__text')) {
+      activityBackground.classList.add('activity__background--scale-on-hover');
+    }
+  });
+
+  activityCards[i].addEventListener('mouseout', (e) => {
+    activityBackground = activityCards[i].querySelector('.activity__background');
+
+    if(e.target.classList.contains('activity__button') || e.target.classList.contains('button__text')) {
+      activityBackground.classList.remove('activity__background--scale-on-hover');
     }
   });
 }

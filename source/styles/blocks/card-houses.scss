@@ -3,6 +3,13 @@
 
   border: 1px solid rgba($color-black, 0.5);
   border-radius: 20px;
+
+  @media #{$tablet-only} {
+    min-width: 364px;
+    width: 364px;
+
+    border-radius: 25px;
+  }
 }
 
 .card-houses__title-wrap {
@@ -14,6 +21,13 @@
   border-radius: 20px 20px 0 0;
 
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    height: 200px;
+    padding: 20px;
+
+    border-radius: 25px 25px 0 0;
+  }
 }
 
 .card-houses__title {
@@ -24,6 +38,11 @@
   font-size: 16px;
   line-height: 20px;
   color: $color-white;
+
+  @media #{$tablet-only} {
+    font-size: 28px;
+    line-height: 30px;
+  }
 }
 
 .card-houses__icon-wrap {
@@ -36,9 +55,21 @@
   justify-content: center;
   width: 36px;
   height: 36px;
+  padding: 4px;
 
   background-color: $color-white;
   border-radius: 12px;
+
+  @media #{$tablet-only} {
+    top: 20px;
+    right: 20px;
+
+    width: 46px;
+    height: 46px;
+    padding: 5px;
+
+    border-radius: 16px;
+  }
 }
 
 .card-houses__background {
@@ -65,10 +96,20 @@
 
   font-weight: 600;
   font-size: 16px;
+
+  @media #{$tablet-only} {
+    margin: 10px 20px;
+
+    font-size: 24px;
+  }
 }
 
 .card-houses__description {
   margin: 0 10px 10px;
+
+  @media #{$tablet-only} {
+    margin: 0 20px 5px;
+  }
 }
 
 .card-houses__link {
@@ -78,19 +119,61 @@
   color: inherit;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
 
   opacity: 0.8;
+
+  transition: opacity $tr-default, text-underline-offset $tr-default;
+
+  @media #{$tablet-only} {
+    margin: 0 20px 20px;
+
+    font-size: 16px;
+    text-underline-offset: 2px;
+  }
+
+  @media #{$hover} {
+    &:hover {
+      text-underline-offset: 4px;
+
+      opacity: 1;
+
+      @media #{$tablet-only} {
+        text-underline-offset: 6px;
+      }
+    }
+  }
+
+  &:active {
+    text-underline-offset: 1px;
+
+    opacity: 0.5;
+
+    @media #{$tablet-only} {
+      text-underline-offset: 2px;
+    }
+  }
 }
 
 .card-houses__utp-block {
   margin: 0 10px 20px;
+
+  @media #{$tablet-only} {
+    margin: 0 20px 20px;
+  }
 }
 
 .card-houses__footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   gap: 10px;
   padding: 0 10px 10px;
+
+  @media #{$tablet-only} {
+    gap: 20px;
+    padding: 0 20px 20px;
+  }
 }
 
 .card-houses__price {
@@ -102,6 +185,10 @@
 .card-houses__money {
   font-weight: 600;
   font-size: 16px;
+
+  @media #{$tablet-only} {
+    font-size: 20px;
+  }
 }
 
 .card-houses__period {

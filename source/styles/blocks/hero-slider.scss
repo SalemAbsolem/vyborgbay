@@ -10,6 +10,13 @@
   border-radius: 20px;
 
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    max-width: 748px;
+    height: 978px;
+
+    border-radius: 25px;
+  }
 }
 
 // .hero-slider__wrap {

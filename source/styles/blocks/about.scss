@@ -1,6 +1,11 @@
 .about {
   max-width: 320px;
   padding: 10px;
+
+  @media #{$tablet-only} {
+    max-width: 768px;
+    padding: 20px 10px;
+  }
 }
 
 .about__wrap {
@@ -17,6 +22,19 @@
     "button button";
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+
+  @media #{$tablet-only} {
+    grid-template-areas:
+      "lead-one lead-one image-one image-one image-two image-two"
+      "slider slider slider lead-two lead-two lead-two"
+      "slider slider slider text text text"
+      "slider slider slider text text text"
+      "image-three image-three image-three image-three image-three image-three"
+      "image-four image-four image-five image-five lead-three lead-three"
+      "image-four image-four image-five image-five button button";
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .about__lead {
@@ -25,6 +43,12 @@
 
   font-weight: 600;
   font-size: 16px;
+
+  @media #{$tablet-only} {
+    margin: 20px 0;
+
+    font-size: 24px;
+  }
 
   &.about__lead--one {
     grid-area: lead-one;
@@ -38,11 +62,16 @@
   &.about__lead--three {
     grid-area: lead-three;
     margin-top: 10px;
+
+    @media #{$tablet-only} {
+      margin: 0;
+    }
   }
 }
 
 .about__image-container {
   height: 145px;
+  width: 100%;
   margin: 0;
 
   border-radius: 20px;
@@ -51,29 +80,59 @@
 
   &.about__image-container--one {
     grid-area: image-one;
+
+    @media #{$tablet-only} {
+      height: 220px;
+    }
   }
 
   &.about__image-container--two {
     grid-area: image-two;
+
+    @media #{$tablet-only} {
+      height: 220px;
+    }
   }
 
   &.about__image-container--three {
     grid-area: image-three;
     height: 200px;
+
+    @media #{$tablet-only} {
+      height: 346px;
+    }
   }
 
   &.about__image-container--four {
     grid-area: image-four;
+
+    @media #{$tablet-only} {
+      height: 220px;
+    }
   }
 
   &.about__image-container--five {
     grid-area: image-five;
+
+    @media #{$tablet-only} {
+      height: 220px;
+    }
+  }
+
+  @media #{$hover} {
+    &:hover .about__image {
+      transform: scale(1.1);
+    }
   }
 }
 
 .about__image {
   height: 100%;
+  width: 100%;
+
   object-fit: cover;
+
+  transition: transform $tr-default;
 }
 
 .about__text-wrap {
@@ -84,6 +143,10 @@
 .about__text {
   height: 122px;
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    height: 157px;
+  }
 }
 
 .about__paragraf {
@@ -92,6 +155,10 @@
 
 .about__more-button {
   margin-bottom: 10px;
+
+  @media #{$tablet-only} {
+    margin: 10px 0;
+  }
 }
 
 .about__interier-slider {
@@ -101,4 +168,9 @@
 .about__booking-button {
   grid-area: button;
   margin-top: 10px;
+
+  @media #{$tablet-only} {
+    align-self: end;
+    margin: 0;
+  }
 }

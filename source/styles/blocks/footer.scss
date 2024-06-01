@@ -3,13 +3,34 @@
   margin: 0 auto 20px;
   padding: 10px;
 
-  border: 1px solid rgba($color-black, 0.5);
+  border: 1px solid $color-gray;
   border-radius: 20px;
 
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 748px;
+    width: 748px;
+    padding: 20px;
+
+    border-radius: 25px;
+  }
 }
 
 .footer__column {
+  @media #{$tablet-only} {
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2;
+
+    &.legal-info {
+      grid-column: 1 / -1;
+    }
+  }
+
   &.footer__column--accordion {
     overflow: hidden;
 
@@ -104,46 +125,48 @@
     /* stylelint-enable max-nesting-depth */
   }
 
-  &.footer__column--active {
-    /* stylelint-disable max-nesting-depth */
-    &.footer__column--contacts {
-      .footer__column-title {
-        color: $color-brown;
+  @media #{$mobile-only} {
+    &.footer__column--active {
+      /* stylelint-disable max-nesting-depth */
+      &.footer__column--contacts {
+        .footer__column-title {
+          color: $color-brown;
 
-        pointer-events: none;
+          pointer-events: none;
 
-        &::after {
-          background-color: $color-brown;
+          &::after {
+            background-color: $color-brown;
 
-          transform: rotate(-90deg) translateX(0);
+            transform: rotate(-90deg) translateX(0);
+          }
         }
       }
-    }
 
-    &.footer__column--navigation {
-      .footer__column-title {
-        color: $color-green;
+      &.footer__column--navigation {
+        .footer__column-title {
+          color: $color-green;
 
-        pointer-events: none;
+          pointer-events: none;
 
-        &::after {
-          background-color: $color-green;
+          &::after {
+            background-color: $color-green;
 
-          transform: rotate(-90deg) translateX(0);
+            transform: rotate(-90deg) translateX(0);
+          }
         }
       }
-    }
 
-    &.footer__column--important {
-      .footer__column-title {
-        color: $color-blue;
+      &.footer__column--important {
+        .footer__column-title {
+          color: $color-blue;
 
-        pointer-events: none;
+          pointer-events: none;
 
-        &::after {
-          background-color: $color-blue;
+          &::after {
+            background-color: $color-blue;
 
-          transform: rotate(-90deg) translateX(0);
+            transform: rotate(-90deg) translateX(0);
+          }
         }
       }
     }
@@ -167,6 +190,13 @@
   }
 
   &.footer__column--navigation {
+    @media #{$tablet-only} {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 10px;
+      grid-row: span 1;
+    }
+
     a.footer__group-link {
       @media #{$hover} {
         &:hover {
@@ -190,6 +220,10 @@
   }
 
   &.footer__column--important {
+    @media #{$tablet-only} {
+      grid-row: span 1;
+    }
+
     a.footer__group-link {
       @media #{$hover} {
         &:hover {
@@ -215,6 +249,10 @@
   .footer__column-group {
     margin: 0;
   }
+
+  @media #{$tablet-only} {
+    grid-column: 1 / -1;
+  }
 }
 
 .footer__logo {
@@ -229,6 +267,10 @@
 
 .footer__booking-button {
   margin-bottom: 20px;
+
+  @media #{$tablet-only} {
+    margin: auto 0 0;
+  }
 }
 
 .footer__column-title {
@@ -243,20 +285,29 @@
 
   transition: color $tr-default;
 
-  &::after {
-    content: "";
+  @media #{$mobile-only} {
+    &::after {
+      content: "";
 
-    display: block;
-    width: 15px;
-    height: 15px;
+      display: block;
+      width: 15px;
+      height: 15px;
 
-    background-color: $color-black;
+      background-color: $color-black;
 
-    mask-image: url("../../images/arrow-slider.svg");
+      mask-image: url("../../images/arrow-slider.svg");
 
-    transform: rotate(-180deg) translateX(5px);
+      transform: rotate(-180deg) translateX(5px);
 
-    transition: background-color $tr-default, transform $tr-default;
+      transition: background-color $tr-default, transform $tr-default;
+    }
+  }
+
+  @media #{$tablet-only} {
+    grid-column: 1 / -1;
+    margin-bottom: 5px;
+
+    font-size: 28px;
   }
 }
 
@@ -264,6 +315,10 @@
   display: flex;
   flex-direction: column;
   margin: 10px 0;
+
+  @media #{$tablet-only} {
+    margin: 5px 0;
+  }
 }
 
 .footer__group-subtitle {
@@ -274,6 +329,10 @@
   font-size: 12px;
 
   opacity: 0.5;
+
+  @media #{$tablet-only} {
+    margin-bottom: 0;
+  }
 }
 
 .footer__group-link {
@@ -337,4 +396,9 @@
 
 .footer__line {
   margin: 20px -10px 10px;
+
+  @media #{$tablet-only} {
+    grid-column: 1 / -1;
+    margin: 0 -20px;
+  }
 }
