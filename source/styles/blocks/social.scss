@@ -12,10 +12,24 @@
   height: 36px;
 }
 
-// .social__link {
+.social__link {
+  display: flex;
 
-// }
+  transition: transform $tr-default, opacity $tr-default;
 
-// .social__icon-wrap {
+  @media #{$hover} {
+    &:hover {
+      transform: translateY(-8px);
+    }
+  }
 
-// }
+  &:active {
+    opacity: 0.5;
+
+    transform: translateY(-8px);
+  }
+}
+
+.social__icon-wrap {
+  display: flex;
+}

@@ -1,4 +1,5 @@
 .feedback {
-  max-width: 320px;
+  min-width: $breakpoint-mobile;
+  max-width: $breakpoint-desktop-l;
   margin-bottom: 30px;
 }

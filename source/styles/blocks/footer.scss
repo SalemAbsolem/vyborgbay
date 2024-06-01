@@ -10,30 +10,198 @@
 }
 
 .footer__column {
-  &.footer__column--navigation {
-    height: 32px;
-
+  &.footer__column--accordion {
     overflow: hidden;
 
+    transition: height $tr-default;
+
+    /* stylelint-disable max-nesting-depth */
     @media #{$mobile-only} {
+      &.footer__column--contacts {
+        .footer__column-title {
+          cursor: pointer;
+
+          @media #{$hover} {
+            &:hover {
+              color: $color-brown;
+
+              &::after {
+                background-color: $color-brown;
+
+                transform: rotate(-180deg) translateX(0);
+              }
+            }
+          }
+
+          &:active {
+            color: $color-brown;
+
+            &::after {
+              background-color: $color-brown;
+
+              transform: rotate(-180deg) translateX(0);
+            }
+          }
+        }
+      }
+
+      &.footer__column--navigation {
+        .footer__column-title {
+          cursor: pointer;
+
+          @media #{$hover} {
+            &:hover {
+              color: $color-green;
+
+              &::after {
+                background-color: $color-green;
+
+                transform: rotate(-180deg) translateX(0);
+              }
+            }
+          }
+
+          &:active {
+            color: $color-green;
+
+            &::after {
+              background-color: $color-green;
+
+              transform: rotate(-180deg) translateX(0);
+            }
+          }
+        }
+      }
+
+      &.footer__column--important {
+        .footer__column-title {
+          cursor: pointer;
+
+          @media #{$hover} {
+            &:hover {
+              color: $color-blue;
+
+              &::after {
+                background-color: $color-blue;
+
+                transform: rotate(-180deg) translateX(0);
+              }
+            }
+          }
+
+          &:active {
+            color: $color-blue;
+
+            &::after {
+              background-color: $color-blue;
+
+              transform: rotate(-180deg) translateX(0);
+            }
+          }
+        }
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
+  }
+
+  &.footer__column--active {
+    /* stylelint-disable max-nesting-depth */
+    &.footer__column--contacts {
       .footer__column-title {
-        cursor: pointer;
+        color: $color-brown;
+
+        pointer-events: none;
+
+        &::after {
+          background-color: $color-brown;
+
+          transform: rotate(-90deg) translateX(0);
+        }
+      }
+    }
+
+    &.footer__column--navigation {
+      .footer__column-title {
+        color: $color-green;
+
+        pointer-events: none;
+
+        &::after {
+          background-color: $color-green;
+
+          transform: rotate(-90deg) translateX(0);
+        }
+      }
+    }
+
+    &.footer__column--important {
+      .footer__column-title {
+        color: $color-blue;
+
+        pointer-events: none;
+
+        &::after {
+          background-color: $color-blue;
+
+          transform: rotate(-90deg) translateX(0);
+        }
+      }
+    }
+  }
+  /* stylelint-enable max-nesting-depth */
+
+  &.footer__column--contacts {
+    a.footer__group-link {
+      @media #{$hover} {
+        &:hover {
+          color: $color-brown;
+        }
+      }
+
+      &:active {
+        color: $color-brown;
+
+        opacity: 0.5;
       }
     }
   }
 
-  &.footer__column--active {
-    height: 100%;
+  &.footer__column--navigation {
+    a.footer__group-link {
+      @media #{$hover} {
+        &:hover {
+          color: $color-green;
+        }
+      }
 
-    .footer__column-title {
-      color: $color-brown;
+      &:active {
+        color: $color-green;
+
+        opacity: 0.5;
+      }
       /* stylelint-disable max-nesting-depth */
-      &::after {
-        background-color: $color-brown;
+      &.footer__group-link--current {
+        color: $color-green;
 
-        transform: rotate(-90deg);
+        pointer-events: none;
       }
       /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  &.footer__column--important {
+    a.footer__group-link {
+      @media #{$hover} {
+        &:hover {
+          color: $color-blue;
+        }
+      }
+
+      &:active {
+        color: $color-blue;
+
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -73,6 +241,8 @@
   font-weight: 700;
   font-size: 24px;
 
+  transition: color $tr-default;
+
   &::after {
     content: "";
 
@@ -84,7 +254,9 @@
 
     mask-image: url("../../images/arrow-slider.svg");
 
-    transform: rotate(-180deg);
+    transform: rotate(-180deg) translateX(5px);
+
+    transition: background-color $tr-default, transform $tr-default;
   }
 }
 
@@ -95,6 +267,9 @@
 }
 
 .footer__group-subtitle {
+  display: inline-block;
+  margin-bottom: 3px;
+
   font-weight: 500;
   font-size: 12px;
 
@@ -108,18 +283,57 @@
   font-size: 16px;
   color: inherit;
 
-  // &.footer__group-link--developer {
+  transition: color $tr-default, opacity $tr-default;
 
-  // }
+  &.footer__group-link--developer {
+    position: relative;
+
+    display: flex;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+
+      display: block;
+      height: 1px;
+
+      background-color: $color-black;
+
+      opacity: 0;
+
+      transition: inset $tr-default, opacity $tr-default;
+    }
+
+    @media #{$hover} {
+      &:hover {
+        &::after {
+          inset: auto 0 -5px;
+
+          opacity: 1;
+        }
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+
+      &::after {
+        inset: auto 0 -5px;
+
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .footer__social {
   margin: 0;
 }
 
-// .footer__icon-wrap {
-
-// }
+.footer__icon-wrap {
+  display: flex;
+}
 
 .footer__line {
   margin: 20px -10px 10px;

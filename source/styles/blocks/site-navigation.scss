@@ -15,13 +15,13 @@
   background-color: $color-white;
 
   border: 1px solid $color-gray;
-  border-radius: 20px;
+  border-radius: 14px;
 
   overflow: hidden;
-  // opacity: 0;
-  // visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 
-  transition: left $tr-default 0.3s, width $tr-default 0.3s, height $tr-default, min-height $tr-default;
+  transition: left $tr-default 0.3s, width $tr-default 0.3s, height $tr-default, min-height $tr-default, opacity $tr-default 0.3s, visibility $tr-default 0.3s, border-radius $tr-default;
 
   // &.site-navigation--header {
 
@@ -33,12 +33,13 @@
 
     width: 300px;
     min-height: 150px;
-    height: calc(100vh - 100px); //задать через JS?
 
-    // opacity: 1;
-    // visibility: visible;
+    border-radius: 20px;
 
-    transition: left $tr-default, width $tr-default, height $tr-default 0.3s, min-height $tr-default 0.3s;
+    opacity: 1;
+    visibility: visible;
+
+    transition: left $tr-default, width $tr-default, height $tr-default 0.3s, min-height $tr-default 0.3s, opacity $tr-default, visibility $tr-default, border-radius $tr-default 0.3s;
   }
 }
 

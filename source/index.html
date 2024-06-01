@@ -53,7 +53,7 @@
 
   </head>
   <body class="page__body body">
-    <!-- header--nav-is-open -->
+    <!-- header\-\-nav-is-open -->
     <header class="body__header header">
       <div class="header__wrap">
         <!-- если находимся на главной то убираем href и добавляем aria-current -->
@@ -85,7 +85,7 @@
           </span>
         </button>
         <!-- список с пунктами меню -->
-        <!-- site-navigation--is-open -->
+        <!-- site-navigation\-\-is-open -->
         <nav class="header__site-navigetion site-navigation site-navigation--header">
           <ul class="site-navigation__pages-list pages-list">
             <!-- класс для текущей страницы pages-list__item\-\-current -->
@@ -1470,7 +1470,8 @@
           </span>
         </a>
       </div>
-      <div class="footer__column footer__column--navigation footer__column--active">
+      <!-- footer__column\-\-active -->
+      <div class="footer__column footer__column--accordion footer__column--active footer__column--contacts">
         <p class="footer__column-title">
           Контакты
         </p>
@@ -1515,12 +1516,13 @@
           </a>
         </p>
       </div>
-      <div class="footer__column footer__column--navigation">
+      <div class="footer__column footer__column--accordion footer__column--navigation">
         <p class="footer__column-title">
           Навигация
         </p>
         <p class="footer__column-group">
-          <a class="footer__group-link" href="/">
+          <!-- footer__group-link\-\-current -->
+          <a class="footer__group-link footer__group-link--current" href="/">
             Главная
           </a>
         </p>
@@ -1545,7 +1547,7 @@
           </a>
         </p>
       </div>
-      <div class="footer__column footer__column--navigation">
+      <div class="footer__column footer__column--accordion footer__column--important">
         <p class="footer__column-title">
           Важное
         </p>
@@ -1556,7 +1558,7 @@
         </p>
         <p class="footer__column-group">
           <a class="footer__group-link" href="#">
-            Инвестицмонное предложение
+            Инвестиционное предложение
           </a>
         </p>
       </div>
