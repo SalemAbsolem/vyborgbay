@@ -17,6 +17,20 @@
 
     border-radius: 25px;
   }
+
+  @media #{$desktop-only} {
+    max-width: 1180px;
+    height: 594px;
+
+    border-radius: 25px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 1900px;
+    height: 956px;
+
+    border-radius: 40px;
+  }
 }
 
 // .hero-slider__wrap {

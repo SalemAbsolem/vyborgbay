@@ -56,6 +56,14 @@
     <!-- header\-\-nav-is-open -->
     <header class="body__header header">
       <div class="header__wrap">
+        <ul class="header__breadcrumbs breadcrumbs">
+          <li class="breadcrumbs__item">
+            <!-- если находимся на главной то убираем href и добавляем aria-current -->
+            <a class="breadcrumbs__link" href="/">
+              Главная
+            </a>
+          </li>
+        </ul>
         <!-- если находимся на главной то убираем href и добавляем aria-current -->
         <a class="header__logo logo logo--header" href="/" aria-current="true">
           <span class="logo__wrap logo__wrap--image">
@@ -863,8 +871,16 @@
               </footer>
             </li>
           </ul>
-          <div class="houses__button-prev button button--houses"></div>
-          <div class="houses__button-next button button--houses button--next"></div>
+          <div class="houses__button-prev button button--houses button--white-green button--with-border">
+            <svg class="button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18168 0.976401C6.98641 0.78114 6.66983 0.781141 6.47457 0.976404L2.80221 4.64879C2.60695 4.84405 2.60695 5.16064 2.80221 5.3559L6.47457 9.02826C6.66983 9.22352 6.98642 9.22352 7.18168 9.02826C7.37694 8.833 7.37694 8.51642 7.18168 8.32115L3.86287 5.00234L7.18168 1.68351C7.37694 1.48825 7.37694 1.17166 7.18168 0.976401Z" fill="#1F1F1F"/>
+            </svg>
+          </div>
+          <div class="houses__button-next button button--houses button--next button--white-green button--with-border">
+            <svg class="button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18168 0.976401C6.98641 0.78114 6.66983 0.781141 6.47457 0.976404L2.80221 4.64879C2.60695 4.84405 2.60695 5.16064 2.80221 5.3559L6.47457 9.02826C6.66983 9.22352 6.98642 9.22352 7.18168 9.02826C7.37694 8.833 7.37694 8.51642 7.18168 8.32115L3.86287 5.00234L7.18168 1.68351C7.37694 1.48825 7.37694 1.17166 7.18168 0.976401Z" fill="#1F1F1F"/>
+            </svg>
+          </div>
           <div class="houses__scroll-bar"></div>
           <span class="houses__notification">
             Листайте что бы увидеть все домики

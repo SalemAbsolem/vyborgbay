@@ -6,6 +6,11 @@
     max-width: 768px;
     padding: 20px 10px;
   }
+
+  @media #{$desktop-only} {
+    max-width: 1920px;
+    padding: 20px 10px 0;
+  }
 }
 
 .about__wrap {
@@ -35,6 +40,19 @@
     gap: 20px;
     grid-template-columns: repeat(6, 1fr);
   }
+
+  @media #{$desktop-only} {
+    grid-template-areas:
+      "lead-one lead-one lead-one image-one image-one image-one image-two image-two image-two image-two image-two image-two"
+      "slider slider slider slider slider slider lead-two lead-two lead-two lead-two lead-two lead-two"
+      "slider slider slider slider slider slider text text text text text text"
+      "slider slider slider slider slider slider text text text text text text"
+      "image-three image-three image-three image-three image-four image-four image-four image-four image-five image-five image-five image-five"
+      "image-three image-three image-three image-three image-four image-four image-four image-four image-five image-five image-five image-five"
+      "image-three image-three image-three image-three lead-three lead-three lead-three lead-three lead-three button button button";
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .about__lead {
@@ -48,6 +66,12 @@
     margin: 20px 0;
 
     font-size: 24px;
+  }
+
+  @media #{$desktop-only} {
+    margin: 20px 0;
+
+    font-size: 28px;
   }
 
   &.about__lead--one {
@@ -64,6 +88,10 @@
     margin-top: 10px;
 
     @media #{$tablet-only} {
+      margin: 0;
+    }
+
+    @media #{$desktop-only} {
       margin: 0;
     }
   }
@@ -84,6 +112,10 @@
     @media #{$tablet-only} {
       height: 220px;
     }
+
+    @media #{$desktop-only} {
+      height: 280px;
+    }
   }
 
   &.about__image-container--two {
@@ -91,6 +123,10 @@
 
     @media #{$tablet-only} {
       height: 220px;
+    }
+
+    @media #{$desktop-only} {
+      height: 280px;
     }
   }
 
@@ -101,6 +137,10 @@
     @media #{$tablet-only} {
       height: 346px;
     }
+
+    @media #{$desktop-only} {
+      height: 380px;
+    }
   }
 
   &.about__image-container--four {
@@ -109,6 +149,10 @@
     @media #{$tablet-only} {
       height: 220px;
     }
+
+    @media #{$desktop-only} {
+      height: 280px;
+    }
   }
 
   &.about__image-container--five {
@@ -116,6 +160,10 @@
 
     @media #{$tablet-only} {
       height: 220px;
+    }
+
+    @media #{$desktop-only} {
+      height: 280px;
     }
   }
 
@@ -147,6 +195,10 @@
   @media #{$tablet-only} {
     height: 157px;
   }
+
+  @media #{$desktop-only} {
+    height: 172px;
+  }
 }
 
 .about__paragraf {
@@ -157,6 +209,10 @@
   margin-bottom: 10px;
 
   @media #{$tablet-only} {
+    margin: 10px 0;
+  }
+
+  @media #{$desktop-only} {
     margin: 10px 0;
   }
 }
@@ -170,6 +226,11 @@
   margin-top: 10px;
 
   @media #{$tablet-only} {
+    align-self: end;
+    margin: 0;
+  }
+
+  @media #{$desktop-only} {
     align-self: end;
     margin: 0;
   }

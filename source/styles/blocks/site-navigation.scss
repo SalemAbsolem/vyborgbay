@@ -21,13 +21,24 @@
   opacity: 0;
   visibility: hidden;
 
-  transition: left $tr-default 0.3s, width $tr-default 0.3s, height $tr-default, min-height $tr-default, opacity $tr-default 0.3s, visibility $tr-default 0.3s, border-radius $tr-default;
+  transition: left $tr-default 0.3s, top $tr-default, width $tr-default 0.3s, height $tr-default, min-height $tr-default, opacity $tr-default 0.3s, visibility $tr-default 0.3s, border-radius $tr-default;
 
   @media #{$tablet-only} {
     top: 20px;
     left: 669px;
 
     width: 89px;
+    height: 46px;
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  @media #{$desktop-only} {
+    top: 20px;
+    left: 1049px;
+
+    width: 101px;
     height: 46px;
     padding: 20px;
 
@@ -50,12 +61,22 @@
     opacity: 1;
     visibility: visible;
 
-    transition: left $tr-default, width $tr-default, height $tr-default 0.3s, min-height $tr-default 0.3s, opacity $tr-default, visibility $tr-default, border-radius $tr-default 0.3s;
+    transition: left $tr-default, top $tr-default 0.3s, width $tr-default, height $tr-default 0.3s, min-height $tr-default 0.3s, opacity $tr-default, visibility $tr-default, border-radius $tr-default 0.3s;
 
     @media #{$tablet-only} {
       left: 403px;
 
       width: 355px;
+      min-height: 250px;
+
+      border-radius: 25px;
+    }
+
+    @media #{$desktop-only} {
+      top: 10px;
+      left: 781px;
+
+      width: 389px;
       min-height: 250px;
 
       border-radius: 25px;
@@ -69,12 +90,20 @@
   @media #{$tablet-only} {
     margin-top: 66px;
   }
+
+  @media #{$desktop-only} {
+    margin-top: 83px;
+  }
 }
 
 .site-navigation__line {
   margin: auto -10px 10px;
 
   @media #{$tablet-only} {
+    margin: auto -20px 10px;
+  }
+
+  @media #{$desktop-only} {
     margin: auto -20px 10px;
   }
 }
@@ -101,6 +130,10 @@
   @media #{$tablet-only} {
     font-size: 12px;
   }
+
+  @media #{$desktop-only} {
+    font-size: 12px;
+  }
 }
 
 .site-navigation__link {
@@ -111,6 +144,10 @@
   transition: color $tr-default, opacity $tr-default;
 
   @media #{$tablet-only} {
+    font-size: 16px;
+  }
+
+  @media #{$desktop-only} {
     font-size: 16px;
   }
 

@@ -12,6 +12,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
 }
 
 .legal-info__item {
@@ -20,6 +26,14 @@
   }
 
   @media #{$tablet-only} {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    font-size: 12px;
+  }
+
+  @media #{$desktop-only} {
     &:not(:last-child) {
       margin-bottom: 0;
     }

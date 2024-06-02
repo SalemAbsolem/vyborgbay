@@ -4,10 +4,22 @@
   @media #{$tablet-only} {
     max-width: 748px;
   }
+
+  @media #{$desktop-only} {
+    max-width: 1180px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 1900px;
+  }
 }
 
 .location__card {
   @media #{$tablet-only} {
+    margin-top: 30px;
+  }
+
+  @media #{$desktop-only} {
     margin-top: 30px;
   }
 }

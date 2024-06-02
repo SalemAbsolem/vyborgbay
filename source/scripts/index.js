@@ -106,7 +106,7 @@ let menuHeight;
 
 if(mobileOnlyBP.matches) {
   menuHeight = 150 + (39 * pageList) - 10;
-} else if(tabletOnlyBP.matches) {
+} else if(tabletOnlyBP.matches || smallDesctopOnlyBP.matches) {
   menuHeight = 250 + (44 * pageList) - 10;
 }
 

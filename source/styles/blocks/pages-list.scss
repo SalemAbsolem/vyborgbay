@@ -17,6 +17,10 @@
     font-size: 28px;
   }
 
+  @media #{$desktop-only} {
+    font-size: 28px;
+  }
+
   &.pages-list__item--current {
     color: $color-green;
 

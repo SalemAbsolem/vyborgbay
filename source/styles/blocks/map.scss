@@ -5,10 +5,24 @@
     max-width: 748px;
     width: 748px;
   }
+
+  @media #{$desktop-only} {
+    position: relative;
+
+    max-width: 1180px;
+    width: 1180px;
+    margin-bottom: 20px;
+  }
 }
 
 .map__button {
   margin-bottom: 20px;
+
+  @media #{$desktop-only} {
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
 }
 
 .map__map-wrap {
@@ -22,6 +36,14 @@
   @media #{$tablet-only} {
     width: 748px;
     height: 560px;
+
+    border-radius: 25px;
+  }
+
+  @media #{$desktop-only} {
+    width: 1180px;
+    height: 560px;
+    margin-top: 30px;
 
     border-radius: 25px;
   }

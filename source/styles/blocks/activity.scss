@@ -5,6 +5,11 @@
   @media #{$tablet-only} {
     max-width: 768px;
   }
+
+  @media #{$desktop-only} {
+    max-width: 1920px;
+    padding-bottom: 0;
+  }
 }
 
 .activity__button-wrap {
@@ -15,6 +20,15 @@
   @media #{$tablet-only} {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+  }
+
+  @media #{$desktop-only} {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+    .activity__button {
+      font-size: 16px;
+    }
   }
 }
 
@@ -40,6 +54,13 @@
 
     margin: -5px 0 30px;
   }
+
+  @media #{$desktop-only} {
+    text-align: left;
+    font-size: 16px;
+
+    margin: -15px 0 30px;
+  }
 }
 
 .activity__list {
@@ -56,12 +77,22 @@
     gap: 20px;
   }
 
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
   &.activity__list--service {
     max-height: 620px;
     overflow: hidden;
 
     @media #{$tablet-only} {
       max-height: 540px;
+    }
+
+    @media #{$desktop-only} {
+      max-height: 580px;
     }
   }
 
@@ -88,10 +119,19 @@
     padding: 20px;
   }
 
+  @media #{$desktop-only} {
+    height: 280px;
+    padding: 20px;
+  }
+
   .activity__button-wrap {
     margin-top: auto;
 
     @media #{$tablet-only} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$desktop-only} {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -107,6 +147,12 @@
   color: $color-white;
 
   @media #{$tablet-only} {
+    max-width: calc(100% - 56px);
+
+    font-size: 28px;
+  }
+
+  @media #{$desktop-only} {
     max-width: calc(100% - 56px);
 
     font-size: 28px;
@@ -129,6 +175,15 @@
   border-radius: 12px;
 
   @media #{$tablet-only} {
+    top: 20px;
+    right: 20px;
+
+    width: 46px;
+    height: 46px;
+    padding: 5px;
+  }
+
+  @media #{$desktop-only} {
     top: 20px;
     right: 20px;
 

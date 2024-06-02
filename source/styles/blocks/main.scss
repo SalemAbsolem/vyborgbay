@@ -8,6 +8,14 @@
   @media #{$tablet-only} {
     margin-bottom: 20px;
   }
+
+  @media #{$desktop-only} {
+    margin-bottom: 50px;
+  }
+
+  @media #{$large-desktop-only} {
+    margin-bottom: 100px;
+  }
 }
 
 .main__section-title {
@@ -23,11 +31,23 @@
     font-size: 50px;
   }
 
+  @media #{$desktop-only} {
+    font-size: 50px;
+  }
+
+  @media #{$large-desktop-only} {
+    font-size: 80px;
+  }
+
   &.main__section-title--with-icon {
     max-width: 200px;
 
     @media #{$tablet-only} {
       max-width: 640px;
+    }
+
+    @media #{$desktop-only} {
+      max-width: 1050px;
     }
   }
 

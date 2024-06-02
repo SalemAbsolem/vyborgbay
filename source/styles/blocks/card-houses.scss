@@ -10,6 +10,13 @@
 
     border-radius: 25px;
   }
+
+  @media #{$desktop-only} {
+    min-width: 380px;
+    width: 380px;
+
+    border-radius: 25px;
+  }
 }
 
 .card-houses__title-wrap {
@@ -28,6 +35,13 @@
 
     border-radius: 25px 25px 0 0;
   }
+
+  @media #{$desktop-only} {
+    height: 200px;
+    padding: 20px;
+
+    border-radius: 25px 25px 0 0;
+  }
 }
 
 .card-houses__title {
@@ -40,6 +54,11 @@
   color: $color-white;
 
   @media #{$tablet-only} {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  @media #{$desktop-only} {
     font-size: 28px;
     line-height: 30px;
   }
@@ -61,6 +80,17 @@
   border-radius: 12px;
 
   @media #{$tablet-only} {
+    top: 20px;
+    right: 20px;
+
+    width: 46px;
+    height: 46px;
+    padding: 5px;
+
+    border-radius: 16px;
+  }
+
+  @media #{$desktop-only} {
     top: 20px;
     right: 20px;
 
@@ -102,12 +132,22 @@
 
     font-size: 24px;
   }
+
+  @media #{$desktop-only} {
+    margin: 20px 20px 10px;
+
+    font-size: 28px;
+  }
 }
 
 .card-houses__description {
   margin: 0 10px 10px;
 
   @media #{$tablet-only} {
+    margin: 0 20px 5px;
+  }
+
+  @media #{$desktop-only} {
     margin: 0 20px 5px;
   }
 }
@@ -132,6 +172,13 @@
     text-underline-offset: 2px;
   }
 
+  @media #{$desktop-only} {
+    margin: 0 20px 20px;
+
+    font-size: 20px;
+    text-underline-offset: 2px;
+  }
+
   @media #{$hover} {
     &:hover {
       text-underline-offset: 4px;
@@ -139,6 +186,10 @@
       opacity: 1;
 
       @media #{$tablet-only} {
+        text-underline-offset: 6px;
+      }
+
+      @media #{$desktop-only} {
         text-underline-offset: 6px;
       }
     }
@@ -152,6 +203,10 @@
     @media #{$tablet-only} {
       text-underline-offset: 2px;
     }
+
+    @media #{$desktop-only} {
+      text-underline-offset: 2px;
+    }
   }
 }
 
@@ -159,6 +214,10 @@
   margin: 0 10px 20px;
 
   @media #{$tablet-only} {
+    margin: 0 20px 20px;
+  }
+
+  @media #{$desktop-only} {
     margin: 0 20px 20px;
   }
 }
@@ -171,6 +230,11 @@
   padding: 0 10px 10px;
 
   @media #{$tablet-only} {
+    gap: 20px;
+    padding: 0 20px 20px;
+  }
+
+  @media #{$desktop-only} {
     gap: 20px;
     padding: 0 20px 20px;
   }
@@ -189,10 +253,18 @@
   @media #{$tablet-only} {
     font-size: 20px;
   }
+
+  @media #{$desktop-only} {
+    font-size: 20px;
+  }
 }
 
 .card-houses__period {
   opacity: 0.8;
+
+  @media #{$desktop-only} {
+    font-size: 16px;
+  }
 }
 
 // .card-houses__button {

@@ -8,6 +8,10 @@
   @media #{$tablet-only} {
     gap: 15px 20px;
   }
+
+  @media #{$desktop-only} {
+    gap: 20px;
+  }
 }
 
 .utp-block__item {
@@ -27,6 +31,14 @@
 
     border-radius: 16px;
   }
+
+  @media #{$desktop-only} {
+    gap: 5px;
+    min-height: 46px;
+    padding: 4px;
+
+    border-radius: 16px;
+  }
 }
 
 .utp-block__icon-wrap {
@@ -40,6 +52,13 @@
     height: 35px;
 
     border-radius: 7px;
+  }
+
+  @media #{$desktop-only} {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 9px;
   }
 }
 
@@ -62,5 +81,11 @@
 
   @media #{$tablet-only} {
     width: 93px;
+  }
+
+  @media #{$desktop-only} {
+    width: 107px;
+
+    font-size: 16px;
   }
 }
