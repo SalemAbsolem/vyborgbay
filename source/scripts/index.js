@@ -28,6 +28,7 @@ const mobileOnlyBP = window.matchMedia('screen and (max-width: 767.98px)');
 const notLargeDesctopBP = window.matchMedia('screen and (max-width: 1919.98px)');
 const tabletOnlyBP = window.matchMedia('screen and (min-width: 768px) and (max-width: 1199.98px)');
 const smallDesctopOnlyBP = window.matchMedia('screen and (min-width: 1200px) and (max-width: 1919.98px)');
+const largeDesctopOnlyBP = window.matchMedia('screen and (min-width: 1920px)');
 const feedbackBlockBP = window.matchMedia('screen and (max-width: 480.98px)');
 
 const header = document.querySelector('.header');
@@ -108,6 +109,8 @@ if(mobileOnlyBP.matches) {
   menuHeight = 150 + (39 * pageList) - 10;
 } else if(tabletOnlyBP.matches || smallDesctopOnlyBP.matches) {
   menuHeight = 250 + (44 * pageList) - 10;
+} else if(largeDesctopOnlyBP.matches) {
+  menuHeight = 300 + (74 * pageList) - 20;
 }
 
 menuButton.addEventListener('click', () => {

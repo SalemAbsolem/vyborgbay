@@ -40,6 +40,10 @@
 
     font-size: 12px;
   }
+
+  @media #{$large-desktop-only} {
+    font-size: 18px;
+  }
 }
 
 .legal-info__link {

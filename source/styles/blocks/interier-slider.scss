@@ -21,6 +21,12 @@
 
     border-radius: 25px;
   }
+
+  @media #{$desktop-only} {
+    height: 600px;
+
+    border-radius: 40px;
+  }
 }
 
 .interier-slider__wrap {
@@ -47,6 +53,12 @@
     width: 580px;
     height: 380px;
   }
+
+  @media #{$desktop-only} {
+    min-width: 940px;
+    width: 940px;
+    height: 600px;
+  }
 }
 
 .interier-slider__image-container {
@@ -64,6 +76,11 @@
   position: absolute;
   left: 10px;
   bottom: 10px;
+
+  @media #{$large-desktop-only} {
+    left: 20px;
+    bottom: 20px;
+  }
 }
 
 .interier-slider__button-next {
@@ -77,6 +94,11 @@
 
   @media #{$desktop-only} {
     left: 66px;
+  }
+
+  @media #{$large-desktop-only} {
+    left: 114px;
+    bottom: 20px;
   }
 }
 
@@ -113,10 +135,25 @@
 
     border-radius: 16px;
   }
+
+  @media #{$desktop-only} {
+    bottom: 20px;
+    left: 208px;
+
+    height: 74px;
+    width: 712px;
+    padding: 10px 20px;
+
+    border-radius: 25px;
+  }
 }
 
 .interier-slider__text {
   @media #{$desktop-only} {
     font-size: 16px;
+  }
+
+  @media #{$large-desktop-only} {
+    font-size: 25px;
   }
 }

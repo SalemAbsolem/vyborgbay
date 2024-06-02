@@ -17,6 +17,13 @@
 
     border-radius: 25px;
   }
+
+  @media #{$large-desktop-only} {
+    min-width: 620px;
+    width: 620px;
+
+    border-radius: 40px;
+  }
 }
 
 .card-houses__title-wrap {
@@ -42,6 +49,12 @@
 
     border-radius: 25px 25px 0 0;
   }
+
+  @media #{$large-desktop-only} {
+    height: 320px;
+
+    border-radius: 40px 40px 0 0;
+  }
 }
 
 .card-houses__title {
@@ -61,6 +74,11 @@
   @media #{$desktop-only} {
     font-size: 28px;
     line-height: 30px;
+  }
+
+  @media #{$large-desktop-only} {
+    font-size: 44px;
+    line-height: 58px;
   }
 }
 
@@ -100,6 +118,14 @@
 
     border-radius: 16px;
   }
+
+  @media #{$large-desktop-only} {
+    width: 74px;
+    height: 74px;
+    padding: 10px;
+
+    border-radius: 25px;
+  }
 }
 
 .card-houses__background {
@@ -138,6 +164,12 @@
 
     font-size: 28px;
   }
+
+  @media #{$large-desktop-only} {
+    margin: 20px;
+
+    font-size: 45px;
+  }
 }
 
 .card-houses__description {
@@ -149,6 +181,10 @@
 
   @media #{$desktop-only} {
     margin: 0 20px 5px;
+  }
+
+  @media #{$large-desktop-only} {
+    margin-bottom: 10px;
   }
 }
 
@@ -179,6 +215,13 @@
     text-underline-offset: 2px;
   }
 
+  @media #{$large-desktop-only} {
+    margin: 0 20px 20px;
+
+    font-size: 32px;
+    text-underline-offset: 4px;
+  }
+
   @media #{$hover} {
     &:hover {
       text-underline-offset: 4px;
@@ -191,6 +234,10 @@
 
       @media #{$desktop-only} {
         text-underline-offset: 6px;
+      }
+
+      @media #{$large-desktop-only} {
+        text-underline-offset: 10px;
       }
     }
   }
@@ -206,6 +253,10 @@
 
     @media #{$desktop-only} {
       text-underline-offset: 2px;
+    }
+
+    @media #{$large-desktop-only} {
+      text-underline-offset: 4px;
     }
   }
 }
@@ -257,6 +308,10 @@
   @media #{$desktop-only} {
     font-size: 20px;
   }
+
+  @media #{$large-desktop-only} {
+    font-size: 32px;
+  }
 }
 
 .card-houses__period {
@@ -264,6 +319,10 @@
 
   @media #{$desktop-only} {
     font-size: 16px;
+  }
+
+  @media #{$large-desktop-only} {
+    font-size: 25px;
   }
 }
 

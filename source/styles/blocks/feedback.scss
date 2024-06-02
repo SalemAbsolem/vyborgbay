@@ -2,4 +2,8 @@
   min-width: $breakpoint-mobile;
   max-width: $breakpoint-desktop-l;
   margin-bottom: 30px;
+
+  @media #{$large-desktop-only} {
+    margin-bottom: 100px;
+  }
 }

@@ -80,6 +80,11 @@
       pointer-events: none;
     }
   }
+
+  @media #{$desktop-only} {
+    margin-top: 50px;
+    width: 1910px;
+  }
 }
 
 .houses__wrap {
@@ -104,7 +109,7 @@
 
   @media #{$large-desktop-only} {
     gap: 20px;
-    width: 1200px;
+    width: 1900px;
   }
 }
 
@@ -125,6 +130,10 @@
   @media #{$desktop-only} {
     display: flex;
   }
+
+  @media #{$large-desktop-only} {
+    left: 30px;
+  }
 }
 
 .houses__button-next {
@@ -139,6 +148,11 @@
 
   @media #{$desktop-only} {
     display: flex;
+  }
+
+  @media #{$large-desktop-only} {
+    top: calc(50% - 37px);
+    right: 30px;
   }
 }
 

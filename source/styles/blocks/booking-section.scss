@@ -30,6 +30,7 @@
     width: 1900px;
     min-height: 350px;
     padding: 20px;
+    margin-bottom: 100px;
 
     border-radius: 40px;
   }
@@ -57,6 +58,14 @@
 
     width: 46px;
     height: 46px;
+  }
+
+  @media #{$large-desktop-only} {
+    top: 20px;
+    right: 20px;
+
+    width: 74px;
+    height: 74px;
   }
 }
 

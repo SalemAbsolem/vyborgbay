@@ -13,6 +13,11 @@
     width: 1180px;
     margin-bottom: 20px;
   }
+
+  @media #{$large-desktop-only} {
+    max-width: 1900px;
+    width: 1900px;
+  }
 }
 
 .map__button {
@@ -22,6 +27,10 @@
     position: absolute;
     top: 7px;
     right: 0;
+  }
+
+  @media #{$large-desktop-only} {
+    top: 11px;
   }
 }
 
@@ -46,5 +55,13 @@
     margin-top: 30px;
 
     border-radius: 25px;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 1900px;
+    height: 900px;
+    margin-top: 50px;
+
+    border-radius: 40px;
   }
 }

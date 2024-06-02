@@ -49,9 +49,17 @@
     @media #{$desktop-only} {
       max-width: 1050px;
     }
+
+    @media #{$large-desktop-only} {
+      max-width: 1750px;
+    }
   }
 
   &.main__section-title--feedback {
     padding-left: 10px;
+
+    @media #{$large-desktop-only} {
+      margin-bottom: 50px;
+    }
   }
 }

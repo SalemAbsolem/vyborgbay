@@ -21,6 +21,14 @@
     font-size: 28px;
   }
 
+  @media #{$large-desktop-only} {
+    font-size: 45px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
   &.pages-list__item--current {
     color: $color-green;
 
@@ -60,6 +68,13 @@
     transform: rotate(-180deg) translateX(5px);
 
     transition: background-color $tr-default, transform $tr-default, opacity $tr-default;
+
+    @media #{$large-desktop-only} {
+      width: 23px;
+      height: 23px;
+
+      transform: rotate(-180deg) translateX(10px);
+    }
   }
 
   @media #{$hover} {

@@ -22,6 +22,10 @@
       min-height: 380px;
     }
 
+    @media #{$large-desktop-only} {
+      min-height: 620px;
+    }
+
     .cards__item {
       display: flex;
       flex-direction: column;
@@ -42,6 +46,10 @@
       @media #{$desktop-only} {
         font-size: 28px;
       }
+
+      @media #{$large-desktop-only} {
+        font-size: 45px;
+      }
       /* stylelint-enable max-nesting-depth */
     }
 
@@ -57,6 +65,10 @@
 
       @media #{$desktop-only} {
         font-size: 20px;
+      }
+
+      @media #{$large-desktop-only} {
+        font-size: 32px;
       }
       /* stylelint-enable max-nesting-depth */
     }
@@ -87,6 +99,14 @@
         width: 46px;
         height: 46px;
         padding: 5px;
+      }
+
+      @media #{$large-desktop-only} {
+        width: 74px;
+        height: 74px;
+        padding: 8px;
+
+        border-radius: 19px;
       }
       /* stylelint-enable max-nesting-depth */
     }
@@ -141,6 +161,10 @@
 
     font-size: 28px;
   }
+
+  @media #{$large-desktop-only} {
+    max-width: 800px;
+  }
 }
 
 .cards__address {
@@ -160,6 +184,10 @@
 
     font-size: 20px;
   }
+
+  @media #{$large-desktop-only} {
+    max-width: 800px;
+  }
 }
 
 .cards__link-text {
@@ -175,7 +203,7 @@
 
 .cards__icon-wrap {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 10px;
 
   display: flex;
@@ -183,8 +211,16 @@
   justify-content: center;
   width: 28px;
   height: 28px;
+  padding: 5px;
+  margin: 0;
+
+  @media #{$tablet-only} {
+    top: 20px;
+    right: 20px;
+  }
 
   @media #{$desktop-only} {
+    top: 20px;
     right: 20px;
   }
 }

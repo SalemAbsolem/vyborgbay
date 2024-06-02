@@ -26,6 +26,10 @@
     border-radius: 16px;
   }
 
+  @media #{$large-desktop-only} {
+    border-radius: 25px;
+  }
+
   &.button--booking {
     height: 46px;
 
@@ -33,6 +37,12 @@
 
     @media #{$desktop-only} {
       font-size: 20px;
+    }
+
+    @media #{$large-desktop-only} {
+      height: 74px;
+
+      font-size: 35px;
     }
   }
 
@@ -53,6 +63,12 @@
 
       font-size: 16px;
     }
+
+    @media #{$large-desktop-only} {
+      height: 74px;
+
+      font-size: 25px;
+    }
   }
 
   &.button--menu {
@@ -68,6 +84,11 @@
     @media #{$desktop-only} {
       width: 101px;
       height: 46px;
+    }
+
+    @media #{$large-desktop-only} {
+      width: 162px;
+      height: 74px;
     }
   }
 
@@ -88,12 +109,24 @@
 
     @media #{$large-desktop-only} {
       width: 365px;
+      height: 74px;
+
+      font-size: 32px;
     }
   }
 
   &.button--cards {
     @media #{$tablet-only} {
       height: 46px;
+    }
+
+    @media #{$desktop-only} {
+      height: 46px;
+    }
+
+    @media #{$large-desktop-only} {
+      height: 74px;
+      padding: 10px 35px;
     }
   }
 
@@ -123,6 +156,11 @@
       text-underline-offset: 2px;
     }
 
+    @media #{$large-desktop-only} {
+      font-size: 32px;
+      text-underline-offset: 4px;
+    }
+
     @media #{$hover} {
       &:hover {
         text-underline-offset: 4px;
@@ -135,6 +173,10 @@
 
         @media #{$desktop-only} {
           text-underline-offset: 6px;
+        }
+
+        @media #{$large-desktop-only} {
+          text-underline-offset: 10px;
         }
       }
     }
@@ -150,6 +192,10 @@
 
       @media #{$desktop-only} {
         text-underline-offset: 2px;
+      }
+
+      @media #{$large-desktop-only} {
+        text-underline-offset: 4px;
       }
     }
   }
@@ -176,6 +222,13 @@
       border-radius: 16px;
     }
 
+    @media #{$large-desktop-only} {
+      width: 74px;
+      height: 74px;
+
+      border-radius: 25px;
+    }
+
     .button__icon {
       width: 10px;
       height: 10px;
@@ -189,6 +242,11 @@
       @media #{$desktop-only} {
         width: 15px;
         height: 15px;
+      }
+
+      @media #{$large-desktop-only} {
+        width: 21px;
+        height: 21px;
       }
       /* stylelint-enable max-nesting-depth */
     }
@@ -206,6 +264,21 @@
       width: 15px;
       height: 15px;
     }
+
+    @media #{$large-desktop-only} {
+      width: 74px;
+      height: 74px;
+      padding: 10px;
+
+      border-radius: 25px;
+
+      /* stylelint-disable max-nesting-depth */
+      .button__icon {
+        width: 21px;
+        height: 21px;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
   }
 
   &.button--activity {
@@ -220,6 +293,11 @@
       height: 46px;
       padding: 10px;
     }
+
+    @media #{$large-desktop-only} {
+      height: 74px;
+      padding: 10px;
+    }
   }
 
   // &.button--service {
@@ -230,9 +308,12 @@
 
   // }
 
-  // &.button--map {
-
-  // }
+  &.button--map {
+    @media #{$large-desktop-only} {
+      height: 74px;
+      padding: 10px 30px;
+    }
+  }
 
   &.button--next {
     transform: scaleX(-1);
@@ -240,6 +321,10 @@
 
   &.button--with-border {
     border: 1px solid $color-gray;
+
+    @media #{$large-desktop-only} {
+      border-width: 2px;
+    }
   }
 
   &.button--white-brown {
@@ -251,11 +336,19 @@
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
+    @media #{$large-desktop-only} {
+      box-shadow: inset 0 75px 0 0 $color-white;
+    }
+
     @media #{$hover} {
       &:hover {
         color: $color-white;
 
         box-shadow: inset 0 8px 0 0 $color-white;
+
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 16px 0 0 $color-white;
+        }
       }
     }
 
@@ -268,14 +361,32 @@
     &.button--with-border-on-hover {
       box-shadow: inset 0 0 0 1px $color-gray, inset 0 46px 0 0 $color-white;
 
+      /* stylelint-disable max-nesting-depth */
+      @media #{$large-desktop-only} {
+        box-shadow: inset 0 0 0 2px $color-gray, inset 0 75px 0 0 $color-white;
+      }
+      /* stylelint-enable max-nesting-depth */
+
       @media #{$hover} {
         &:hover {
           box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-white;
+
+          /* stylelint-disable max-nesting-depth */
+          @media #{$large-desktop-only} {
+            box-shadow: inset 0 0 0 2px $color-gray, inset 0 16px 0 0 $color-white;
+          }
+          /* stylelint-enable max-nesting-depth */
         }
       }
 
       &:active {
         box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-white;
+
+        /* stylelint-disable max-nesting-depth */
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 0 0 2px $color-gray, inset 0 0 0 0 $color-white;
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }
@@ -289,11 +400,19 @@
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
+    @media #{$large-desktop-only} {
+      box-shadow: inset 0 75px 0 0 $color-brown;
+    }
+
     @media #{$hover} {
       &:hover {
         color: $color-black;
 
         box-shadow: inset 0 8px 0 0 $color-brown;
+
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 16px 0 0 $color-brown;
+        }
       }
     }
 
@@ -306,14 +425,32 @@
     &.button--with-border-on-hover {
       box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-brown;
 
+      /* stylelint-disable max-nesting-depth */
+      @media #{$large-desktop-only} {
+        box-shadow: inset 0 0 0 0 $color-gray, inset 0 75px 0 0 $color-brown;
+      }
+      /* stylelint-enable max-nesting-depth */
+
       @media #{$hover} {
         &:hover {
           box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-brown;
+
+          /* stylelint-disable max-nesting-depth */
+          @media #{$large-desktop-only} {
+            box-shadow: inset 0 0 0 2px $color-gray, inset 0 16px 0 0 $color-brown;
+          }
+          /* stylelint-enable max-nesting-depth */
         }
       }
 
       &:active {
         box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-brown;
+
+        /* stylelint-disable max-nesting-depth */
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 0 0 2px $color-gray, inset 0 0 0 0 $color-brown;
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }
@@ -327,11 +464,19 @@
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
+    @media #{$large-desktop-only} {
+      box-shadow: inset 0 75px 0 0 $color-green;
+    }
+
     @media #{$hover} {
       &:hover {
         color: $color-black;
 
         box-shadow: inset 0 8px 0 0 $color-green;
+
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 16px 0 0 $color-green;
+        }
       }
     }
 
@@ -344,14 +489,32 @@
     &.button--with-border-on-hover {
       box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-green;
 
+      /* stylelint-disable max-nesting-depth */
+      @media #{$large-desktop-only} {
+        box-shadow: inset 0 0 0 0 $color-gray, inset 0 75px 0 0 $color-green;
+      }
+      /* stylelint-enable max-nesting-depth */
+
       @media #{$hover} {
         &:hover {
           box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-green;
+
+          /* stylelint-disable max-nesting-depth */
+          @media #{$large-desktop-only} {
+            box-shadow: inset 0 0 0 2px $color-gray, inset 0 16px 0 0 $color-green;
+          }
+          /* stylelint-enable max-nesting-depth */
         }
       }
 
       &:active {
         box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-green;
+
+        /* stylelint-disable max-nesting-depth */
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 0 0 2px $color-gray, inset 0 0 0 0 $color-green;
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }
@@ -365,11 +528,19 @@
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
+    @media #{$large-desktop-only} {
+      box-shadow: inset 0 75px 0 0 $color-white;
+    }
+
     @media #{$hover} {
       &:hover {
         color: $color-white;
 
         box-shadow: inset 0 8px 0 0 $color-white;
+
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 16px 0 0 $color-white;
+        }
 
         path {
           fill: $color-white;
@@ -390,14 +561,32 @@
     &.button--with-border-on-hover {
       box-shadow: inset 0 0 0 1px $color-gray, inset 0 46px 0 0 $color-white;
 
+      /* stylelint-disable max-nesting-depth */
+      @media #{$large-desktop-only} {
+        box-shadow: inset 0 0 0 2px $color-gray, inset 0 75px 0 0 $color-white;
+      }
+      /* stylelint-enable max-nesting-depth */
+
       @media #{$hover} {
         &:hover {
           box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-white;
+
+          /* stylelint-disable max-nesting-depth */
+          @media #{$large-desktop-only} {
+            box-shadow: inset 0 0 0 2px $color-gray, inset 0 16px 0 0 $color-white;
+          }
+          /* stylelint-enable max-nesting-depth */
         }
       }
 
       &:active {
         box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-white;
+
+        /* stylelint-disable max-nesting-depth */
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 0 0 2px $color-gray, inset 0 0 0 0 $color-white;
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }
@@ -411,11 +600,19 @@
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
+    @media #{$large-desktop-only} {
+      box-shadow: inset 0 75px 0 0 $color-blue;
+    }
+
     @media #{$hover} {
       &:hover {
         color: $color-black;
 
         box-shadow: inset 0 8px 0 0 $color-blue;
+
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 16px 0 0 $color-blue;
+        }
       }
     }
 
@@ -428,14 +625,32 @@
     &.button--with-border-on-hover {
       box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-blue;
 
+      /* stylelint-disable max-nesting-depth */
+      @media #{$large-desktop-only} {
+        box-shadow: inset 0 0 0 0 $color-gray, inset 0 75px 0 0 $color-blue;
+      }
+      /* stylelint-enable max-nesting-depth */
+
       @media #{$hover} {
         &:hover {
           box-shadow: inset 0 0 0 1px $color-gray, inset 0 8px 0 0 $color-blue;
+
+          /* stylelint-disable max-nesting-depth */
+          @media #{$large-desktop-only} {
+            box-shadow: inset 0 0 0 2px $color-gray, inset 0 16px 0 0 $color-blue;
+          }
+          /* stylelint-enable max-nesting-depth */
         }
       }
 
       &:active {
         box-shadow: inset 0 0 0 1px $color-gray, inset 0 0 0 0 $color-blue;
+
+        /* stylelint-disable max-nesting-depth */
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 0 0 2px $color-gray, inset 0 0 0 0 $color-blue;
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }
@@ -449,11 +664,19 @@
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
+    @media #{$large-desktop-only} {
+      box-shadow: inset 0 75px 0 0 $color-mint;
+    }
+
     @media #{$hover} {
       &:hover {
         color: $color-black;
 
         box-shadow: inset 0 8px 0 0 $color-mint;
+
+        @media #{$large-desktop-only} {
+          box-shadow: inset 0 16px 0 0 $color-mint;
+        }
       }
     }
 
@@ -465,6 +688,12 @@
 
     &.button--with-border-on-hover {
       box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-mint;
+
+      /* stylelint-disable max-nesting-depth */
+      @media #{$large-desktop-only} {
+        box-shadow: inset 0 0 0 0 $color-gray, inset 0 75px 0 0 $color-mint;
+      }
+      /* stylelint-enable max-nesting-depth */
 
       @media #{$hover} {
         &:hover {

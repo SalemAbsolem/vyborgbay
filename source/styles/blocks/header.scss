@@ -67,6 +67,11 @@
     max-width: 1160px;
     padding: 20px 10px;
   }
+
+  @media #{$large-desktop-only} {
+    max-width: 1860px;
+    padding: 20px 10px;
+  }
 }
 
 .header__breadcrumbs {
@@ -109,6 +114,10 @@
   @media #{$desktop-only} {
     display: flex;
     width: 228px;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 380px;
   }
 }
 

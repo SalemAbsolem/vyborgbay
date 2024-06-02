@@ -39,6 +39,14 @@
 
     border-radius: 16px;
   }
+
+  @media #{$large-desktop-only} {
+    gap: 10px;
+    min-height: 74px;
+    padding: 8px 10px;
+
+    border-radius: 25px;
+  }
 }
 
 .utp-block__icon-wrap {
@@ -59,6 +67,13 @@
     height: 35px;
 
     border-radius: 9px;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 15px;
   }
 }
 
@@ -87,5 +102,11 @@
     width: 107px;
 
     font-size: 16px;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 190px;
+
+    font-size: 25px;
   }
 }
