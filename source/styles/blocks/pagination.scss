@@ -1,0 +1,175 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 280px;
+  width: 280px;
+  height: 38px;
+
+  overflow: hidden;
+
+  @media #{$tablet-only} {
+    max-width: 550px;
+    width: 550px;
+    height: 46px;
+  }
+
+  @media #{$desktop-only} {
+    justify-content: flex-end;
+    max-width: 550px;
+    width: 550px;
+    height: 46px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 920px;
+    width: 920px;
+    height: 74px;
+  }
+}
+
+.pagination__wrap {
+  @include normalize-list;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 280px;
+  width: 280px;
+  height: 100%;
+  margin: 0;
+
+  @media #{$tablet-only} {
+    max-width: 550px;
+    width: 550px;
+  }
+
+  @media #{$desktop-only} {
+    justify-content: flex-end;
+    max-width: 550px;
+    width: 550px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 920px;
+    width: 920px;
+  }
+}
+
+.pagination__slide {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  @media #{$tablet-only} {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 15px;
+  }
+
+  @media #{$desktop-only} {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 15px;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 74px;
+    height: 74px;
+
+    border-radius: 25px;
+  }
+}
+
+.pagination__thumb {
+  width: 35px;
+  height: 35px;
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-radius: 12px;
+
+  @media #{$tablet-only} {
+    width: 41px;
+    height: 41px;
+
+    border-radius: 15px;
+  }
+
+  @media #{$desktop-only} {
+    width: 41px;
+    height: 41px;
+
+    border-radius: 15px;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 68px;
+    height: 68px;
+
+    border-radius: 25px;
+    // opacity: 0.2;
+  }
+}
+
+.pagination__timer {
+  --progress: 0;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  stroke-width: 2px;
+  stroke: $color-white;
+  fill: none;
+  stroke-dashoffset: calc(123.36 * (1 - var(--progress)));
+  stroke-dasharray: 123.36;
+
+  clip-path: view-box;
+
+  @media #{$tablet-only} {
+    stroke-dashoffset: calc(148.52 * (1 - var(--progress)));
+    stroke-dasharray: 148.52;
+
+    rect {
+      rx: 15;
+      ry: 15;
+    }
+  }
+
+  @media #{$desktop-only} {
+    stroke-dashoffset: calc(148.52 * (1 - var(--progress)));
+    stroke-dasharray: 148.52;
+
+    rect {
+      rx: 15;
+      ry: 15;
+    }
+  }
+
+  @media #{$large-desktop-only} {
+    stroke-dashoffset: calc(243.8 * (1 - var(--progress)));
+    stroke-dasharray: 243.8;
+
+    rect {
+      rx: 12;
+      ry: 12;
+    }
+  }
+}

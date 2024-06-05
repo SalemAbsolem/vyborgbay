@@ -4,6 +4,12 @@
   display: flex;
   height: 100%;
   margin: 0;
+
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .slides__item {
@@ -42,9 +48,42 @@
   // }
 
   &.slides__item--card {
+    .slides__title {
+      /* stylelint-disable max-nesting-depth */
+      @media #{$tablet-only} {
+        margin: 0;
+      }
+
+      @media #{$desktop-only} {
+        margin: 0;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    .slides__card {
+      /* stylelint-disable max-nesting-depth */
+      @media #{$tablet-only} {
+        margin: auto 0;
+      }
+
+      @media #{$desktop-only} {
+        margin: auto 0;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
     .slides__background::before {
-      background: rgba($color-black, 0.48);
-      backdrop-filter: blur(4px);
+      content: none;
+    }
+
+    .slides__background-image {
+      filter: blur(4px) brightness(0.5);
+      transform: scale(1.1);
+    }
+
+    .slides__background-video {
+      filter: blur(4px) brightness(0.5);
+      transform: scale(1.1);
     }
   }
 }
@@ -126,6 +165,8 @@
   position: absolute;
   inset: 0;
   z-index: -2;
+
+  overflow: hidden;
 
   &::before {
     content: "";

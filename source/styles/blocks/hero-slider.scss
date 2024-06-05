@@ -1,10 +1,23 @@
 .hero-slider {
+  max-width: 320px;
+
+  @media #{$tablet-only} {
+    max-width: 768px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1200px;
+  }
+
   @media #{$large-desktop-only} {
+    max-width: 1920px;
     margin-bottom: 20px;
   }
 }
 
 .hero-slider__container {
+  position: relative;
+
   max-width: 300px;
   height: 500px;
   margin: 0 auto;
@@ -43,6 +56,20 @@
 
 // }
 
-// .hero-slider__pagination {
+.hero-slider__pagination {
+  position: absolute;
+  left: 10px;
+  bottom: 75px;
+  z-index: 20;
 
-// }
+  @media #{$tablet-only} {
+    left: 20px;
+    bottom: 86px;
+  }
+
+  @media #{$desktop-only} {
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+  }
+}

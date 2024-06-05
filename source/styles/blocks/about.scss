@@ -8,11 +8,12 @@
   }
 
   @media #{$desktop-only} {
-    max-width: 1920px;
+    max-width: 1200px;
     padding: 20px 10px 0;
   }
 
   @media #{$large-desktop-only} {
+    max-width: 1920px;
     padding-top: 0;
   }
 }
@@ -78,7 +79,7 @@
     font-size: 28px;
   }
 
-  @media #{$desktop-only} {
+  @media #{$large-desktop-only} {
     margin: 20px 0;
 
     font-size: 45px;

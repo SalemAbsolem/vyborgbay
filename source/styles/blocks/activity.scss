@@ -7,8 +7,12 @@
   }
 
   @media #{$desktop-only} {
-    max-width: 1920px;
+    max-width: 1200px;
     padding-bottom: 0;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 1920px;
   }
 }
 

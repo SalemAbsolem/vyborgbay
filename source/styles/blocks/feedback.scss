@@ -1,9 +1,18 @@
 .feedback {
   min-width: $breakpoint-mobile;
-  max-width: $breakpoint-desktop-l;
+  // max-width: $breakpoint-mobile;
   margin-bottom: 30px;
 
+  @media #{$tablet-only} {
+    max-width: 768px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1200px;
+  }
+
   @media #{$large-desktop-only} {
+    max-width: 1920px;
     margin-bottom: 100px;
   }
 }

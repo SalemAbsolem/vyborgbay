@@ -1,4 +1,20 @@
 .header {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media #{$tablet-only} {
+    max-width: 768px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1200px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 1920px;
+  }
+
   &.header--nav-is-open {
     @media #{$mobile-only} {
       .header__logo {

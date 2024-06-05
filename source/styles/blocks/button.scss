@@ -332,7 +332,7 @@
 
     background-color: $color-brown;
 
-    box-shadow: inset 0 46px 0 0 $color-white;
+    box-shadow: inset 0 47px 0 0 $color-white;
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
@@ -359,7 +359,7 @@
     }
 
     &.button--with-border-on-hover {
-      box-shadow: inset 0 0 0 1px $color-gray, inset 0 46px 0 0 $color-white;
+      box-shadow: inset 0 0 0 1px $color-gray, inset 0 47px 0 0 $color-white;
 
       /* stylelint-disable max-nesting-depth */
       @media #{$large-desktop-only} {
@@ -396,7 +396,7 @@
 
     background-color: $color-white;
 
-    box-shadow: inset 0 46px 0 0 $color-brown;
+    box-shadow: inset 0 47px 0 0 $color-brown;
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
@@ -423,7 +423,7 @@
     }
 
     &.button--with-border-on-hover {
-      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-brown;
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 47px 0 0 $color-brown;
 
       /* stylelint-disable max-nesting-depth */
       @media #{$large-desktop-only} {
@@ -460,7 +460,7 @@
 
     background-color: $color-white;
 
-    box-shadow: inset 0 46px 0 0 $color-green;
+    box-shadow: inset 0 47px 0 0 $color-green;
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
@@ -487,7 +487,7 @@
     }
 
     &.button--with-border-on-hover {
-      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-green;
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 47px 0 0 $color-green;
 
       /* stylelint-disable max-nesting-depth */
       @media #{$large-desktop-only} {
@@ -524,7 +524,7 @@
 
     background-color: $color-green;
 
-    box-shadow: inset 0 46px 0 0 $color-white;
+    box-shadow: inset 0 47px 0 0 $color-white;
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
@@ -559,7 +559,7 @@
     }
 
     &.button--with-border-on-hover {
-      box-shadow: inset 0 0 0 1px $color-gray, inset 0 46px 0 0 $color-white;
+      box-shadow: inset 0 0 0 1px $color-gray, inset 0 47px 0 0 $color-white;
 
       /* stylelint-disable max-nesting-depth */
       @media #{$large-desktop-only} {
@@ -596,7 +596,7 @@
 
     background-color: $color-white;
 
-    box-shadow: inset 0 46px 0 0 $color-blue;
+    box-shadow: inset 0 47px 0 0 $color-blue;
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
@@ -623,7 +623,7 @@
     }
 
     &.button--with-border-on-hover {
-      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-blue;
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 47px 0 0 $color-blue;
 
       /* stylelint-disable max-nesting-depth */
       @media #{$large-desktop-only} {
@@ -660,7 +660,7 @@
 
     background-color: $color-white;
 
-    box-shadow: inset 0 46px 0 0 $color-mint;
+    box-shadow: inset 0 47px 0 0 $color-mint;
 
     transition: box-shadow $tr-default, color $tr-default, width $tr-default, right $tr-default 0.3s, top $tr-default;
 
@@ -687,7 +687,7 @@
     }
 
     &.button--with-border-on-hover {
-      box-shadow: inset 0 0 0 0 $color-gray, inset 0 46px 0 0 $color-mint;
+      box-shadow: inset 0 0 0 0 $color-gray, inset 0 47px 0 0 $color-mint;
 
       /* stylelint-disable max-nesting-depth */
       @media #{$large-desktop-only} {

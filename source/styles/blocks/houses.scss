@@ -20,6 +20,12 @@
 
   overflow: hidden;
 
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -81,7 +87,7 @@
     }
   }
 
-  @media #{$desktop-only} {
+  @media #{$large-desktop-only} {
     margin-top: 50px;
     width: 1910px;
   }
@@ -91,24 +97,24 @@
   @include normalize-list;
 
   display: flex;
-  gap: 10px;
+  // gap: 10px;
   width: 310px;
   margin: 0;
 
   overflow: visible;
 
   @media #{$tablet-only} {
-    gap: 20px;
+    // gap: 20px;
     width: 768px;
   }
 
   @media #{$desktop-only} {
-    gap: 20px;
+    // gap: 20px;
     width: 1200px;
   }
 
   @media #{$large-desktop-only} {
-    gap: 20px;
+    // gap: 20px;
     width: 1900px;
   }
 }
@@ -164,6 +170,8 @@
   border: 1px solid $color-gray;
   border-radius: 12px;
 
+  overflow: hidden;
+
   @media #{$tablet-only} {
     width: 748px;
     height: 20px;
@@ -173,6 +181,14 @@
   @media #{$desktop-only} {
     display: none;
   }
+}
+
+.houses__scrollbar-drag {
+  height: 100%;
+
+  background-color: $color-blue;
+
+  border-radius: inherit;
 }
 
 .houses__notification {
