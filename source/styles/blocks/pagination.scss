@@ -143,33 +143,33 @@
 
   clip-path: view-box;
 
-  @media #{$tablet-only} {
-    stroke-dashoffset: calc(148.52 * (1 - var(--progress)));
-    stroke-dasharray: 148.52;
+  // @media #{$tablet-only} {
+  //   stroke-dashoffset: calc(148.52 * (1 - var(--progress)));
+  //   stroke-dasharray: 148.52;
 
-    rect {
-      rx: 15;
-      ry: 15;
-    }
-  }
+  //   rect {
+  //     rx: 15;
+  //     ry: 15;
+  //   }
+  // }
 
-  @media #{$desktop-only} {
-    stroke-dashoffset: calc(148.52 * (1 - var(--progress)));
-    stroke-dasharray: 148.52;
+  // @media #{$desktop-only} {
+  //   stroke-dashoffset: calc(148.52 * (1 - var(--progress)));
+  //   stroke-dasharray: 148.52;
 
-    rect {
-      rx: 15;
-      ry: 15;
-    }
-  }
+  //   rect {
+  //     rx: 15;
+  //     ry: 15;
+  //   }
+  // }
 
-  @media #{$large-desktop-only} {
-    stroke-dashoffset: calc(243.8 * (1 - var(--progress)));
-    stroke-dasharray: 243.8;
+  // @media #{$large-desktop-only} {
+  //   stroke-dashoffset: calc(243.8 * (1 - var(--progress)));
+  //   stroke-dasharray: 243.8;
 
-    rect {
-      rx: 12;
-      ry: 12;
-    }
-  }
+  //   rect {
+  //     rx: 12;
+  //     ry: 12;
+  //   }
+  // }
 }
