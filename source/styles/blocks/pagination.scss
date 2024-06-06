@@ -138,7 +138,7 @@
   stroke-width: 2px;
   stroke: $color-white;
   fill: none;
-  stroke-dashoffset: calc(123.36 * (1 - var(--progress)));
+  stroke-dashoffset: calc(102.36 * (0 - var(--progress)));
   stroke-dasharray: 123.36;
 
   clip-path: view-box;
