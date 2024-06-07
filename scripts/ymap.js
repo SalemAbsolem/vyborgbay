@@ -1,0 +1,1 @@
+var n=()=>{if(!document.querySelector("#map"))return;let e=new ymaps.Map("map",{center:[60.7293029,28.6895658],zoom:17},{searchControlProvider:"yandex#search"}),o=new ymaps.Placemark(e.getCenter(),{hintContent:"123",balloonContent:"32365466"},{preset:"islands#icon",iconColor:"#68a54b"});e.geoObjects.add(o),e.behaviors.disable("scrollZoom")};export{n as initYmap};
