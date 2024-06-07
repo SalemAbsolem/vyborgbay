@@ -12,6 +12,9 @@ const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, fo
   }
 
   const sectionOnMain = document.querySelectorAll('.main__section:not(.feedback)');
+  if(!sectionOnMain) {
+    return;
+  }
   const sectionFeedback = document.querySelector('.main__section.feedback');
 
   let sectionFeedbackTitle, sectionFeedbackWidjet;
@@ -31,15 +34,21 @@ const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, fo
         sectionOnMain[i].setAttribute('style', `zoom: ${scale}`);
       }
 
-      if(sectionFeedback) {
-        sectionFeedbackTitle.setAttribute('style', `zoom: ${scale}`);
-        if(feedback.matches) {
-          sectionFeedbackWidjet.setAttribute('style', `zoom: ${scale}`);
-        }
-      }
-
       if(footer) {
         footer.setAttribute('style', `zoom: ${scale}`);
+      }
+
+      if(sectionFeedback) {
+        if(feedback.matches) {
+          sectionFeedbackTitle.setAttribute('style', `zoom: ${scale}`);
+          sectionFeedbackWidjet.setAttribute('style', `zoom: ${scale}`);
+        } else if(!feedback.matches && tablet.matches) {
+          scale = widthScreen / 768;
+          sectionFeedback.setAttribute('style', `zoom: ${scale}`);
+        } else if(!feedback.matches && desktopS.matches) {
+          scale = widthScreen / 1200;
+          sectionFeedback.setAttribute('style', `zoom: ${scale}`);
+        }
       }
     }
   } else {

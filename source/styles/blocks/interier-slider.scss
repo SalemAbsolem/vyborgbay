@@ -118,6 +118,28 @@
 
   overflow: hidden;
 
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+
+    display: block;
+    width: 10px;
+
+    background-color: $color-white;
+  }
+
+  &::after {
+    left: 0;
+  }
+
+  &::before {
+    right: 0;
+  }
+
   @media #{$tablet-only} {
     left: 122px;
 
@@ -145,10 +167,24 @@
     padding: 10px 20px;
 
     border-radius: 25px;
+
+    &::after,
+    &::before {
+      width: 20px;
+    }
   }
 }
 
 .interier-slider__text {
+  display: inline-block;
+  padding-right: 2em;
+
+  white-space: nowrap;
+
+  &.interier-slider__text--move-text {
+    animation: move-text 6s 1 normal linear backwards;
+  }
+
   @media #{$desktop-only} {
     font-size: 16px;
   }

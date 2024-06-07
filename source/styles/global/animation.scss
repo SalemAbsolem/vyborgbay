@@ -1,1 +1,5 @@
-// анимации проекта
+@keyframes move-text {
+  to {
+    transform: translateX(-100%);
+  }
+}

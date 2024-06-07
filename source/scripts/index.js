@@ -28,8 +28,16 @@ interierSliderInit();
 housesSliderInit();
 
 // Модуль бронирования
-// import { bookingModuleResize } from './booking-resize';
-// bookingModuleResize(mobileOnlyBP, tabletOnlyBP, smallDesktopOnlyBP, largeDesktopOnlyBP);
+import { bookingModuleResize } from './booking-resize';
+bookingModuleResize(mobileOnlyBP, tabletOnlyBP, smallDesktopOnlyBP, largeDesktopOnlyBP);
+
+// ЯндексКарты
+import {initYmap} from './ymap';
+window.addEventListener('load', () => {
+  /* eslint-disable */
+  ymaps.ready(initYmap);
+  /* eslint-enable */
+});
 
 // Открытие меню
 import { toggleMenu } from './open-menu';

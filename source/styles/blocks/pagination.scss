@@ -138,8 +138,8 @@
   stroke-width: 2px;
   stroke: $color-white;
   fill: none;
-  stroke-dashoffset: calc(102.36 * (0 - var(--progress)));
-  stroke-dasharray: 123.36;
+  stroke-dashoffset: calc(123.36px * (0 - var(--progress))); // вариант для мака. для винды должно совпадать со свойством ниже.
+  stroke-dasharray: 123.36px;
 
   clip-path: view-box;
 

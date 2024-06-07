@@ -14,7 +14,13 @@ const createClass = (elem, subClass, subStrg) => {
 
 const imgZoomCard = (eLclass) => {
   const block = document.querySelector(eLclass);
+  if(!block) {
+    return;
+  }
   const cards = block.querySelectorAll('[class*="__item"]');
+  if(!cards) {
+    return;
+  }
 
   let background;
 

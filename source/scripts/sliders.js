@@ -29,7 +29,11 @@ const heroSliderInit = (mobile, tablet) => {
     roundLengths: true,
   });
 
-  /*const heroSlider = */new Swiper('.hero-slider__container', {
+  const heroSlider = document.querySelector('.hero-slider__container');
+  if(!heroSlider) {
+    return;
+  }
+  new Swiper('.hero-slider__container', {
     modules: [Autoplay, Pagination, Thumbs],
     wrapperClass: 'hero-slider__wrap',
     slideClass: 'hero-slider__slide',
@@ -57,7 +61,11 @@ const heroSliderInit = (mobile, tablet) => {
 };
 
 const interierSliderInit = () => {
-  /*const interierSlider = */new Swiper('.interier-slider', {
+  const interierSlider = document.querySelector('.interier-slider');
+  if(!interierSlider) {
+    return;
+  }
+  new Swiper('.interier-slider', {
     modules: [Autoplay, Navigation],
     wrapperClass: 'interier-slider__wrap',
     slideClass: 'interier-slider__item',
@@ -68,7 +76,7 @@ const interierSliderInit = () => {
     speed: 1000,
     loop: true,
     autoplay: {
-      delay: 4000,
+      delay: 6000,
       disableOnInteraction: false,
     },
 
@@ -85,7 +93,11 @@ const interierSliderInit = () => {
 };
 
 const housesSliderInit = () => {
-  /*const housesSlider = */new Swiper('.houses__slider', {
+  const housesSlider = document.querySelector('.houses__slider');
+  if(!housesSlider) {
+    return;
+  }
+  new Swiper('.houses__slider', {
     modules: [Autoplay, Navigation, Scrollbar],
     wrapperClass: 'houses__wrap',
     slideClass: 'houses__card',
@@ -95,7 +107,7 @@ const housesSliderInit = () => {
     },
     scrollbar: {
       el: '.houses__scroll-bar',
-      draggable: true,
+      // draggable: true,
       dragClass: 'houses__scrollbar-drag',
       // snapOnRelease: true,
     },

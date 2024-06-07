@@ -43,8 +43,14 @@ const makeThumb = (src) => {
 
 const paginationInit = (sliderClass, slideClass) => {
   const slider = document.querySelector(sliderClass);
+  if(!slider) {
+    return;
+  }
   const backgroundSlides = slider.querySelectorAll(`.${slideClass}__background`);
   const paginationBlock = slider.querySelector('.pagination');
+  if(!paginationBlock) {
+    return;
+  }
   const paginationWrap = paginationBlock.querySelector('.pagination__wrap');
 
   for(let i = 0; i < backgroundSlides.length; i++) {
@@ -75,10 +81,14 @@ const videoSlideInit = (sliderClass, slideClass, mobile, tablet) => {
     }
   }
 };
-//swiper-slide-active
+
 const textInterierInit = (sliderClass) => {
   const slider = document.querySelector(sliderClass);
-  const textSlide = slider.querySelector('.interier-slider__text');
+  if(!slider) {
+    return;
+  }
+  const textSlideContainer = slider.querySelector('.interier-slider__text-container');
+  let textSlide = textSlideContainer.querySelector('.interier-slider__text');
 
   const changeInterval = setInterval(() => {
     const activeSlide = slider.querySelector('.swiper-slide-active');
@@ -87,6 +97,27 @@ const textInterierInit = (sliderClass) => {
     if(textSlide.textContent !== activeText) {
       textSlide.textContent = activeText;
     } else {
+      if(textSlideContainer.clientWidth <= (textSlide.clientWidth - 20)) {
+        textSlide.classList.add('interier-slider__text--move-text');
+        textSlideContainer.appendChild(textSlide.cloneNode(true));
+
+        textSlide = textSlideContainer.querySelectorAll('.interier-slider__text');
+        for(let i = 2; i < textSlide.length; i++) {
+          textSlide[i].parentNode.removeChild(textSlide[i]);
+        }
+      } else {
+        textSlide = textSlideContainer.querySelectorAll('.interier-slider__text');
+
+        for(let i = 0; i < textSlide.length; i++) {
+          textSlide[i].classList.remove('interier-slider__text--move-text');
+        }
+
+        textSlide = textSlideContainer.querySelectorAll('.interier-slider__text');
+
+        for(let i = 1; i < textSlide.length; i++) {
+          textSlide[i].parentNode.removeChild(textSlide[i]);
+        }
+      }
       clearInterval(changeInterval);
     }
   }, 100);

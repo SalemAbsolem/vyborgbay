@@ -51,8 +51,13 @@
     <!-- Предзагрузка страниц -->
     <!-- <link rel="prefetch" href="/quiz"> -->
 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1bb4fe91-9fc6-435a-a0db-09c1d3338d28&lang=ru_RU" async></script>
   </head>
   <body class="page__body body">
+    <div class="page__preloader preloader">
+
+    </div>
+    <script src="scripts/preloader.js" defer></script>
     <!-- header\-\-nav-is-open -->
     <header class="body__header header">
       <div class="header__wrap">
@@ -1458,8 +1463,8 @@
             Как до нас добраться
           </span>
         </button>
-        <div class="map__map-wrap">
-          <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d45fc08f589674450ab31d481fe95a5e2447ca6407b743309a03a96db164cf6&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
+        <div class="map__map-wrap" id="map">
+          <!-- <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d45fc08f589674450ab31d481fe95a5e2447ca6407b743309a03a96db164cf6&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script> -->
         </div>
       </section>
     </main>
@@ -1671,7 +1676,7 @@
       </div>
     </footer>
     <script src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js" defer></script>
-    <!-- <script src="scripts/booking-module.js" defer></script> -->
+    <script src="scripts/booking-module.js" defer></script>
     <script src="https://res.smartwidgets.ru/app.js" defer></script>
     <script src="scripts/index.js" defer></script>
   </body>

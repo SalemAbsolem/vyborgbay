@@ -13,6 +13,9 @@ const bookingModuleResize = (mobile, tablet, desktopS, desktopL) => {
 
 
   const moduleBooking = document.querySelector('#booking_iframe iframe');
+  if(!moduleBooking) {
+    return;
+  }
   moduleBooking.addEventListener('load', function sizeIframe() {
     setTimeout(() => {
       const repeatInterval = setInterval(() => {
