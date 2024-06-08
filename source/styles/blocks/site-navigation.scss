@@ -3,7 +3,7 @@
   top: 10px;
   left: 234px;
   right: 10px;
-  z-index: -1;
+  z-index: 999;
 
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@
 
   &.site-navigation--is-open {
     left: 10px;
-    z-index: 999999;
+    // z-index: 999;
 
     width: 300px;
     min-height: 150px;
