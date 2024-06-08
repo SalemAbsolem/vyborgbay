@@ -27,6 +27,8 @@
       width: 232px;
       height: 40px;
 
+      transition: opacity $tr-default;
+
       /* stylelint-disable max-nesting-depth */
       .logo__wrap--image {
         width: auto;

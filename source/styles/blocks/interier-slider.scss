@@ -38,24 +38,21 @@
 }
 
 .interier-slider__item {
-  min-width: 300px;
+  min-width: 100%;
   width: 300px;
   height: 200px;
 
   @media #{$tablet-only} {
-    min-width: 364px;
     width: 364px;
     height: 340px;
   }
 
   @media #{$desktop-only} {
-    min-width: 580px;
     width: 580px;
     height: 380px;
   }
 
   @media #{$large-desktop-only} {
-    min-width: 940px;
     width: 940px;
     height: 600px;
   }

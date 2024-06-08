@@ -15,11 +15,13 @@ window.addEventListener('load', () => {
     return;
   }
   const body = document.body;
-  preloader.style.opacity = 0;
-  preloader.style.visibility = 'hidden';
-  body.removeAttribute('style', 'overflow: hidden;');
   setTimeout(() => {
-    preloader.style.zIndex = -1;
-    preloader.style.display = 'none';
-  }, 300);
+    preloader.style.opacity = 0;
+    preloader.style.visibility = 'hidden';
+    body.removeAttribute('style', 'overflow: hidden;');
+    setTimeout(() => {
+      preloader.style.zIndex = -1;
+      preloader.style.display = 'none';
+    }, 300);
+  }, 1000);
 });

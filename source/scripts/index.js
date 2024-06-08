@@ -39,6 +39,12 @@ window.addEventListener('load', () => {
   /* eslint-enable */
 });
 
+// Фиксирование меню снизу
+import { menuBottomFixed } from './fix-bottom-menu';
+window.addEventListener('scroll', () => {
+  menuBottomFixed(header);
+});
+
 // Открытие меню
 import { toggleMenu } from './open-menu';
 toggleMenu(mobileOnlyBP, tabletOnlyBP, smallDesktopOnlyBP, largeDesktopOnlyBP, header);

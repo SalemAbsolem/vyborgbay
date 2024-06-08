@@ -4,6 +4,11 @@ import { paginationInit, videoSlideInit, textInterierInit } from './create-funct
 
 
 const heroSliderInit = (mobile, tablet) => {
+  const heroSlider = document.querySelector('.hero-slider__container');
+  if(!heroSlider) {
+    return;
+  }
+
   paginationInit('.hero-slider__container', 'slides');
   videoSlideInit('.hero-slider__container', 'slides', mobile, tablet);
 
@@ -29,10 +34,6 @@ const heroSliderInit = (mobile, tablet) => {
     roundLengths: true,
   });
 
-  const heroSlider = document.querySelector('.hero-slider__container');
-  if(!heroSlider) {
-    return;
-  }
   new Swiper('.hero-slider__container', {
     modules: [Autoplay, Pagination, Thumbs],
     wrapperClass: 'hero-slider__wrap',
@@ -45,11 +46,12 @@ const heroSliderInit = (mobile, tablet) => {
     loop: true,
     thumbs: {
       swiper: thumbHeroSlider,
+      slideThumbActiveClass: 'pagination__slide--active',
     },
     roundLengths: true,
     on: {
       autoplayTimeLeft(s, time, progress) {
-        const timerSvg = document.querySelector('.swiper-slide-thumb-active .pagination__timer');
+        const timerSvg = document.querySelector('.pagination__slide--active .pagination__timer');
         const timerSvgs = document.querySelectorAll('.pagination__timer');
         for(let i = 0; i < timerSvgs.length; i++) {
           timerSvgs[i].style.setProperty('--progress', 0);
