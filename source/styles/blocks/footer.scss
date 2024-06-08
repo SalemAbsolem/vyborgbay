@@ -161,8 +161,6 @@
         .footer__column-title {
           color: $color-brown;
 
-          pointer-events: none;
-
           &::after {
             background-color: $color-brown;
 
@@ -175,8 +173,6 @@
         .footer__column-title {
           color: $color-green;
 
-          pointer-events: none;
-
           &::after {
             background-color: $color-green;
 
@@ -188,8 +184,6 @@
       &.footer__column--important {
         .footer__column-title {
           color: $color-blue;
-
-          pointer-events: none;
 
           &::after {
             background-color: $color-blue;

@@ -26,12 +26,17 @@ const accordion = (mobile, footer) => {
       footerGroups[0].style.height = `${groupsHeight[0]}px`;
 
       footerTitles[i].addEventListener('click', () => {
-        for(let j = 0; j < footerGroups.length; j++) {
-          footerGroups[j].classList.remove('footer__column--active');
-          footerGroups[j].style.height = `${titleHeight[j]}px`;
+        if(footerGroups[i].classList.contains('footer__column--active')) {
+          footerGroups[i].classList.remove('footer__column--active');
+          footerGroups[i].style.height = `${titleHeight[i]}px`;
+        } else {
+          for(let j = 0; j < footerGroups.length; j++) {
+            footerGroups[j].classList.remove('footer__column--active');
+            footerGroups[j].style.height = `${titleHeight[j]}px`;
+          }
+          footerGroups[i].classList.add('footer__column--active');
+          footerGroups[i].style.height = `${groupsHeight[i]}px`;
         }
-        footerGroups[i].classList.add('footer__column--active');
-        footerGroups[i].style.height = `${groupsHeight[i]}px`;
       });
     }
   } else {
