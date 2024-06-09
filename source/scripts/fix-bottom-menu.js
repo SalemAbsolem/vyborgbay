@@ -1,9 +1,8 @@
-const menuBottomFixed = (header, footer) => {
+const menuBottomFixed = (header, headerHeight, footer) => {
   if(!header) {
     return;
   }
   const menuLinkList = header.querySelector('.header__site-navigation.site-navigation');
-  const headerHeight = header.clientHeight;
   const logo = header.querySelector('.logo');
   const main = document.querySelector('.main');
   const windowScrollTop = window.scrollY;

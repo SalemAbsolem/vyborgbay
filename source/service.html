@@ -58,7 +58,7 @@
 
     </div>
     <script src="scripts/preloader.js" defer></script>
-    <!-- header\-\-nav-is-open -->
+    <!-- header\-\-nav-is-open    header\-\-fix-bottom -->
     <header class="body__header header">
       <div class="header__wrap">
         <ul class="header__breadcrumbs breadcrumbs">
@@ -98,7 +98,7 @@
           </span>
         </button>
         <!-- список с пунктами меню -->
-        <!-- site-navigation\-\-is-open -->
+        <!-- site-navigation\-\-is-open   site-navigation\-\-fix-bottom -->
         <nav class="header__site-navigation site-navigation site-navigation--header">
           <ul class="site-navigation__pages-list pages-list">
             <!-- класс для текущей страницы pages-list__item\-\-current -->
@@ -154,7 +154,7 @@
     <main class="body__main main">
       <!-- Скрытый заголовок. Участвует в SEO. Сделать изменение через админку -->
       <h1 class="visually-hidden">
-        VyborgBay главная страница
+        Услуга
       </h1>
 
 
@@ -162,6 +162,37 @@
 
 
       <!-- БЛОК-ГАЛЕРЕЯ -->
+      <section class="main__section gallery-grid">
+        <h2 class="main__section-title">
+          Фотогалерея
+        </h2>
+        <div class="gallery-grid__content">
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--one">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--two">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--three">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--four">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--five">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--six">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--seven">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--eight">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </section>
 
 
       <!-- БЛОК ЧЕМ У НАС ЗАНЯТЬСЯ -->
@@ -170,12 +201,12 @@
           Чем у нас заняться
         </h2>
         <div class="activity__button-wrap">
-          <button class="activity__button button button--activity button--service button--brown-white button--with-border-on-hover" type="button" data-btn-color="brown">
+          <button class="activity__button button button--activity button--tab button--brown-white button--with-border-on-hover" type="button" data-btn-color="brown">
             <span class="button__text">
               Услуги
             </span>
           </button>
-          <button class="activity__button button button--activity button--excursions button--white-green button--with-border-on-hover" type="button" data-btn-color="green">
+          <button class="activity__button button button--activity button--tab button--white-green button--with-border-on-hover" type="button" data-btn-color="green">
             <span class="button__text">
               Экскурсии
             </span>
@@ -184,7 +215,7 @@
             Выберите интересующую категорию
           </span>
         </div>
-        <ul class="activity__list activity__list--service">
+        <ul class="activity__list activity__list--tab activity__list--is-active">
           <li class="activity__item">
             <h3 class="activity__title">
               SPA, Финская баня
@@ -447,7 +478,7 @@
             </div>
           </li>
         </ul>
-        <ul class="activity__list activity__list--excursions">
+        <ul class="activity__list activity__list--tab">
           <li class="activity__item">
             <h3 class="activity__title">
               SPA, Финская баня
@@ -716,11 +747,7 @@
           </span>
         </button>
       </section>
-
-
       <!-- КОНЕЦ БЛОКОВ -->
-
-
     </main>
     <footer class="body__footer footer">
       <div class="footer__column">
@@ -929,9 +956,6 @@
         </ul>
       </div>
     </footer>
-    <script src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js" defer></script>
-    <script src="scripts/booking-module.js" defer></script>
-    <script src="https://res.smartwidgets.ru/app.js" defer></script>
     <script src="scripts/index.js" defer></script>
   </body>
 </html>

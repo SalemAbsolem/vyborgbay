@@ -9,6 +9,7 @@ const feedbackBlockBP = window.matchMedia('screen and (max-width: 480.98px)');
 
 // Части страницы
 const header = document.querySelector('.header');
+const headerHeight = header.clientHeight;
 const footer = document.querySelector('.footer');
 
 //  Масштабирование
@@ -43,7 +44,7 @@ window.addEventListener('load', () => {
 // Фиксирование меню снизу
 import { menuBottomFixed } from './fix-bottom-menu';
 window.addEventListener('scroll', () => {
-  menuBottomFixed(header, footer);
+  menuBottomFixed(header, headerHeight, footer);
 });
 
 // Открытие меню
