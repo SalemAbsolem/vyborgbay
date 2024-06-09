@@ -1,0 +1,76 @@
+.hero-block {
+  max-width: 300px;
+  width: 300px;
+  margin-bottom: 20px;
+
+  @media #{$tablet-only} {
+    max-width: 748px;
+    width: 748px;
+    margin-bottom: 40px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1180px;
+    width: 1180px;
+    margin-bottom: 50px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 1900px;
+    width: 1900px;
+    margin-bottom: 100px;
+  }
+}
+
+.hero-block__content {
+  position: relative;
+
+  height: 500px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  @media #{$tablet-only} {
+    height: 978px;
+
+    border-radius: 25px;
+  }
+
+  @media #{$desktop-only} {
+    height: 594px;
+
+    border-radius: 25px;
+  }
+
+  @media #{$large-desktop-only} {
+    height: 956px;
+
+    border-radius: 40px;
+  }
+}
+
+.hero-block__background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: block;
+
+    background: linear-gradient(to bottom, $color-transparent 50%, rgba($color-black, 0.67) 100%);
+  }
+}
+
+.hero-block__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

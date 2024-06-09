@@ -62,4 +62,23 @@
       margin-bottom: 50px;
     }
   }
+
+  &.main__section-title--description {
+    margin-bottom: 10px;
+
+    @media #{$tablet-only} {
+      grid-area: title;
+      margin-bottom: 0;
+    }
+
+    @media #{$desktop-only} {
+      grid-area: title;
+      align-self: start;
+      margin-bottom: 10px;
+    }
+
+    @media #{$large-desktop-only} {
+      margin-bottom: 30px;
+    }
+  }
 }
