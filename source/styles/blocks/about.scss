@@ -223,6 +223,8 @@
   height: 122px;
   overflow: hidden;
 
+  transition: height $tr-default;
+
   @media #{$tablet-only} {
     height: 157px;
   }
@@ -234,6 +236,10 @@
   @media #{$large-desktop-only} {
     height: 268px;
   }
+
+  p {
+    margin: 0 0 10px;
+  }
 }
 
 .about__paragraf {
@@ -241,15 +247,7 @@
 }
 
 .about__more-button {
-  margin-bottom: 10px;
-
-  @media #{$tablet-only} {
-    margin: 10px 0;
-  }
-
-  @media #{$desktop-only} {
-    margin: 10px 0;
-  }
+  margin: 10px 0;
 }
 
 .about__interier-slider {

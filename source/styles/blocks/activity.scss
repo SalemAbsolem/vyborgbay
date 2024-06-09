@@ -82,54 +82,55 @@
 .activity__list {
   @include normalize-list;
 
-  display: flex;
   flex-direction: column;
   gap: 10px;
+  max-height: 620px;
   margin: 0;
 
+  overflow: hidden;
+
+  transition: height $tr-default, max-height $tr-default;
+
   @media #{$tablet-only} {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-content: start;
     gap: 20px;
+    max-height: 540px;
   }
 
   @media #{$desktop-only} {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-content: start;
     gap: 20px;
+    max-height: 580px;
+
+    .activity__button {
+      font-size: 16px;
+    }
   }
 
-  &.activity__list--service {
-    max-height: 620px;
-    overflow: hidden;
+  @media #{$large-desktop-only} {
+    max-height: 920px;
+
+    .activity__button {
+      font-size: 25px;
+    }
+  }
+
+  &.activity__list--tab {
+    display: none;
+  }
+
+  &.activity__list--is-active {
+    display: flex;
 
     @media #{$tablet-only} {
-      max-height: 540px;
+      display: grid;
     }
 
     @media #{$desktop-only} {
-      max-height: 580px;
-
-      /* stylelint-disable max-nesting-depth */
-      .activity__button {
-        font-size: 16px;
-      }
-      /* stylelint-enable max-nesting-depth */
+      display: grid;
     }
-
-    @media #{$large-desktop-only} {
-      max-height: 920px;
-
-      /* stylelint-disable max-nesting-depth */
-      .activity__button {
-        font-size: 25px;
-      }
-      /* stylelint-enable max-nesting-depth */
-    }
-  }
-
-  &.activity__list--excursions {
-    display: none;
   }
 }
 
