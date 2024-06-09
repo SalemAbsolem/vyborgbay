@@ -58,7 +58,7 @@
 
     </div>
     <script src="scripts/preloader.js" defer></script>
-    <!-- header\-\-nav-is-open -->
+    <!-- header\-\-nav-is-open    header\-\-fix-bottom -->
     <header class="body__header header">
       <div class="header__wrap">
         <ul class="header__breadcrumbs breadcrumbs">
@@ -98,7 +98,7 @@
           </span>
         </button>
         <!-- список с пунктами меню -->
-        <!-- site-navigation\-\-is-open -->
+        <!-- site-navigation\-\-is-open   site-navigation\-\-fix-bottom -->
         <nav class="header__site-navigation site-navigation site-navigation--header">
           <ul class="site-navigation__pages-list pages-list">
             <!-- класс для текущей страницы pages-list__item\-\-current -->
@@ -157,12 +157,31 @@
         VyborgBay главная страница
       </h1>
 
-
       <!-- БЛОК HERO С МОДУЛЕМ БРОНИРОВАНИЯ -->
-
+      <section class="main__section hero-block hero-block--booking">
+        <div class="hero-block__content">
+          <h2 class="main__section-title main__section-title--booking">
+            Страница бронирования
+          </h2>
+          <div class="hero-block__background">
+            <img class="hero-block__background-image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </section>
+      <section class="main__section booking-section">
+        <h2 class="main__section-title main__section-title--with-icon">
+          Успей забронировать
+        </h2>
+        <div class="booking-section__icon-wrap">
+          <img class="booking-section__icon" src="images/booking-icon.svg" width="38" height="38" alt="#" loading="lazy">
+        </div>
+        <!-- linthtml-configure id-style="false" attr-quote-style="false" -->
+        <script src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js" defer></script>
+        <div id="booking_iframe" style="padding-bottom: 0;position: relative;"></div>
+        <!-- linthtml-configure id-style="true" attr-quote-style="true" -->
+      </section>
 
       <!-- БЛОК С ОПИСАНИЕМ С СЛАЙДЕРОМ -->
-
       <section class="main__section about">
         <h2 class="main__section-title">
           Общее описание
@@ -269,21 +288,30 @@
       </section>
 
       <!-- БЛОК С ОПИСАНИЕМ КАРТОЧКАМИ -->
-
+      <section class="main__section description">
+        <h2 class="main__section-title main__section-title--description">
+          Общее описание
+        </h2>
+        <div class="description__text-content">
+          <p class="description__text">
+            Повседневная практика показывает, что глубокий уровень погружения однозначно определяет каждого участника как способного принимать собственные решения касаемо кластеризации усилий.
+          </p>
+        </div>
+        <div class="description__image-content">
+          <img class="description__image" src="images/services-icon.svg" width="241" height="178" alt="" aria-hidden="true">
+        </div>
+      </section>
       <section class="main__section location">
-        <h2 class="main__section-title">
+        <h2 class="main__section-title visually-hidden">
           У нас есть 2 локации
         </h2>
         <ul class="location__card cards cards--location">
           <li class="cards__item">
             <h3 class="cards__title">
-              Локация 1
+              Глэмп
             </h3>
-            <address class="cards__address">
-              Выборг, ул. Симоняка, 21
-            </address>
             <a class="cards__button button button--cards button--green-white" href="location.html">
-              Перейти к локации
+              Узнать условия проживания
             </a>
             <p class="cards__icon-wrap">
               <svg class="cards__icon cards__icon--green" viewBox="0 0 29 29" width="29" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -299,13 +327,10 @@
           </li>
           <li class="cards__item">
             <h3 class="cards__title">
-              Локация 1
+              Лодж
             </h3>
-            <address class="cards__address">
-              Выборг, ул. Симоняка, 21
-            </address>
             <a class="cards__button button button--cards button--blue-white" href="location.html">
-              Перейти к локации
+              Узнать условия проживания
             </a>
             <p class="cards__icon-wrap">
               <svg class="cards__icon cards__icon--blue" viewBox="0 0 29 29" width="29" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,7 +346,6 @@
           </li>
         </ul>
       </section>
-
 
       <!-- БЛОК ЧЕМ ЗАНЯТЬСЯ -->
       <section class="main__section activity">
@@ -881,7 +905,37 @@
 
 
       <!-- БЛОК-ГАЛЕРЕЯ -->
-
+      <section class="main__section gallery-grid">
+        <h2 class="main__section-title">
+          Фотогалерея
+        </h2>
+        <div class="gallery-grid__content">
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--one">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--two">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--three">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--four">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--five">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--six">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--seven">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+          <div class="gallery-grid__wrap-image gallery-grid__wrap-image--eight">
+            <img class="gallery-grid__image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </section>
 
       <!-- БЛОК С ЯНДЕКС.КАРТАМИ -->
       <section class="main__section map">
@@ -897,10 +951,6 @@
           <!-- <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d45fc08f589674450ab31d481fe95a5e2447ca6407b743309a03a96db164cf6&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script> -->
         </div>
       </section>
-
-
-      <!-- КОНЕЦ БЛОКОВ -->
-
     </main>
     <footer class="body__footer footer">
       <div class="footer__column">
@@ -1109,9 +1159,7 @@
         </ul>
       </div>
     </footer>
-    <script src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js" defer></script>
     <script src="scripts/booking-module.js" defer></script>
-    <script src="https://res.smartwidgets.ru/app.js" defer></script>
     <script src="scripts/index.js" defer></script>
   </body>
 </html>
