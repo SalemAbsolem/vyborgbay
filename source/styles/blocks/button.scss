@@ -311,6 +311,28 @@
     }
   }
 
+  // &.button--service-about {
+
+  // }
+
+  &.button--service-about-booking {
+    padding: 10px 25px;
+    width: fit-content;
+
+    @media #{$tablet-only} {
+      padding: 12px 40px;
+    }
+
+    @media #{$desktop-only} {
+      padding: 10px 40px;
+    }
+
+    @media #{$large-desktop-only} {
+      height: 74px;
+      padding: 10px 65px;
+    }
+  }
+
   &.button--next {
     transform: scaleX(-1);
   }

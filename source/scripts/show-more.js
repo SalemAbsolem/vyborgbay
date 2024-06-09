@@ -113,4 +113,56 @@ const showMoreCard = (blockClass, mobile, tablet, desktop) => {
 
 };
 
-export {showMoreCard, showMoreText};
+
+const showMoreServiceText = (containerClass, mobile, tablet) => {
+  const textContainer = document.querySelector(containerClass);
+  if(!textContainer) {
+    return;
+  }
+  const textContainerHeight = textContainer.clientHeight;
+
+  const paragrafs = textContainer.querySelectorAll('p');
+  if(!paragrafs) {
+    return;
+  }
+
+  let paragrafsHeight = 0;
+
+  for(let i = 0; i < paragrafs.length; i++) {
+    paragrafsHeight = paragrafsHeight + paragrafs[i].clientHeight;
+  }
+  paragrafsHeight = paragrafsHeight + (10 * (paragrafs.length - 1));
+
+  const moreButton = document.querySelector(`${containerClass} + button`);
+  const moreButtonText = moreButton.querySelector('.button__text');
+
+  if(paragrafsHeight <= textContainerHeight) {
+    moreButton.style.display = 'none';
+  } else {
+    if(mobile.matches || tablet.matches) {
+      moreButton.addEventListener('click', () => {
+        if(textContainerHeight === textContainer.clientHeight) {
+          textContainer.style.height = `${paragrafsHeight}px`;
+          moreButtonText.textContent = 'Скрыть';
+        } else {
+          textContainer.style.height = `${textContainerHeight}px`;
+          moreButtonText.textContent = 'Подробнее';
+        }
+      });
+    } else {
+      moreButton.addEventListener('click', () => {
+        if(getComputedStyle(textContainer).getPropertyValue('overflow-y') === 'hidden') {
+          textContainer.style.overflowY = 'scroll';
+          moreButtonText.textContent = 'Скрыть';
+          paragrafs[2].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else {
+          paragrafs[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          textContainer.style.overflowY = 'hidden';
+          moreButtonText.textContent = 'Подробнее';
+        }
+      });
+    }
+  }
+};
+
+export {showMoreCard, showMoreText, showMoreServiceText};

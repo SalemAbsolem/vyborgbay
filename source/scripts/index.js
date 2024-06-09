@@ -69,9 +69,10 @@ imgZoomCard('.main__section.location');
 imgZoomCard('.main__section.activity');
 
 // Показать больше
-import {showMoreCard, showMoreText} from './show-more';
+import {showMoreCard, showMoreText, showMoreServiceText} from './show-more';
 showMoreCard('.activity', mobileOnlyBP, tabletOnlyBP, desktopOnlyBP);
 showMoreText('.about__text', mobileOnlyBP);
+showMoreServiceText('.service-about__text-wrap', mobileOnlyBP, tabletOnlyBP);
 
 // табы
 import {tabsInit} from './tabs';
