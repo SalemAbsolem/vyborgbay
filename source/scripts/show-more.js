@@ -38,7 +38,7 @@ const showMoreText = (containerClass, mobile) => {
         if(getComputedStyle(textContainer).getPropertyValue('overflow-y') === 'hidden') {
           textContainer.style.overflowY = 'scroll';
           moreButtonText.textContent = 'Скрыть';
-          paragrafs[2].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          // paragrafs[2].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         } else {
           paragrafs[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
           textContainer.style.overflowY = 'hidden';
@@ -154,7 +154,7 @@ const showMoreServiceText = (containerClass, mobile, tablet) => {
         if(getComputedStyle(textContainer).getPropertyValue('overflow-y') === 'hidden') {
           textContainer.style.overflowY = 'scroll';
           moreButtonText.textContent = 'Скрыть';
-          paragrafs[2].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          // paragrafs[2].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         } else {
           paragrafs[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
           textContainer.style.overflowY = 'hidden';
