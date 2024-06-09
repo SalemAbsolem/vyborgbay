@@ -68,6 +68,8 @@
     inset: auto 0 20px;
     z-index: 999999;
 
+    transition: opacity $tr-default, visibility $tr-default, transform $tr-default;
+
     .header__wrap {
       max-width: 300px;
       width: 300px;

@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
 // Фиксирование меню снизу
 import { menuBottomFixed } from './fix-bottom-menu';
 window.addEventListener('scroll', () => {
-  menuBottomFixed(header);
+  menuBottomFixed(header, footer);
 });
 
 // Открытие меню
