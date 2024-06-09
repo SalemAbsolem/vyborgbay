@@ -1,4 +1,7 @@
 .header {
+  position: relative;
+  z-index: 9999999;
+
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
