@@ -1,0 +1,139 @@
+.conditions {
+  max-width: 300px;
+  width: 300px;
+  margin-bottom: 30px;
+
+  @media #{$tablet-only} {
+    max-width: 748px;
+    width: 748px;
+    margin-bottom: 50px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 1180px;
+    width: 1180px;
+    margin-bottom: 50px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 1900px;
+    width: 1900px;
+    margin-bottom: 100px;
+  }
+}
+
+.conditions__list {
+  @include normalize-list;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 20px;
+
+  @media #{$tablet-only} {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  @media #{$desktop-only} {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  @media #{$large-desktop-only} {
+    margin-top: 50px;
+  }
+}
+
+.conditions__item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  padding: 10px;
+
+  border: 1px solid $color-gray;
+  border-radius: 12px;
+
+  @media #{$tablet-only} {
+    grid-template-columns: 42px 1fr;
+
+    border-radius: 16px;
+  }
+
+  @media #{$desktop-only} {
+    grid-template-columns: 42px 1fr;
+
+    border-radius: 16px;
+  }
+
+  @media #{$large-desktop-only} {
+    grid-template-columns: 68px 1fr;
+    padding: 20px;
+
+    border-radius: 25px;
+  }
+}
+
+.conditions__wrap-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+
+  background-color: $color-gray;
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  @media #{$tablet-only} {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 9px;
+  }
+
+  @media #{$desktop-only} {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 9px;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 68px;
+    height: 68px;
+
+    border-radius: 15px;
+  }
+}
+
+.conditions__image {
+  width: 100%;
+  height: 100%;
+
+  object-position: cover;
+}
+
+.conditions__text {
+  /* stylelint-disable value-no-vendor-prefix */
+  display: -webkit-box;
+  /* stylelint-enable value-no-vendor-prefix */
+  margin: 0;
+
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+  @media #{$desktop-only} {
+    font-size: 16px;
+  }
+
+  @media #{$large-desktop-only} {
+    font-size: 25px;
+  }
+}
