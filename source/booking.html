@@ -58,7 +58,7 @@
 
     </div>
     <script src="scripts/preloader.js" defer></script>
-    <!-- header\-\-nav-is-open -->
+    <!-- header\-\-nav-is-open    header\-\-fix-bottom -->
     <header class="body__header header">
       <div class="header__wrap">
         <ul class="header__breadcrumbs breadcrumbs">
@@ -98,7 +98,7 @@
           </span>
         </button>
         <!-- список с пунктами меню -->
-        <!-- site-navigation\-\-is-open -->
+        <!-- site-navigation\-\-is-open   site-navigation\-\-fix-bottom -->
         <nav class="header__site-navigation site-navigation site-navigation--header">
           <ul class="site-navigation__pages-list pages-list">
             <!-- класс для текущей страницы pages-list__item\-\-current -->
@@ -156,10 +156,29 @@
       <h1 class="visually-hidden">
         VyborgBay главная страница
       </h1>
-
-
       <!-- БЛОК HERO С МОДУЛЕМ БРОНИРОВАНИЯ -->
-
+      <section class="main__section hero-block hero-block--booking">
+        <div class="hero-block__content">
+          <h2 class="main__section-title main__section-title--booking">
+            Страница бронирования
+          </h2>
+          <div class="hero-block__background">
+            <img class="hero-block__background-image" src="images/hero-slider-bg@2x.jpg" width="1538" height="1026" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </section>
+      <section class="main__section booking-section">
+        <h2 class="main__section-title main__section-title--with-icon">
+          Успей забронировать
+        </h2>
+        <div class="booking-section__icon-wrap">
+          <img class="booking-section__icon" src="images/booking-icon.svg" width="38" height="38" alt="#" loading="lazy">
+        </div>
+        <!-- linthtml-configure id-style="false" attr-quote-style="false" -->
+        <script src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js" defer></script>
+        <div id="booking_iframe" style="padding-bottom: 0;position: relative;"></div>
+        <!-- linthtml-configure id-style="true" attr-quote-style="true" -->
+      </section>
 
       <!-- БЛОК ЧЕМ У НАС ЗАНЯТЬСЯ -->
       <section class="main__section activity">
@@ -167,12 +186,12 @@
           Чем у нас заняться
         </h2>
         <div class="activity__button-wrap">
-          <button class="activity__button button button--activity button--service button--brown-white button--with-border-on-hover" type="button" data-btn-color="brown">
+          <button class="activity__button button button--activity button--tab button--brown-white button--with-border-on-hover" type="button" data-btn-color="brown">
             <span class="button__text">
               Услуги
             </span>
           </button>
-          <button class="activity__button button button--activity button--excursions button--white-green button--with-border-on-hover" type="button" data-btn-color="green">
+          <button class="activity__button button button--activity button--tab button--white-green button--with-border-on-hover" type="button" data-btn-color="green">
             <span class="button__text">
               Экскурсии
             </span>
@@ -181,7 +200,7 @@
             Выберите интересующую категорию
           </span>
         </div>
-        <ul class="activity__list activity__list--service">
+        <ul class="activity__list activity__list--tab activity__list--is-active">
           <li class="activity__item">
             <h3 class="activity__title">
               SPA, Финская баня
@@ -444,7 +463,7 @@
             </div>
           </li>
         </ul>
-        <ul class="activity__list activity__list--excursions">
+        <ul class="activity__list activity__list--tab">
           <li class="activity__item">
             <h3 class="activity__title">
               SPA, Финская баня
@@ -715,7 +734,6 @@
       </section>
 
       <!-- БЛОК С ЯНДЕКС.КАРТОЙ -->
-
       <section class="main__section map">
         <h2 class="main__section-title">
           Мы находимся здесь
@@ -730,10 +748,7 @@
         </div>
       </section>
 
-
       <!-- КОНЕЦ БЛОКОВ -->
-
-
     </main>
     <footer class="body__footer footer">
       <div class="footer__column">
@@ -944,7 +959,6 @@
     </footer>
     <script src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js" defer></script>
     <script src="scripts/booking-module.js" defer></script>
-    <script src="https://res.smartwidgets.ru/app.js" defer></script>
     <script src="scripts/index.js" defer></script>
   </body>
 </html>
