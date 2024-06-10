@@ -55,13 +55,13 @@ toggleMenu(mobileOnlyBP, tabletOnlyBP, smallDesktopOnlyBP, largeDesktopOnlyBP, h
 
 import { accordion } from './accordion';
 accordion(mobileOnlyBP, footer);
-window.addEventListener('resize', () => {
-  accordion(mobileOnlyBP, footer);
-});
+// window.addEventListener('resize', () => {
+//   accordion(mobileOnlyBP, footer);
+// });
 
-window.addEventListener('orientationchange', () => {
-  accordion(mobileOnlyBP, footer);
-});
+// window.addEventListener('orientationchange', () => {
+//   accordion(mobileOnlyBP, footer);
+// });
 
 // увеличение фона при наведении на кнопку
 import { imgZoomCard } from './img-zoom';
