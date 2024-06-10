@@ -29,6 +29,10 @@ heroSliderInit(mobileOnlyBP, tabletOnlyBP);
 interierSliderInit();
 housesSliderInit();
 
+// Фото и Видео фоны
+import {blockBackgroundInit} from './create-function';
+blockBackgroundInit('.hero-block', mobileOnlyBP, tabletOnlyBP);
+
 // Модуль бронирования
 import { bookingModuleResize } from './booking-resize';
 bookingModuleResize(mobileOnlyBP, tabletOnlyBP, smallDesktopOnlyBP, largeDesktopOnlyBP);
