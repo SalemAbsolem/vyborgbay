@@ -11,24 +11,25 @@ const bookingModuleResize = (mobile, tablet, desktopS, desktopL) => {
     sizeBlock = 250;
   }
 
-
-  const moduleBooking = document.querySelector('#booking_iframe iframe');
-  if(!moduleBooking) {
-    return;
-  }
-  moduleBooking.addEventListener('load', function sizeIframe() {
-    setTimeout(() => {
-      const repeatInterval = setInterval(() => {
-        if(moduleBooking.style.height !== `${sizeBlock}px` || moduleBooking.style.minHeight !== `${sizeBlock}px`) {
-          moduleBooking.style.minHeight = `${sizeBlock}px`;
-          moduleBooking.style.height = `${sizeBlock}px`;
-          window.scrollTo(0, 0);
-        } else {
-          clearInterval(repeatInterval);
-          moduleBooking.removeEventListener('load', sizeIframe);
-        }
-      }, 100);
-    }, 500);
+  document.addEventListener('DOMContentLoaded', () => {
+    const moduleBooking = document.querySelector('#booking_iframe iframe');
+    if(!moduleBooking) {
+      return;
+    }
+    moduleBooking.addEventListener('load', function sizeIframe() {
+      setTimeout(() => {
+        const repeatInterval = setInterval(() => {
+          if(moduleBooking.style.height !== `${sizeBlock}px` && moduleBooking.style.minHeight !== `${sizeBlock}px`) {
+            moduleBooking.style.minHeight = `${sizeBlock}px`;
+            moduleBooking.style.height = `${sizeBlock}px`;
+            window.scrollTo(0, 0);
+          } else {
+            clearInterval(repeatInterval);
+            moduleBooking.removeEventListener('load', sizeIframe);
+          }
+        }, 100);
+      }, 500);
+    });
   });
 };
 

@@ -88,6 +88,12 @@
     }
   }
 
+  &.logo--current {
+    opacity: 1;
+
+    pointer-events: none;
+  }
+
   @media #{$hover} {
     &:hover {
       opacity: 0.5;
@@ -96,6 +102,8 @@
 
   &:active {
     opacity: 0.8;
+
+    transition: opacity $tr-fast;
   }
 }
 

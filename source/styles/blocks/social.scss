@@ -43,6 +43,8 @@
 
     transform: translateY(-8px);
 
+    transition: transform $tr-fast, opacity $tr-fast;
+
     @media #{$large-desktop-only} {
       transform: translateY(-16px);
     }

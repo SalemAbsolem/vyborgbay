@@ -248,6 +248,8 @@
 
     opacity: 0.5;
 
+    transition: opacity $tr-fast, text-underline-offset $tr-fast;
+
     @media #{$tablet-only} {
       text-underline-offset: 2px;
     }

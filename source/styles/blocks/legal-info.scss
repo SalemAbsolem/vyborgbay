@@ -63,5 +63,7 @@
     color: $color-brown;
 
     opacity: 1;
+
+    transition: opacity $tr-fast, color $tr-fast;
   }
 }

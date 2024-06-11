@@ -294,5 +294,7 @@
     color: $color-brown;
 
     opacity: 0.5;
+
+    transition: color $tr-fast, opacity $tr-fast;
   }
 }

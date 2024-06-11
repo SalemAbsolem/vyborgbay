@@ -93,6 +93,8 @@
     color: $color-green;
 
     opacity: 0.5;
+
+    transition: color $tr-fast, opacity $tr-fast;
   }
 
   &:active::after {
@@ -101,5 +103,7 @@
     opacity: 0.5;
 
     transform: rotate(-180deg) translateX(0);
+
+    transition: background-color $tr-fast, transform $tr-fast, opacity $tr-fast;
   }
 }
