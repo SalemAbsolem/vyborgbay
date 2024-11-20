@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  margin-top: 20px;
+  margin: 20px 0 0;
 
   @media #{$tablet-only} {
     grid-template-columns: repeat(2, 1fr);
@@ -49,7 +49,8 @@
 
 .conditions__item {
   display: grid;
-  grid-template-columns: 32px 1fr;
+  align-items: center;
+  grid-template-columns: minmax(32px, auto) 1fr;
   gap: 10px;
   padding: 10px;
 
@@ -57,19 +58,19 @@
   border-radius: 12px;
 
   @media #{$tablet-only} {
-    grid-template-columns: 42px 1fr;
+    grid-template-columns: minmax(42px, auto) 1fr;
 
     border-radius: 16px;
   }
 
   @media #{$desktop-only} {
-    grid-template-columns: 42px 1fr;
+    grid-template-columns: minmax(42px, auto) 1fr;
 
     border-radius: 16px;
   }
 
   @media #{$large-desktop-only} {
-    grid-template-columns: 68px 1fr;
+    grid-template-columns: minmax(68px, auto) 1fr;
     padding: 20px;
 
     border-radius: 25px;
@@ -83,8 +84,8 @@
   width: 32px;
   height: 32px;
 
-  background-color: $color-gray;
-  border-radius: 8px;
+  // background-color: $color-gray;
+  // border-radius: 8px;
 
   overflow: hidden;
 
@@ -92,21 +93,21 @@
     width: 42px;
     height: 42px;
 
-    border-radius: 9px;
+    // border-radius: 9px;
   }
 
   @media #{$desktop-only} {
     width: 42px;
     height: 42px;
 
-    border-radius: 9px;
+    // border-radius: 9px;
   }
 
   @media #{$large-desktop-only} {
     width: 68px;
     height: 68px;
 
-    border-radius: 15px;
+    // border-radius: 15px;
   }
 }
 
@@ -114,7 +115,7 @@
   width: 100%;
   height: 100%;
 
-  object-position: cover;
+  object-fit: cover;
 }
 
 .conditions__text {

@@ -22,6 +22,7 @@ const tabsInit = (blockClass, buttonTabClass, nonActiveButtonTabClass, activeBut
   buttonsTab[0].style.pointerEvents = 'none';
   tabs[0].classList.add(activeTabClass);
   moreButtonText.textContent = 'Открыть еще';
+  showMoreCard(blockClass, mobile, tablet, desktop);
 
   for(let i = 0; i < buttonsTab.length; i++) {
     buttonsTab[i].addEventListener('click', () => {

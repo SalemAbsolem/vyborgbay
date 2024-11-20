@@ -2,13 +2,13 @@ const bookingModuleResize = (mobile, tablet, desktopS, desktopL) => {
   let sizeBlock;
 
   if(mobile.matches) {
-    sizeBlock = 300;
+    sizeBlock = 670;
   } else if(tablet.matches) {
-    sizeBlock = 350;
+    sizeBlock = 605;
   } else if(desktopS.matches) {
-    sizeBlock = 250;
+    sizeBlock = 605;
   } else if(desktopL.matches) {
-    sizeBlock = 250;
+    sizeBlock = 605;
   }
 
   document.addEventListener('DOMContentLoaded', () => {

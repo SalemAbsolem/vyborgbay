@@ -1,4 +1,6 @@
 .card-houses {
+  display: flex;
+  flex-direction: column;
   width: 260px;
 
   border: 1px solid rgba($color-black, 0.5);
@@ -93,10 +95,10 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  padding: 4px;
+  // padding: 4px;
 
-  background-color: $color-white;
-  border-radius: 12px;
+  // background-color: $color-white;
+  // border-radius: 12px;
 
   @media #{$tablet-only} {
     top: 20px;
@@ -104,9 +106,9 @@
 
     width: 46px;
     height: 46px;
-    padding: 5px;
+    // padding: 5px;
 
-    border-radius: 16px;
+    // border-radius: 16px;
   }
 
   @media #{$desktop-only} {
@@ -115,18 +117,25 @@
 
     width: 46px;
     height: 46px;
-    padding: 5px;
+    // padding: 5px;
 
-    border-radius: 16px;
+    // border-radius: 16px;
   }
 
   @media #{$large-desktop-only} {
     width: 74px;
     height: 74px;
-    padding: 10px;
+    // padding: 10px;
 
-    border-radius: 25px;
+    // border-radius: 25px;
   }
+}
+
+.card-houses__icon {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
 
 .card-houses__background {
@@ -144,7 +153,9 @@
 }
 
 .card-houses__background-image {
+  width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
@@ -174,7 +185,14 @@
 }
 
 .card-houses__description {
+  /* stylelint-disable-next-line value-no-vendor-prefix */
+  display: -webkit-box;
   margin: 0 10px 10px;
+
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 
   @media #{$tablet-only} {
     margin: 0 20px 5px;
@@ -182,6 +200,8 @@
 
   @media #{$desktop-only} {
     margin: 0 20px 5px;
+
+    -webkit-line-clamp: 3;
   }
 
   @media #{$large-desktop-only} {
@@ -191,7 +211,7 @@
 
 .card-houses__link {
   display: inline-block;
-  margin: 0 10px 10px;
+  margin: auto 10px 0;
 
   color: inherit;
   text-decoration: underline;
@@ -203,21 +223,21 @@
   transition: opacity $tr-default, text-underline-offset $tr-default;
 
   @media #{$tablet-only} {
-    margin: 0 20px 20px;
+    margin: auto 20px 0;
 
     font-size: 16px;
     text-underline-offset: 2px;
   }
 
   @media #{$desktop-only} {
-    margin: 0 20px 20px;
+    margin: auto 20px 0;
 
     font-size: 20px;
     text-underline-offset: 2px;
   }
 
   @media #{$large-desktop-only} {
-    margin: 0 20px 20px;
+    margin: auto 20px 0;
 
     font-size: 32px;
     text-underline-offset: 4px;
@@ -265,14 +285,14 @@
 }
 
 .card-houses__utp-block {
-  margin: 0 10px 20px;
+  margin: 20px 10px;
 
   @media #{$tablet-only} {
-    margin: 0 20px 20px;
+    margin: 20px;
   }
 
   @media #{$desktop-only} {
-    margin: 0 20px 20px;
+    margin: 20px;
   }
 }
 
@@ -281,6 +301,7 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 10px;
+  // margin-top: auto;
   padding: 0 10px 10px;
 
   @media #{$tablet-only} {

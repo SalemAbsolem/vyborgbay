@@ -2,12 +2,12 @@
   @include normalize-list;
 
   display: none;
+  flex-wrap: wrap;
+  max-width: 38%;
 
   font-size: 16px;
   font-weight: 600;
   color: $color-black;
-
-  opacity: 0.5;
 
   @media #{$desktop-only} {
     display: flex;
@@ -19,6 +19,8 @@
 }
 
 .breadcrumbs__item {
+  white-space: nowrap;
+
   &:not(:last-child) {
     &::after {
       content: "/";
@@ -34,4 +36,26 @@
   width: fit-content;
 
   color: inherit;
+
+  opacity: 0.5;
+
+  transition: color $tr-default, opacity $tr-default;
+
+  @media #{$hover} {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    color: $color-green;
+
+    opacity: 1;
+
+    transition: color $tr-fast, opacity $tr-fast;
+  }
+
+  &.breadcrumbs__link--current {
+    pointer-events: none;
+  }
 }

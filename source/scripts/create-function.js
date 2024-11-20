@@ -123,40 +123,40 @@ const textInterierInit = (sliderClass) => {
   }, 100);
 };
 
-const blockBackgroundInit = (blockClass, mobile, tablet) => {
-  const block = document.querySelector(blockClass);
-  if(!block) {
-    return;
-  }
-  const backgroundWrap = block.querySelector(`${blockClass}__background`);
-  const image = backgroundWrap.querySelector('img');
-  const imageSrc = backgroundWrap.dataset.imageSrc;
-  const videoSrcVertical = backgroundWrap.dataset.videoVerticalSrc;
-  const videoSrcHorizontal = backgroundWrap.dataset.videoHorizontalSrc;
-  if(videoSrcHorizontal) {
-    const video = makeElement('video', 'hero-block__background-video');
-    video.setAttribute('poster', imageSrc);
-    video.setAttribute('width', '320');
-    video.setAttribute('height', '500');
-    video.setAttribute('preload', 'auto');
-    video.setAttribute('autoplay', '');
-    video.setAttribute('loop', '');
-    video.setAttribute('muted', '');
-    video.setAttribute('webkit-playsinline', '');
-    video.setAttribute('playsinline', '');
+// const blockBackgroundInit = (blockClass, mobile, tablet) => {
+//   const block = document.querySelector(blockClass);
+//   if(!block) {
+//     return;
+//   }
+//   const backgroundWrap = block.querySelector(`${blockClass}__background`);
+//   const image = backgroundWrap.querySelector('img');
+//   const imageSrc = backgroundWrap.dataset.imageSrc;
+//   const videoSrcVertical = backgroundWrap.dataset.videoVerticalSrc;
+//   const videoSrcHorizontal = backgroundWrap.dataset.videoHorizontalSrc;
+//   if(videoSrcHorizontal) {
+//     const video = makeElement('video', 'hero-block__background-video');
+//     video.setAttribute('poster', imageSrc);
+//     video.setAttribute('width', '320');
+//     video.setAttribute('height', '500');
+//     video.setAttribute('preload', 'auto');
+//     video.setAttribute('autoplay', '');
+//     video.setAttribute('loop', '');
+//     video.setAttribute('muted', '');
+//     video.setAttribute('webkit-playsinline', '');
+//     video.setAttribute('playsinline', '');
 
-    image.remove();
+//     image.remove();
 
-    if(mobile.matches || tablet.matches) {
-      video.innerHTML = makeVideoBg(videoSrcVertical);
-      backgroundWrap.appendChild(video);
-    } else {
-      video.innerHTML = makeVideoBg(videoSrcHorizontal);
-      backgroundWrap.appendChild(video);
-    }
-  } else if(!videoSrcHorizontal) {
-    image.src = imageSrc;
-  }
-};
+//     if(mobile.matches || tablet.matches) {
+//       video.innerHTML = makeVideoBg(videoSrcVertical);
+//       backgroundWrap.appendChild(video);
+//     } else {
+//       video.innerHTML = makeVideoBg(videoSrcHorizontal);
+//       backgroundWrap.appendChild(video);
+//     }
+//   } else if(!videoSrcHorizontal) {
+//     image.src = imageSrc;
+//   }
+// };
 
-export {paginationInit, videoSlideInit, textInterierInit, blockBackgroundInit};
+export {paginationInit, videoSlideInit, textInterierInit/*, blockBackgroundInit*/};

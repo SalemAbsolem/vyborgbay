@@ -49,15 +49,20 @@
     <!-- END -->
 
     <!-- Предзагрузка страниц -->
-    <!-- <link rel="prefetch" href="/quiz"> -->
+    <link rel="prefetch" href="booking.html">
+    <link rel="prefetch" href="/">
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1bb4fe91-9fc6-435a-a0db-09c1d3338d28&lang=ru_RU" async></script>
   </head>
   <body class="page__body body">
-    <div class="page__preloader preloader">
-
+    <!-- <div class="page__preloader preloader">
+      <div class="preloader__image-wrap">
+        <svg class="preloader__image" width="201" height="135" aria-hidden="true" focusable="false">
+          <use href="images/icons/stack.svg#logo-tablet-footer"></use>
+        </svg>
+      </div>
     </div>
-    <script src="scripts/preloader.js" defer></script>
+    <script src="scripts/preloader.js" defer></script> -->
     <!-- header\-\-nav-is-open    header\-\-fix-bottom -->
     <header class="body__header header">
       <div class="header__wrap">
@@ -343,10 +348,6 @@
         <div class="booking-section__icon-wrap">
           <img class="booking-section__icon" src="images/booking-icon.svg" width="38" height="38" alt="#" loading="lazy">
         </div>
-        <!-- linthtml-configure id-style="false" attr-quote-style="false" -->
-        <script src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js" defer></script>
-        <div id="booking_iframe" style="padding-bottom: 0;position: relative;"></div>
-        <!-- linthtml-configure id-style="true" attr-quote-style="true" -->
       </section>
       <section class="main__section about">
         <h2 class="main__section-title">
@@ -509,80 +510,6 @@
         </h2>
         <div class="houses__slider">
           <ul class="houses__wrap">
-            <li class="houses__card card-houses">
-              <div class="card-houses__title-wrap">
-                <h3 class="card-houses__title">
-                  Лодж
-                </h3>
-                <div class="card-houses__icon-wrap">
-                  <svg class="card-houses__icon card-houses__icon--blue" viewBox="0 0 29 29" width="29" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M.63 7.2a6.68 6.68 0 0 1 6.67-6.68h14.83a6.68 6.68 0 0 1 6.67 6.67v14.83a6.68 6.68 0 0 1-6.67 6.67h-14.83a6.68 6.68 0 0 1-6.67-6.67v-14.83Zm21.5-5h-14.83a5 5 0 0 0-5 5v1.89l1.17-.58a6.84 6.84 0 0 1 7.9 1.28 4.74 4.74 0 0 0 6.7 0 6.84 6.84 0 0 1 7.89-1.28l1.17.58v-1.9a5 5 0 0 0-5-5Zm-19.82 19.82a5 5 0 0 0 5 5h14.82a5 5 0 0 0 5-5v-3.54l-2.02-1.01a4.88 4.88 0 0 0-5.63.91c-2.75 2.76-7.06 2.6-9.85.03a5.15 5.15 0 0 0-5.96-.74l-1.36.75v3.6Zm22.71-11.64a4.74 4.74 0 0 0-5.47.89 6.84 6.84 0 0 1-9.67 0 4.74 4.74 0 0 0-5.47-.89l-2.1 1.05v4.6l.36-.2a7.25 7.25 0 0 1 8.38 1.03c1.97 1.82 4.98 2 6.95.04a6.98 6.98 0 0 1 8.05-1.3l1.08.53v-4.7l-2.1-1.05Z" fill="#FBF7F7"/>
-                  </svg>
-                </div>
-                <div class="card-houses__background">
-                  <picture>
-                    <!-- <source media="(min-width: 768px)" type="image/jpeg" srcset="#" width="10" height="10"> -->
-                    <img class="card-houses__background-image" src="images/location-2@2x.jpg" width="6240" height="4160" alt="#" loading="lazy">
-                  </picture>
-                </div>
-              </div>
-              <h4 class="card-houses__subtitle">
-                Описание
-              </h4>
-              <p class="card-houses__description">
-                В рамках спецификации современных стандартов, явные признаки победы
-              </p>
-              <a class="card-houses__link" href="#">
-                Подробнее о размещении
-              </a>
-              <ul class="card-houses__utp-block utp-block">
-                <li class="utp-block__item">
-                  <div class="utp-block__icon-wrap">
-                    <img class="utp-block__icon" src="images/booking-icon.svg" width="29" height="29" alt="#">
-                  </div>
-                  <p class="utp-block__text">
-                    Своя кухня
-                  </p>
-                </li>
-                <li class="utp-block__item">
-                  <div class="utp-block__icon-wrap">
-                    <img class="utp-block__icon" src="images/booking-icon.svg" width="29" height="29" alt="#">
-                  </div>
-                  <p class="utp-block__text">
-                    Терраса
-                  </p>
-                </li>
-                <li class="utp-block__item">
-                  <div class="utp-block__icon-wrap">
-                    <img class="utp-block__icon" src="images/booking-icon.svg" width="29" height="29" alt="#">
-                  </div>
-                  <p class="utp-block__text">
-                    Вид на залив
-                  </p>
-                </li>
-                <li class="utp-block__item">
-                  <div class="utp-block__icon-wrap">
-                    <img class="utp-block__icon" src="images/booking-icon.svg" width="29" height="29" alt="#">
-                  </div>
-                  <p class="utp-block__text">
-                    4 гостя
-                  </p>
-                </li>
-              </ul>
-              <footer class="card-houses__footer">
-                <p class="card-houses__price">
-                  <span class="card-houses__money">
-                    от 9 000 руб.
-                  </span>
-                  <span class="card-houses__period">
-                    в сутки
-                  </span>
-                </p>
-                <a class="card-houses__button button button--booking button--houses button--blue-white button--with-border-on-hover" href="booking.html">
-                  Забронировать
-                </a>
-              </footer>
-            </li>
             <li class="houses__card card-houses">
               <div class="card-houses__title-wrap">
                 <h3 class="card-houses__title">
@@ -1467,6 +1394,98 @@
         <div class="map__map-wrap" id="map">
           <!-- <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d45fc08f589674450ab31d481fe95a5e2447ca6407b743309a03a96db164cf6&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script> -->
         </div>
+        <div class="map__popup-route popup-route">
+          <div class="popup-route__wrap">
+            <button class="popup-route__close-button button button--brown-white button--with-border-on-hover button--close" type="button">
+              <span class="button__text">
+                Закрыть
+              </span>
+            </button>
+            <div class="popup-route__header">
+              <h3 class="popup-route__title">
+                Как до нас добраться
+              </h3>
+              <button class="popup-route__tab-button button button--green-white button--with-border-on-hover button--popup-tab button--popup-tab-active" type="button" data-tab="sorvali">
+                <span class="button__text">
+                  Бухта Sorvali
+                </span>
+              </button>
+              <button class="popup-route__tab-button button button--white-blue button--with-border button--popup-tab" type="button" data-tab="pieni">
+                <span class="button__text">
+                  Вилла Pieni
+                </span>
+              </button>
+            </div>
+            <div class="popup-route__tab tab tab--sorvali tab--show" data-tab="sorvali">
+              <div class="tab__column">
+                <h4 class="tab__title">
+                  Общ. транспорт
+                </h4>
+                <p class="tab__description">
+                  Долетите на&nbsp;Ласточке до&nbsp;вокзала города Выборг, от&nbsp;вокзала на&nbsp;12&nbsp;автобусе до&nbsp;остановки ГИБДД, дальше 600&nbsp;м пешком у&nbsp;нас.
+                </p>
+                <p class="tab__description">
+                  Также в&nbsp;Выборге работают приложения такси, от&nbsp;вокзала до&nbsp;глэмпинга&nbsp;Вы доберетесь всего за&nbsp;8&nbsp;минут.
+                </p>
+              </div>
+              <div class="tab__column">
+                <h4 class="tab__title">
+                  На автомобиле
+                </h4>
+                <p class="tab__description">
+                  Введите в&nbsp;навигатор: Выборг, Симоняка, 21&nbsp;или Vyborg&nbsp;Bay и&nbsp;следуйте по&nbsp;маршруту
+                </p>
+              </div>
+              <div class="tab__footer">
+                <p class="tab__address">
+                  <span class="tab__footnote">
+                    Адрес Бухты Sorvali
+                  </span><br>
+                  Выборг, ул. Симоняка, 21
+                </p>
+                <a class="tab__button button button--mint-white button--with-border-on-hover button--popup-route" href="https://yandex.ru/maps/?rtext=~60.729304%2C28.689549" target="_blank" rel="nofollow noopener noreferrer">
+                  <span class="button__text">
+                    Построить маршрут
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="popup-route__tab tab tab--pieni" data-tab="pieni">
+              <div class="tab__column">
+                <h4 class="tab__title">
+                  Общ. транспорт
+                </h4>
+                <p class="tab__description">
+                  Долетите на&nbsp;Ласточке до&nbsp;вокзала города Выборг, от&nbsp;вокзала на&nbsp;12&nbsp;автобусе до&nbsp;остановки ГИБДД, дальше 600&nbsp;м пешком у&nbsp;нас.
+                </p>
+                <p class="tab__description">
+                  Также в&nbsp;Выборге работают приложения такси, от&nbsp;вокзала до&nbsp;глэмпинга&nbsp;Вы доберетесь всего за&nbsp;8&nbsp;минут.
+                </p>
+              </div>
+              <div class="tab__column">
+                <h4 class="tab__title">
+                  На автомобиле
+                </h4>
+                <p class="tab__description">
+                  Введите в&nbsp;навигатор: Выборг, Симоняка, 21&nbsp;или Vyborg&nbsp;Bay и&nbsp;следуйте по&nbsp;маршруту
+                </p>
+              </div>
+              <div class="tab__footer">
+                <p class="tab__address">
+                  <span class="tab__footnote">
+                    Адрес Виллы Pieni
+                  </span><br>
+                  Выборг, ул. Монрепо, 14
+                </p>
+                <a class="tab__button button button--mint-white button--with-border-on-hover button--popup-route" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                  <span class="button__text">
+                    Построить маршрут
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="body__footer footer">
@@ -1680,8 +1699,23 @@
         </ul>
       </div>
     </footer>
-    <script src="scripts/booking-module.js" defer></script>
-    <script src="https://res.smartwidgets.ru/app.js" defer></script>
+    <div class="cookie">
+      <div class="cookie__icon-wrap">
+        <img class="cookie__icon" src="images/coockie-icon.svg" width="36" height="36" alt="" aria-hidden="true">
+      </div>
+      <p class="cookie__text">
+        К&nbsp;сожалению, это специальные куки, которыми может питаться только компьютер. Пожалуйста, посмотрите нашу
+        <a class="cookie__privacy-link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+          политику куки</a>, чтобы узнать, как мы&nbsp;их&nbsp;используем.
+      </p>
+      <button class="cookie__button button button--green-white button--with-border-on-hover" type="button">
+        <span class="button__text">
+          Отлично
+        </span>
+      </button>
+    </div>
+    <!-- <script src="scripts/booking-module.js" defer></script> -->
+    <!-- <script src="https://res.smartwidgets.ru/app.js" defer></script> -->
     <script src="scripts/index.js" defer></script>
   </body>
 </html>

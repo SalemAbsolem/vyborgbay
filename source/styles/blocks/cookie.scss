@@ -1,0 +1,177 @@
+.cookie {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 1999999999;
+
+  display: none;
+  flex-direction: column;
+  width: 300px;
+  padding: 10px;
+
+  background-color: $color-white;
+  border: 1px solid $color-gray;
+  border-radius: 20px;
+
+  transform: translateX(-50%);
+
+  &.cookie--show {
+    display: flex;
+  }
+
+  @media #{$tablet-only} {
+    bottom: 30px;
+
+    flex-direction: row;
+    align-items: center;
+    width: 748px;
+
+    border-radius: 25px;
+  }
+
+  @media #{$desktop-only} {
+    bottom: 30px;
+
+    flex-direction: row;
+    align-items: center;
+    width: 1180px;
+  }
+
+  @media #{$large-desktop-only} {
+    bottom: 50px;
+
+    width: 1900px;
+    padding: 20px;
+
+    border-width: 2px;
+    border-radius: 40px;
+  }
+}
+
+.cookie__icon-wrap {
+  display: flex;
+  width: 36px;
+  height: 36px;
+
+  @media #{$tablet-only} {
+    flex-basis: 36px;
+    margin-right: 15px;
+  }
+
+  @media #{$desktop-only} {
+    flex-basis: 45px;
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+  }
+
+  @media #{$large-desktop-only} {
+    flex-basis: 74px;
+    width: 74px;
+    height: 74px;
+  }
+}
+
+.cookie__icon {
+  width: 100%;
+  height: 100%;
+}
+
+.cookie__text {
+  margin: 10px 0;
+
+  @media #{$tablet-only} {
+    flex-grow: 1;
+    max-width: 480px;
+    margin: 0;
+  }
+
+  @media #{$desktop-only} {
+    flex-grow: 1;
+    max-width: 810px;
+    margin: 0;
+
+    font-size: 16px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 930px;
+
+    font-size: 20px;
+  }
+}
+
+.cookie__privacy-link {
+  display: inline-flex;
+
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
+  color: $color-brown;
+
+  transition: opacity $tr-default, text-underline-offset $tr-default;
+
+  @media #{$tablet-only} {
+    text-underline-offset: 2px;
+  }
+
+  @media #{$desktop-only} {
+    text-underline-offset: 2px;
+  }
+
+  @media #{$large-desktop-only} {
+    text-underline-offset: 4px;
+  }
+
+  @media #{$hover} {
+    &:hover {
+      text-underline-offset: 4px;
+
+      @media #{$tablet-only} {
+        text-underline-offset: 6px;
+      }
+
+      @media #{$desktop-only} {
+        text-underline-offset: 6px;
+      }
+
+      @media #{$large-desktop-only} {
+        text-underline-offset: 10px;
+      }
+    }
+  }
+
+  &:active {
+    text-underline-offset: 1px;
+
+    transition: opacity $tr-fast, text-underline-offset $tr-fast;
+
+    @media #{$tablet-only} {
+      text-underline-offset: 2px;
+    }
+
+    @media #{$desktop-only} {
+      text-underline-offset: 2px;
+    }
+
+    @media #{$large-desktop-only} {
+      text-underline-offset: 4px;
+    }
+  }
+}
+
+.cookie__button {
+  width: 150px;
+
+  @media #{$tablet-only} {
+    margin-left: 30px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: auto;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 248px;
+  }
+}

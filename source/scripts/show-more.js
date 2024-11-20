@@ -97,6 +97,7 @@ const showMoreCard = (blockClass, mobile, tablet, desktop) => {
     moreButton.style.display = 'none';
     list.style.height = `${itemsHeight}px`;
   } else {
+    moreButton.style.display = 'flex';
     moreButton.addEventListener('click', () => {
       if(list.clientHeight < itemsHeight) {
         list.style.height = `${itemsHeight}px`;
@@ -126,20 +127,31 @@ const showMoreServiceText = (containerClass, mobile, tablet) => {
     return;
   }
 
+  // const lineHeight = Number(getComputedStyle(textContainer)['line-height'].replace('px', ''));
+
   let paragrafsHeight = 0;
 
   for(let i = 0; i < paragrafs.length; i++) {
-    paragrafsHeight = paragrafsHeight + paragrafs[i].clientHeight;
+    paragrafsHeight += paragrafs[i].clientHeight + 10;
   }
-  paragrafsHeight = paragrafsHeight + (10 * (paragrafs.length - 1));
+
+
+  // const heightContein = Math.round(textContainerHeight / lineHeight) * lineHeight;
+
+  // console.log(heightContein - (paragrafs[0].clientHeight + 10) - (paragrafs[1].clientHeight + 10));
+  // paragrafsHeight = paragrafsHeight + (10 * (paragrafs.length - 1));
 
   const moreButton = document.querySelector(`${containerClass} + button`);
   const moreButtonText = moreButton.querySelector('.button__text');
 
-  if(paragrafsHeight <= textContainerHeight) {
-    moreButton.style.display = 'none';
-  } else {
-    if(mobile.matches || tablet.matches) {
+  // if(paragrafsHeight <= textContainerHeight) {
+  //   moreButton.style.display = 'none';
+  // } else {
+  if(mobile.matches || tablet.matches) {
+    if(paragrafsHeight <= textContainerHeight) {
+      textContainer.style.height = `${paragrafsHeight}px`;
+      moreButton.style.display = 'none';
+    } else {
       moreButton.addEventListener('click', () => {
         if(textContainerHeight === textContainer.clientHeight) {
           textContainer.style.height = `${paragrafsHeight}px`;
@@ -149,6 +161,11 @@ const showMoreServiceText = (containerClass, mobile, tablet) => {
           moreButtonText.textContent = 'Подробнее';
         }
       });
+    }
+  } else {
+    if(paragrafsHeight <= textContainerHeight) {
+      textContainer.style.height = `${paragrafsHeight}px`;
+      moreButton.style.display = 'none';
     } else {
       moreButton.addEventListener('click', () => {
         if(getComputedStyle(textContainer).getPropertyValue('overflow-y') === 'hidden') {
@@ -163,6 +180,7 @@ const showMoreServiceText = (containerClass, mobile, tablet) => {
       });
     }
   }
+  // }
 };
 
 export {showMoreCard, showMoreText, showMoreServiceText};

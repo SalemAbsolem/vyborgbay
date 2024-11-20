@@ -25,6 +25,18 @@
     scrollbar-color: $color-green $color-white;
     scrollbar-width: thin;
   }
+
+  .no-scrollbar {
+    ::-webkit-scrollbar-thumb {
+      width: 0;
+      height: 0;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
 }
 
 body {

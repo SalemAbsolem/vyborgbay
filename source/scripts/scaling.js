@@ -1,4 +1,4 @@
-const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, footer) => {
+const scalingPage = (mobile, tablet, notDesktop, feedback, header, footer) => {
   const widthScreen = window.innerWidth;
 
   let scale;
@@ -7,9 +7,9 @@ const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, fo
     scale = widthScreen / 320;
   } else if(tablet.matches) {
     scale = widthScreen / 768;
-  } else if(desktopS.matches) {
+  } /*else if(desktopS.matches) {
     scale = widthScreen / 1200;
-  }
+  }*/
 
   const sectionOnMain = document.querySelectorAll('.main__section:not(.feedback)');
   if(!sectionOnMain) {
@@ -24,7 +24,9 @@ const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, fo
     sectionFeedbackWidjet = sectionFeedback.querySelector('.sw-app');
   }
 
-  if(notDesktopL.matches) {
+  const cookie = document.querySelector('.cookie');
+
+  if(notDesktop.matches) {
     if(scale >= 1) {
       if(header) {
         header.setAttribute('style', `zoom: ${scale}`);
@@ -38,6 +40,10 @@ const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, fo
         footer.setAttribute('style', `zoom: ${scale}`);
       }
 
+      if(cookie) {
+        cookie.setAttribute('style', `zoom: ${scale}`);
+      }
+
       if(sectionFeedback) {
         if(feedback.matches) {
           sectionFeedbackTitle.setAttribute('style', `zoom: ${scale}`);
@@ -45,10 +51,10 @@ const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, fo
         } else if(!feedback.matches && tablet.matches) {
           scale = widthScreen / 768;
           sectionFeedback.setAttribute('style', `zoom: ${scale}`);
-        } else if(!feedback.matches && desktopS.matches) {
+        } /*else if(!feedback.matches && desktopS.matches) {
           scale = widthScreen / 1200;
           sectionFeedback.setAttribute('style', `zoom: ${scale}`);
-        }
+        }*/
       }
     }
   } else {
@@ -71,6 +77,10 @@ const scalingPage = (mobile, tablet, desktopS, notDesktopL, feedback, header, fo
 
     if(footer) {
       footer.setAttribute('style', `zoom: ${scale}`);
+    }
+
+    if(cookie) {
+      cookie.setAttribute('style', `zoom: ${scale}`);
     }
   }
 };

@@ -130,8 +130,13 @@ const housesSliderInit = () => {
       },
       1200: {
         spaceBetween: 20,
+        // slidesPerView: 3,
+        // slidesPerGroup: 1,
+        // slidesPerGroupAuto: true,
+        // loopAdditionalSlides: 3,
         centeredSlides: true,
-        loop: true,
+        // loopAddBlankSlides: true,
+        // loop: true,
       },
     },
   });
